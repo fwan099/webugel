@@ -4,19 +4,15 @@
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Institucional</h5>
-                <a class="btn btn-link text-white-50" href="">About Us</a>
-                <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                <a class="btn btn-link text-white-50" href="">Our Services</a>
-                <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-                <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                <a class="btn btn-link text-white-50" href="">Sobre Nosotros</a>
+                <a class="btn btn-link text-white-50" href="">Directorio Institucional</a>
+                <a class="btn btn-link text-white-50" href="">Documentos de Gestion</a>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Enlaces de Interes</h5>
-                <a class="btn btn-link text-white-50" href="">About Us</a>
-                <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                <a class="btn btn-link text-white-50" href="">Our Services</a>
-                <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-                <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                <h5 class="text-white mb-4">Enlaces Rapidos</h5>
+                <a class="btn btn-link text-white-50" href="">Convocatorias</a>
+                <a class="btn btn-link text-white-50" href="">Comunicados</a>
+                <a class="btn btn-link text-white-50" href="">Oficios Multiples</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Contactenos</h5>
@@ -31,7 +27,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-center"> 
-                <a href="" id="libro"><img src="./public/img/icons/libro.png" alt="" width="160"></a>
+                <a href="#" id="libro"><img src="./public/img/icons/libro.png" class="libro__re" alt="" width="160"></a>
             </div>
         </div>
     </div>
