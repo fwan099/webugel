@@ -96,9 +96,9 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Areas</a>
                         <div class="dropdown-menu rounded-0 m-0 p-0">
                             <a href="administracion" class="dropdown-item">Administración</a>
-                            <a href="gestion-institucional" class="dropdown-item">Area de Gestión Institucional</a>
-                            <a href="gestion-pedagogica" class="dropdown-item">Area de Gestión Pedagogica</a>
-                            <a href="asesoria-juridica" class="dropdown-item">Area de Asesoria Juridica</a>
+                            <a href="gestionInstitucional" class="dropdown-item">Area de Gestión Institucional</a>
+                            <a href="gestionPedagogica" class="dropdown-item">Area de Gestión Pedagogica</a>
+                            <a href="asesoriaJuridica" class="dropdown-item">Area de Asesoria Juridica</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">

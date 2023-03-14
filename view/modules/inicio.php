@@ -60,7 +60,7 @@
                 </p>
             </div>
             <div class="mesadepartes-item">
-                <a href="#" class="btn btn-sp text-white wow fadeInUp " data-wow-delay="0.5s">Ir a Mesa de Partes Virtual <i
+                <a href="#" class="btn btn-sp text-white wow fadeInUp" data-wow-delay="0.5s">Ir a Mesa de Partes Virtual <i
                         class="bi bi-pc-display-horizontal ms-2"></i></a>
             </div>
         </div>

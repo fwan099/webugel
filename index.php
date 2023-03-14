@@ -2,7 +2,7 @@
 include "view/layouts/view_header.php";
 if(isset($_GET["url"])){
    switch ($_GET["url"]){
-        case "inicio":
+        case "inicio":    
             include "view/modules/".$_GET["url"].".php";
             break;
         case "nosotros":
@@ -20,6 +20,23 @@ if(isset($_GET["url"])){
         case "administracion":
             include "view/modules/administracion/".$_GET["url"].".php";
             break;
+        case "gestionInstitucional":
+            include "view/modules/gestionInstitucional/".$_GET["url"].".php";
+            break;
+        case "gestionPedagogica":
+            include "view/modules/gestionPedagogica/".$_GET["url"].".php";
+            break;
+        case "asesoriaJuridica":
+            include "view/modules/asesoriaJuridica/".$_GET["url"].".php";
+            break;
+        case "comunicados":
+                include "view/modules/comunicados/".$_GET["url"].".php";
+                break;
+        default:
+            include "view/modules/error/404.php";
+            break;
+
+
 
     }
 
