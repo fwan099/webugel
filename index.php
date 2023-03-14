@@ -29,9 +29,33 @@ if(isset($_GET["url"])){
         case "asesoriaJuridica":
             include "view/modules/asesoriaJuridica/".$_GET["url"].".php";
             break;
+        case "convocatorias":
+            include "view/modules/convocatorias/".$_GET["url"].".php";
+            break;
+        case "convocatoriasCas":
+            include "view/modules/convocatorias/".$_GET["url"].".php";
+            break;
+        case "convocatoriasDocente":
+            include "view/modules/convocatorias/".$_GET["url"].".php";
+            break;
+        case "convocatoriasAuxiliar":
+            include "view/modules/convocatorias/".$_GET["url"].".php";
+            break;
+        case "convocatoriasDirectivos":
+            include "view/modules/convocatorias/".$_GET["url"].".php";
+            break;
+        case "convocatoriasCap":
+            include "view/modules/convocatorias/".$_GET["url"].".php";
+            break;
         case "comunicados":
-                include "view/modules/comunicados/".$_GET["url"].".php";
-                break;
+            include "view/modules/comunicados/".$_GET["url"].".php";
+            break;
+        case "oficiosMultiples":
+            include "view/modules/oficios/".$_GET["url"].".php";
+            break;
+        case "servicios":
+            include "view/modules/servicios/".$_GET["url"].".php";
+            break;
         default:
             include "view/modules/error/404.php";
             break;

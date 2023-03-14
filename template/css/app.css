@@ -4,6 +4,14 @@
   --light: #effdf5;
   --dark: #2b3940;
   --dorado: #efb810;
+  --light2:#cce5ff;
+  --light3:#f0ebd7;
+}
+.bg-light2{
+  background-color: var(--light2);
+}
+.bg-light3{
+  background-color: var(--light3);
 }
 
 .header__box .info__box {
@@ -133,7 +141,7 @@
   font-size: 12px !important;
 }
 .container__com{
-  height: 180px;
+  min-height: 180px;
 }
 .container__com .img__com{
   width: 100%;
@@ -144,4 +152,36 @@
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
+}
+input:focus{
+  border-color: var(--primary) !important;
+  box-shadow: none !important;
+}
+button:focus{
+  border-color: var(--secondary) !important;
+  box-shadow: none !important;
+}
+textarea:focus{
+  border-color: var(--primary) !important;
+  box-shadow: none !important;
+}
+.btn-rounded{
+  border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
+}
+.btn-secondary{
+  background-color: var(--secondary) !important;
+  border: var(--secondary) !important;
+  font-weight: initial !important;
+}
+.bg-secondary{
+  background-color: var(--secondary) !important;
+}
+@media (max-width: 720px){
+  .texto{
+    font-size: 12px;
+  }
 }

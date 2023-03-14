@@ -13,7 +13,8 @@
             <img src="./public/img/car_1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h4 class="text-white wow fadeIn" data-wow-delay="0.3s">Find The Perfect Job That You Deserved</h4>
-                <p class="wow fadeInUp" data-wow-delay="0.3s">Some representative placeholder content for the first slide.
+                <p class="wow fadeInUp" data-wow-delay="0.3s">Some representative placeholder content for the first
+                    slide.
                 </p>
             </div>
         </div>
@@ -21,7 +22,8 @@
             <img src="./public/img/car_2.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h4 class="text-white wow fadeIn" data-wow-delay="0.3s">Find The Perfect Job That You Deserved</h4>
-                <p class="wow fadeInUp" data-wow-delay="0.3s">Some representative placeholder content for the first slide.
+                <p class="wow fadeInUp" data-wow-delay="0.3s">Some representative placeholder content for the first
+                    slide.
                 </p>
             </div>
         </div>
@@ -29,7 +31,8 @@
             <img src="./public/img/car_1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h4 class="text-white wow fadeIn" data-wow-delay="0.3s">Find The Perfect Job That You Deserved</h4>
-                <p class="wow fadeInUp" data-wow-delay="0.3s">Some representative placeholder content for the first slide.
+                <p class="wow fadeInUp" data-wow-delay="0.3s">Some representative placeholder content for the first
+                    slide.
                 </p>
             </div>
         </div>
@@ -52,7 +55,8 @@
         <div
             class="container-mesadepartes__items d-flex flex-wrap justify-content-lg-between justify-content-around align-items-center gap-3">
             <div class="mesadepartes-item">
-                <p class="text-white d-flex flex-column m-0 text-center text-md-start wow fadeInUp" data-wow-delay="0.4s">
+                <p class="text-white d-flex flex-column m-0 text-center text-md-start wow fadeInUp"
+                    data-wow-delay="0.4s">
                     <em> Realiza Tus Tramites Sin Salir de casa</em>
                     <span class="text-teme">Porque pensamos en ti y queremos que este servicio sea facil,
                         rapido y
@@ -60,8 +64,8 @@
                 </p>
             </div>
             <div class="mesadepartes-item">
-                <a href="#" class="btn btn-sp text-white wow fadeInUp" data-wow-delay="0.5s">Ir a Mesa de Partes Virtual <i
-                        class="bi bi-pc-display-horizontal ms-2"></i></a>
+                <a href="#" class="btn btn-sp text-white wow fadeInUp" data-wow-delay="0.5s">Ir a Mesa de Partes Virtual
+                    <i class="bi bi-pc-display-horizontal ms-2"></i></a>
             </div>
         </div>
     </div>
@@ -73,53 +77,53 @@
 <div class="container-xxl py-5">
     <div class="container">
         <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Servicios</h1>
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <a class="cat-item rounded p-4" href="">
+                <a class="cat-item rounded p-4" href="comunicados">
                     <i class="fa-solid fa-bullhorn fa-3x text-primary mb-4"></i>
                     <h6 class="mb-3">Comunicados</h6>
                     <p class="mb-0">123 Registros</p>
                 </a>
             </div>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <a class="cat-item rounded p-4" href="">
+                <a class="cat-item rounded p-4" href="oficiosMultiples">
                     <i class="fa-solid fa-paste fa-3x text-primary mb-4"></i>
                     <h6 class="mb-3">Oficios Multiples</h6>
                     <p class="mb-0">123 Registros</p>
                 </a>
             </div>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <a class="cat-item rounded p-4" href="">
+                <a class="cat-item rounded p-4" href="convocatoriasCas">
                     <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                     <h6 class="mb-3">Convocatorias CAS</h6>
                     <p class="mb-0">123 Registros</p>
                 </a>
             </div>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <a class="cat-item rounded p-4" href="">
+                <a class="cat-item rounded p-4" href="convocatoriasCap">
                     <i class="fa-solid fa-people-group fa-3x text-primary mb-4"></i>
                     <h6 class="mb-3">Convocatorias CAP</h6>
                     <p class="mb-0">123 Registros</p>
                 </a>
             </div>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <a class="cat-item rounded p-4" href="">
+                <a class="cat-item rounded p-4" href="convocatoriasDocente">
                     <i class="fa-solid fa-users fa-3x text-primary mb-4"></i>
                     <h6 class="mb-3">Convocatorias Docente</h6>
                     <p class="mb-0">123 Registros</p>
                 </a>
             </div>
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <a class="cat-item rounded p-4" href="">
+                <a class="cat-item rounded p-4" href="convocatoriasAuxiliar">
                     <i class="fa fa-3x fa-hands-helping text-primary mb-4"></i>
-                    <h6 class="mb-3">Convocatorias Auxiliar</h6>
+                    <h6 class="mb-3">Convocatorias Auxiliares</h6>
                     <p class="mb-0">123 Registros</p>
                 </a>
             </div>
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <a class="cat-item rounded p-4" href="">
-                    <i class="fa-solid fa-book-open fa-3x text-primary mb-4"></i>
-                    <h6 class="mb-3">Libro de Reclamaciones</h6>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <a class="cat-item rounded p-4" href="convocatoriasDirectivos">
+                    <i class="fa-solid fa-person-shelter fa-3x text-primary mb-4"></i>
+                    <h6 class="mb-3">Convocatorias Directivos</h6>
                     <p class="mb-0">123 Registros</p>
                 </a>
             </div>
@@ -136,41 +140,6 @@
 <!-- Category End -->
 
 
-<!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                <div class="row g-0 about-bg rounded overflow-hidden">
-                    <div class="col-6 text-start">
-                        <img class="img-fluid w-100" src="./template/img/about-1.jpg">
-                    </div>
-                    <div class="col-6 text-start">
-                        <img class="img-fluid" src="./template/img/about-2.jpg" style="width: 85%; margin-top: 15%;">
-                    </div>
-                    <div class="col-6 text-end">
-                        <img class="img-fluid" src="./template/img/about-3.jpg" style="width: 85%;">
-                    </div>
-                    <div class="col-6 text-end">
-                        <img class="img-fluid w-100" src="./template/img/about-4.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h1 class="mb-4">Unidad de Gestión Educativa Local Yunguyo</h1>
-                <p class="mb-4">Mediante nuestro nuevo portal quiero darles la más cordial bienvenida, con el
-                    fin de servirlos mucho mejor en bienestar de todos los estudiantes de la provincia de
-                    Yunguyo.</p>
-
-                <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
-                <a class="btn btn-primary py-3 px-5 mt-3" href="">Ver Directorio</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- About End -->
 
 
 <!-- Jobs Start -->
@@ -198,462 +167,274 @@
             </ul>
             <div class="tab-content">
                 <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="job-item p-4 mb-4">
+                    <div class="job-item p-4 mb-4 bg-light">
                         <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-1.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Software Engineer</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
+                            <div class="col-lg-10 d-lg-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid border rounded"
+                                    src="./public/docs/preview-img-docs/c2.jpg" alt=""
+                                    style="width: 80px; height: 80px;">
+                                <div class="text-start ps-lg-4 mt-3 mt-lg-0">
+                                    <h5 class="mb-3 fs-6">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA
+                                        UGEL
+                                        YUNGUYO</h5>
+                                    <span class=" me-3 text-justify fs-6"><i
+                                            class="fa-solid fa-arrow-right text-primary me-2"></i>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
+                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
+                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                    </span>
                                 </div>
                             </div>
                             <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
+                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                            class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
+                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
+                                    08 Marzo 2023</small>
                             </div>
                         </div>
                     </div>
-                    <div class="job-item p-4 mb-4">
+                    <div class="job-item p-4 mb-4 bg-light">
                         <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-2.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Marketing Manager</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
+                            <div class="col-lg-10 d-lg-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid border rounded"
+                                    src="./public/docs/preview-img-docs/c2.jpg" alt=""
+                                    style="width: 80px; height: 80px;">
+                                <div class="text-start ps-lg-4 mt-3 mt-lg-0">
+                                    <h5 class="mb-3 fs-6">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA
+                                        UGEL
+                                        YUNGUYO</h5>
+                                    <span class=" me-3 text-justify fs-6"><i
+                                            class="fa-solid fa-arrow-right text-primary me-2"></i>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
+                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
+                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                    </span>
                                 </div>
                             </div>
                             <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
+                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                            class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
+                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
+                                    08 Marzo 2023</small>
                             </div>
                         </div>
                     </div>
-                    <div class="job-item p-4 mb-4">
+                    <div class="job-item p-4 mb-4 bg-light">
                         <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-3.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Product Designer</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
+                            <div class="col-lg-10 d-lg-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid border rounded"
+                                    src="./public/docs/preview-img-docs/c2.jpg" alt=""
+                                    style="width: 80px; height: 80px;">
+                                <div class="text-start ps-lg-4 mt-3 mt-lg-0">
+                                    <h5 class="mb-3 fs-6">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA
+                                        UGEL
+                                        YUNGUYO</h5>
+                                    <span class=" me-3 text-justify fs-6"><i
+                                            class="fa-solid fa-arrow-right text-primary me-2"></i>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
+                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
+                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                    </span>
                                 </div>
                             </div>
                             <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
+                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                            class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
+                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
+                                    08 Marzo 2023</small>
                             </div>
                         </div>
                     </div>
-                    <div class="job-item p-4 mb-4">
-                        <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-4.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Creative Director</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
-                                </div>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
-                                </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="job-item p-4 mb-4">
-                        <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-5.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Wordpress Developer</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
-                                </div>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
-                                </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary py-3 px-5" href="">Ver Mas</a>
+                    <a class="btn btn-primary btn-rounded" href="comunicados"><i class="fa-solid fa-plus me-2"></i>Mas Comunicados</a>
                 </div>
                 <div id="tab-2" class="tab-pane fade show p-0">
-                    <div class="job-item p-4 mb-4">
+                    <div class="job-item p-4 mb-4 bg-light2">
                         <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-1.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Software Engineer</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
+                            <div class="col-lg-10 d-lg-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid border rounded"
+                                    src="./public/docs/preview-img-docs/c2.jpg" alt=""
+                                    style="width: 80px; height: 80px;">
+                                <div class="text-start ps-lg-4 mt-3 mt-lg-0">
+                                    <h5 class="mb-3 fs-6">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA
+                                        UGEL
+                                        YUNGUYO</h5>
+                                    <span class=" me-3 text-justify fs-6"><i
+                                            class="fa-solid fa-arrow-right text-primary me-2"></i>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
+                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
+                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                    </span>
                                 </div>
                             </div>
                             <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
+                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                            class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
-                            </div>
-                        </div>
-                        </divRewa, INDIA <div class="job-item p-4 mb-4">
-                        <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-2.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Marketing Manager</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
-                                </div>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
-                                </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
+                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
+                                    08 Marzo 2023</small>
                             </div>
                         </div>
                     </div>
-                    <div class="job-item p-4 mb-4">
+                    <div class="job-item p-4 mb-4 bg-light2">
                         <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-3.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Product Designer</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
+                            <div class="col-lg-10 d-lg-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid border rounded"
+                                    src="./public/docs/preview-img-docs/c2.jpg" alt=""
+                                    style="width: 80px; height: 80px;">
+                                <div class="text-start ps-lg-4 mt-3 mt-lg-0">
+                                    <h5 class="mb-3 fs-6">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA
+                                        UGEL
+                                        YUNGUYO</h5>
+                                    <span class=" me-3 text-justify fs-6"><i
+                                            class="fa-solid fa-arrow-right text-primary me-2"></i>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
+                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
+                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                    </span>
                                 </div>
                             </div>
                             <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
+                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                            class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
+                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
+                                    08 Marzo 2023</small>
                             </div>
                         </div>
                     </div>
-                    <div class="job-item p-4 mb-4">
+                    <div class="job-item p-4 mb-4 bg-light2">
                         <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-4.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Creative Director</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
+                            <div class="col-lg-10 d-lg-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid border rounded"
+                                    src="./public/docs/preview-img-docs/c2.jpg" alt=""
+                                    style="width: 80px; height: 80px;">
+                                <div class="text-start ps-lg-4 mt-3 mt-lg-0">
+                                    <h5 class="mb-3 fs-6">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA
+                                        UGEL
+                                        YUNGUYO</h5>
+                                    <span class=" me-3 text-justify fs-6"><i
+                                            class="fa-solid fa-arrow-right text-primary me-2"></i>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
+                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
+                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                    </span>
                                 </div>
                             </div>
                             <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
+                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                            class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
+                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
+                                    08 Marzo 2023</small>
                             </div>
                         </div>
                     </div>
-                    <div class="job-item p-4 mb-4">
-                        <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-5.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Wordpress Developer</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
-                                </div>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
-                                </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary py-3 px-5" href="">Ver Mas</a>
+                    <a class="btn btn-primary btn-rounded" href="oficiosMultiples"><i class="fa-solid fa-plus me-2"></i>Mas Oficios Multiples</a>
                 </div>
-                <div id="tab-3" class="tab-pane fade show p-0">
-                    <div class="job-item p-4 mb-4">
+                <div id="tab-3" class="tab-pane fade show p-0"  >
+                    <div class="job-item p-4 mb-4 bg-light3">
                         <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-1.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Software Engineer</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
+                            <div class="col-lg-10 d-lg-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid border rounded"
+                                    src="./public/docs/preview-img-docs/c2.jpg" alt=""
+                                    style="width: 80px; height: 80px;">
+                                <div class="text-start ps-lg-4 mt-3 mt-lg-0">
+                                    <h5 class="mb-3 fs-6">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA
+                                        UGEL
+                                        YUNGUYO</h5>
+                                    <span class=" me-3 text-justify fs-6"><i
+                                            class="fa-solid fa-arrow-right text-primary me-2"></i>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
+                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
+                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                    </span>
                                 </div>
                             </div>
                             <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
+                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                            class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
+                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
+                                    08 Marzo 2023</small>
                             </div>
                         </div>
                     </div>
-                    <div class="job-item p-4 mb-4">
+                    <div class="job-item p-4 mb-4 bg-light3">
                         <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-2.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Marketing Manager</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
+                            <div class="col-lg-10 d-lg-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid border rounded"
+                                    src="./public/docs/preview-img-docs/c2.jpg" alt=""
+                                    style="width: 80px; height: 80px;">
+                                <div class="text-start ps-lg-4 mt-3 mt-lg-0">
+                                    <h5 class="mb-3 fs-6">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA
+                                        UGEL
+                                        YUNGUYO</h5>
+                                    <span class=" me-3 text-justify fs-6"><i
+                                            class="fa-solid fa-arrow-right text-primary me-2"></i>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
+                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
+                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                    </span>
                                 </div>
                             </div>
                             <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
+                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                            class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
+                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
+                                    08 Marzo 2023</small>
                             </div>
                         </div>
                     </div>
-                    <div class="job-item p-4 mb-4">
+                    <div class="job-item p-4 mb-4 bg-light3">
                         <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-3.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Product Designer</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
+                            <div class="col-lg-10 d-lg-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid border rounded"
+                                    src="./public/docs/preview-img-docs/c1.jpg" alt=""
+                                    style="width: 80px; height: 80px;">
+                                <div class="text-start ps-lg-4 mt-3 mt-lg-0">
+                                    <h5 class="mb-3 fs-6">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA
+                                        UGEL
+                                        YUNGUYO</h5>
+                                    <span class=" me-3 text-justify fs-6"><i
+                                            class="fa-solid fa-arrow-right text-primary me-2"></i>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
+                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
+                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                    </span>
                                 </div>
                             </div>
                             <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
+                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                            class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
+                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
+                                    08 Marzo 2023</small>
                             </div>
                         </div>
                     </div>
-                    <div class="job-item p-4 mb-4">
-                        <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-4.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Creative Director</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
-                                </div>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
-                                </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="job-item p-4 mb-4">
-                        <div class="row g-4">
-                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-5.jpg"
-                                    alt="" style="width: 80px; height: 80px;">
-                                <div class="text-start ps-4">
-                                    <h5 class="mb-3">Wordpress Developer</h5>
-                                    <span class="text-truncate me-3"><i
-                                            class="fa fa-map-marker-alt text-primary me-2"></i>Rewa,
-                                        INDIA</span>
-                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full
-                                        Time</span>
-                                    <span class="text-truncate me-0"><i
-                                            class="far fa-money-bill-alt text-primary me-2"></i>$123 -
-                                        $456</span>
-                                </div>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                <div class="d-flex mb-3">
-                                    <a class="btn btn-light btn-square me-3" href=""><i
-                                            class="far fa-heart text-primary"></i></a>
-                                    <a class="btn btn-primary" href="">Apply Now</a>
-                                </div>
-                                <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date
-                                    Line: 01 Jan,
-                                    2045</small>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary py-3 px-5" href="">Ver Mas</a>
+                    <a class="btn btn-primary btn-rounded" href="convocatorias"><i class="fa-solid fa-plus me-2"></i>Mas Convocatorias</a>
                 </div>
             </div>
         </div>
@@ -665,7 +446,7 @@
 <!-- Testimonial Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
-        <h1 class="text-center mb-5">Noticias</h1>
+        <h1 class="text-center mb-5">Enlaces de Interés</h1>
         <div class="owl-carousel testimonial-carousel">
             <div class="testimonial-item bg-light rounded p-4">
                 <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>

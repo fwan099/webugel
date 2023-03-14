@@ -104,17 +104,18 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Convocatorias</a>
                         <div class="dropdown-menu rounded-0 m-0 p-0">
-                            <a href="convocatorias-cas" class="dropdown-item">Convocatorias CAS</a>
-                            <a href="convocatorias-docente" class="dropdown-item">Convocatorias Docentes</a>
-                            <a href="convocatorias-auxiliares" class="dropdown-item">Convocatorias Auxiliares</a>
-                            <a href="convocatorias-directivos" class="dropdown-item">Convocatorias Directivos</a>
+                            <a href="convocatoriasCas" class="dropdown-item">Convocatorias CAS</a>
+                            <a href="convocatoriasDocente" class="dropdown-item">Convocatorias Docentes</a>
+                            <a href="convocatoriasAuxiliar" class="dropdown-item">Convocatorias Auxiliares</a>
+                            <a href="convocatoriasDirectivos" class="dropdown-item">Convocatorias Directivos</a>
+                            <a href="convocatoriasCap" class="dropdown-item">Convocatorias CAP</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Informacion</a>
                         <div class="dropdown-menu rounded-0 m-0 p-0">
                             <a href="comunicados" class="dropdown-item">Comunicados</a>
-                            <a href="oficios-multiples" class="dropdown-item">Oficios Multiples</a>
+                            <a href="oficiosMultiples" class="dropdown-item">Oficios Multiples</a>
                         </div>
                     </div>
                     <a href="servicios" class="nav-item nav-link">Servicios</a>
