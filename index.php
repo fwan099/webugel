@@ -56,6 +56,9 @@ if(isset($_GET["url"])){
         case "servicios":
             include "view/modules/servicios/".$_GET["url"].".php";
             break;
+        case "documento":
+                include "view/modules/documento/".$_GET["url"].".php";
+                break;
         default:
             include "view/modules/error/404.php";
             break;

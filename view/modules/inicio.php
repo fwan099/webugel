@@ -179,16 +179,14 @@
                                         YUNGUYO</h5>
                                     <span class=" me-3 text-justify fs-6"><i
                                             class="fa-solid fa-arrow-right text-primary me-2"></i>
-                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
-                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
-                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
                                     </span>
                                 </div>
                             </div>
                             <div
                                 class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                    <a class="btn btn-secondary btn-rounded" href="documento"><i
                                             class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
                                 <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
@@ -208,16 +206,14 @@
                                         YUNGUYO</h5>
                                     <span class=" me-3 text-justify fs-6"><i
                                             class="fa-solid fa-arrow-right text-primary me-2"></i>
-                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
-                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
-                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
                                     </span>
                                 </div>
                             </div>
                             <div
                                 class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                    <a class="btn btn-secondary btn-rounded" href="documento"><i
                                             class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
                                 <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
@@ -237,16 +233,14 @@
                                         YUNGUYO</h5>
                                     <span class=" me-3 text-justify fs-6"><i
                                             class="fa-solid fa-arrow-right text-primary me-2"></i>
-                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
-                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
-                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
                                     </span>
                                 </div>
                             </div>
                             <div
                                 class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                    <a class="btn btn-secondary btn-rounded" href="documento"><i
                                             class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
                                 <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
@@ -269,16 +263,14 @@
                                         YUNGUYO</h5>
                                     <span class=" me-3 text-justify fs-6"><i
                                             class="fa-solid fa-arrow-right text-primary me-2"></i>
-                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
-                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
-                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
                                     </span>
                                 </div>
                             </div>
                             <div
                                 class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                    <a class="btn btn-secondary btn-rounded" href="documento"><i
                                             class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
                                 <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
@@ -298,16 +290,14 @@
                                         YUNGUYO</h5>
                                     <span class=" me-3 text-justify fs-6"><i
                                             class="fa-solid fa-arrow-right text-primary me-2"></i>
-                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
-                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
-                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
                                     </span>
                                 </div>
                             </div>
                             <div
                                 class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                    <a class="btn btn-secondary btn-rounded" href="documento"><i
                                             class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
                                 <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
@@ -327,16 +317,14 @@
                                         YUNGUYO</h5>
                                     <span class=" me-3 text-justify fs-6"><i
                                             class="fa-solid fa-arrow-right text-primary me-2"></i>
-                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
-                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
-                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
                                     </span>
                                 </div>
                             </div>
                             <div
                                 class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                    <a class="btn btn-secondary btn-rounded" href="documento"><i
                                             class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
                                 <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
@@ -359,16 +347,14 @@
                                         YUNGUYO</h5>
                                     <span class=" me-3 text-justify fs-6"><i
                                             class="fa-solid fa-arrow-right text-primary me-2"></i>
-                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
-                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
-                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
                                     </span>
                                 </div>
                             </div>
                             <div
                                 class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                    <a class="btn btn-secondary btn-rounded" href="documento"><i
                                             class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
                                 <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
@@ -388,16 +374,14 @@
                                         YUNGUYO</h5>
                                     <span class=" me-3 text-justify fs-6"><i
                                             class="fa-solid fa-arrow-right text-primary me-2"></i>
-                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
-                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
-                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
                                     </span>
                                 </div>
                             </div>
                             <div
                                 class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                    <a class="btn btn-secondary btn-rounded" href="documento"><i
                                             class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
                                 <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,
@@ -417,16 +401,14 @@
                                         YUNGUYO</h5>
                                     <span class=" me-3 text-justify fs-6"><i
                                             class="fa-solid fa-arrow-right text-primary me-2"></i>
-                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE
-                                            HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL
-                                            YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
+                                        <p class="texto m-0 d-inline-block">RELACION DE PLAZAS VACANTES POR BOLSA DE HORAS PARA CONTRATO DOCENTE DEL NIVEL SECUNDARIA EN EL AMBITO DE LA UGEL YUNGUYO DECRETO SUPREMO N°. 001-2023-MINEDU</p>
                                     </span>
                                 </div>
                             </div>
                             <div
                                 class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-secondary btn-rounded" href=""><i
+                                    <a class="btn btn-secondary btn-rounded" href="documento"><i
                                             class="fa-solid fa-eye me-2"></i>Ver Documento</a>
                                 </div>
                                 <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Lunes,

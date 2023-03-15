@@ -4,27 +4,22 @@
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Institucional</h5>
-                <a class="btn btn-link text-white-50" href="">Sobre Nosotros</a>
-                <a class="btn btn-link text-white-50" href="">Directorio Institucional</a>
-                <a class="btn btn-link text-white-50" href="">Documentos de Gestion</a>
+                <a class="btn btn-link text-white-50" href="nosotros">Sobre Nosotros</a>
+                <a class="btn btn-link text-white-50" href="directorio">Directorio Institucional</a>
+                <a class="btn btn-link text-white-50" href="documentosdegestion">Documentos de Gestion</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Enlaces Rapidos</h5>
-                <a class="btn btn-link text-white-50" href="">Convocatorias</a>
-                <a class="btn btn-link text-white-50" href="">Comunicados</a>
-                <a class="btn btn-link text-white-50" href="">Oficios Multiples</a>
+                <a class="btn btn-link text-white-50" href="convocatorias">Convocatorias</a>
+                <a class="btn btn-link text-white-50" href="comunicados">Comunicados</a>
+                <a class="btn btn-link text-white-50" href="oficiosMultiples">Oficios Multiples</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Contactenos</h5>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jr. Independencia N° 1034, Yunguyo</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51987654321</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>infougelyunguyo@ugelyunguyo.com</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-whatsapp"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
+                
             </div>
             <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-center"> 
                 <a href="#" id="libro"><img src="./public/img/icons/libro.png" class="libro__re" alt="" width="160"></a>
@@ -32,9 +27,9 @@
         </div>
     </div>
     <div class="container">
-        <div class="copyright">
+        <div class="copyright d-flex justify-content-center">
             <div class="row justify-content-center">
-                <span>Copyright <i class="fa-regular fa-copyright me-3"></i> 2023 <a href="./">Unidad de Gestión Educativa Local Yunguyo</a></span>
+                <span>Copyright <i class="fa-regular fa-copyright w-auto"></i> 2023<a href="./"> Unidad de Gestión Educativa Local Yunguyo</a></span>
             </div>
         </div>
     </div>
