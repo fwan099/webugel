@@ -2,22 +2,44 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row bg-light">
-            <div class="col-lg-12 bg-light  mb-5">
-                <h5 class="text-primary text-center p-2 animated slideInLeft mb-0">Documento Actual</h5>
+            <div class="col-lg-12 bg-light  mb-1">
+                <h5 class="text-primary text-center p-3 animated slideInLeft mb-0">OFICIO MULTIPLE PARA PRUEBA DEL
+                    PORTAL WEB INSTITUCIONAL DE LA UGEL YUNGUYO</h5>
             </div>
-            <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.2s">
-                <iframe src="./public/docs/c1.pdf" frameborder="0" width="100%"  height="600px"></iframe>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <!--<iframe src="./public/docs/c1.pdf" frameborder="0" width="100%"  height="600px"></iframe>-->
+                <div style="text-align: center;" class="p-3">
+                    <iframe id="fraViewDocumentsPDFViewer" src="./public/pdfjs/web/viewer.html?file=../../docs/c2.pdf"
+                        width="100%" height="300px"></iframe>
+                </div>
             </div>
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="col-lg-8 wow fadeInUp p-3" data-wow-delay="0.4s">
                 <div class="row px-3">
-                    <h5 class="border-bottom-style pb-2 text-center">Buscar</h5>
+                    <h5 class="border-bottom-style pb-2 text-center">DETALLES</h5>
                     <div class="col-lg-12">
-                        <div class="input-group">
-                            <input type="text" class="form-control form-control-lg fs-6" id="txt_con" placeholder="Escribir...">
-                            <button type="button" class="btn btn-primary">
-                                <i class="fa-solid fa-magnifying-glass p-2 fs-6"></i>
-                            </button>
+                        <div class="mb-3">
+                            <span class="text-primary fw-bolder">
+                            <i class="fa-solid fa-bullhorn me-2"></i>Titulo:
+                            </span>
+                            <p class="text-justify">OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA UGEL YUNGUYO</p>
+                            <span class="text-primary fw-bolder">
+                                <i class="fa-solid fa-arrow-right me-2"></i>Descripción:
+                            </span>
+                            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsum
+                                quos
+                                quo assumenda dignissimos? Dicta, odit ipsum consectetur doloremque eos cumque adipisci
+                                asperiores quis? Ducimus veniam consequuntur est enim nesciunt? Lorem ipsum dolor sit
+                                amet
+                                consectetur adipisicing elit. Maiores soluta autem tenetur, ad quos expedita, asperiores
+                                accusantium tempore inventore sint totam at possimus quo earum repudiandae sit
+                                doloremque
+                                minus quod!</p>
+                            <span class="text-primary fw-bolder">
+                                <i class="fa-solid fa-calendar-days me-2"></i>Lunes, 08 Marzo 2023
+                            </span>
                         </div>
+                        <button class="btn btn-primary btn-rounded">Descargar</button>
+
                     </div>
                 </div>
             </div>

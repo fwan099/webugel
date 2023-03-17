@@ -10,3 +10,4 @@ for (let i = 0; i < textos.length; i++) {
         texto.textContent = nuevoContenido;
     }
 }
+

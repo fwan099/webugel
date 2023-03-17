@@ -17,7 +17,7 @@
                                 </p>
                                 <ul class="d-flex list-unstyled m-0">
                                     <li class="p-2"><i class="fa-solid fa-calendar-days me-2"></i>10 Marzo 2023</li>
-                                    <li class="p-2"><i class="fa-solid fa-eye me-2"></i>334 Vistas</li>
+                                    <li class="p-2"><a href="documento" class=""><i class="fa-solid fa-eye me-2"></i>Ver Documento</a></li>
                                 </ul>
 
                             </div>
@@ -37,7 +37,7 @@
                                 </p>
                                 <ul class="d-flex list-unstyled m-0">
                                     <li class="p-2"><i class="fa-solid fa-calendar-days me-2"></i>10 Marzo 2023</li>
-                                    <li class="p-2"><i class="fa-solid fa-eye me-2"></i>834 Vistas</li>
+                                    <li class="p-2"><a href="documento" class=""><i class="fa-solid fa-eye me-2"></i>Ver Documento</a></li>
                                 </ul>
 
                             </div>
@@ -57,7 +57,7 @@
                                 </p>
                                 <ul class="d-flex list-unstyled m-0">
                                     <li class="p-2"><i class="fa-solid fa-calendar-days me-2"></i>10 Marzo 2023</li>
-                                    <li class="p-2"><i class="fa-solid fa-eye me-2"></i>834 Vistas</li>
+                                    <li class="p-2"><a href="documento" class=""><i class="fa-solid fa-eye me-2"></i>Ver Documento</a></li>
                                 </ul>
 
                             </div>
@@ -77,7 +77,7 @@
                                 </p>
                                 <ul class="d-flex list-unstyled m-0">
                                     <li class="p-2"><i class="fa-solid fa-calendar-days me-2"></i>10 Marzo 2023</li>
-                                    <li class="p-2"><i class="fa-solid fa-eye me-2"></i>834 Vistas</li>
+                                    <li class="p-2"><a href="documento" class=""><i class="fa-solid fa-eye me-2"></i>Ver Documento</a></li>
                                 </ul>
 
                             </div>

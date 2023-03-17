@@ -428,7 +428,7 @@
 <!-- Testimonial Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
-        <h1 class="text-center mb-5">Enlaces de Interés</h1>
+        <h1 class="text-center mb-5">Enlaces de Interes</h1>
         <div class="owl-carousel testimonial-carousel">
             <div class="testimonial-item bg-light rounded p-4">
                 <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
