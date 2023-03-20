@@ -13,9 +13,9 @@ if (!isset($_SESSION['S_ID'])) {
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <meta name="description" content="Nifty is a responsive admin dashboard template based on Bootstrap 5 framework. There are a lot of useful components.">
-    <title>Sistema Tramite Documentario | MPY</title>
+    <title>Panel | Portal Web</title>
 
-    <link rel="shortcut icon" href="assets/img/default.png" id="icon_pestaña" />
+    <link rel="shortcut icon" href="../../public/img/icon.png" id="icon_pestaña" />
     <!-- STYLESHEETS -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--- -->
 
@@ -102,11 +102,11 @@ if (!isset($_SESSION['S_ID'])) {
 
                         <!-- Brand logo -->
                         <a href="#" class="brand-img stretched-link">
-                            <img src="assets/img/default.png" alt="Nifty Logo" id="logo_header" class="Nifty logo" width="40" height="40">
+                            <img src="../../public/img/icon.png" alt="Nifty Logo" id="logo_header" class="Nifty logo" width="40" height="40">
                         </a>
 
                         <!-- Brand title -->
-                        <div class="brand-title">SIS Tramite</div>
+                        <div class="brand-title">Portal Web</div>
 
                         <!-- You can also use IMG or SVG instead of a text element. -->
 
@@ -179,11 +179,6 @@ if (!isset($_SESSION['S_ID'])) {
                             </div>
                         </div>
                         <!-- End - User dropdown -->
-                        <button class="sidebar-toggler header__btn btn btn-icon btn-sm" type="button" aria-label="Sidebar button">
-                            <i class="demo-psi-dot-vertical"></i>
-                        </button>
-
-
                     </div>
                 </div>
             </div>
@@ -238,27 +233,53 @@ if (!isset($_SESSION['S_ID'])) {
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a onclick="cargar_contenido('content','modules/tramite/tramite.php')" class="nav-link mininav-toggle"><i class="bi bi-archive fs-5 me-2"></i>
+                                    <a onclick="cargar_contenido('content','modules/comunicados/comunicados.php')" class="nav-link mininav-toggle"><i class="bi bi-archive fs-5 me-2"></i>
 
-                                        <span class="nav-label mininav-content ms-1">Tramite</span>
+                                        <span class="nav-label mininav-content ms-1">Comunicados</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a onclick="cargar_contenido('content','modules/usuario/usuario.php')" class="nav-link mininav-toggle"><i class="bi bi-people fs-5 me-2"></i>
+                                    <a onclick="cargar_contenido('content','modules/oficios/oficios.php')" class="nav-link mininav-toggle"><i class="bi bi-people fs-5 me-2"></i>
 
-                                        <span class="nav-label mininav-content ms-1">Usuario</span>
+                                        <span class="nav-label mininav-content ms-1">Oficios Multiples</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item has-sub">
+                                    <a href="#" class="mininav-toggle nav-link collapsed"><i class="demo-pli-split-vertical-2 fs-5 me-2"></i>
+                                        <span class="nav-label ms-1">Convocatorias</span>
+                                    </a>
+                                    <!-- Layouts submenu list -->
+                                    <ul class="mininav-content nav collapse">
+                                        <li class="nav-item">
+                                            <a onclick="cargar_contenido('content','modules/convocatorias/convocatoriasCas.php')" class="nav-link">Convocatorias CAS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a onclick="cargar_contenido('content','modules/convocatorias/convocatoriasDocentes.php')" class="nav-link">Convocatorias Docentes</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a onclick="cargar_contenido('content','modules/convocatorias/convocatoriasAuxiliares.php')" class="nav-link">Convocatorias Auxiliares</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a onclick="cargar_contenido('content','modules/convocatorias/convocatoriasDirectivos.php')" class="nav-link">Convocatorias Directivos</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a onclick="cargar_contenido('content','modules/convocatorias/convocatoriasCap.php')" class="nav-link">Convocatorias CAP</a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- END : Layouts submenu list -->
+
+                                </li>
+                                <li class="nav-item">
+                                    <a onclick="cargar_contenido('content','modules/slider/slider.php')" class="nav-link mininav-toggle"><i class="bi bi-file-earmark-text fs-5 me-2"></i>
+
+                                        <span class="nav-label mininav-content ms-1">Slider Imagenes</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a onclick="cargar_contenido('content','modules/area/area.php')" class="nav-link mininav-toggle"><i class="bi bi-grid-1x2 fs-5 me-2"></i>
+                                    <a onclick="cargar_contenido('content','modules/usuario/usuario.php')" class="nav-link mininav-toggle"><i class="bi bi-journal-bookmark fs-5 me-2"></i>
 
-                                        <span class="nav-label mininav-content ms-1">Area</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a onclick="cargar_contenido('content','modules/documento/tipo_documento.php')" class="nav-link mininav-toggle"><i class="bi bi-file-earmark-text fs-5 me-2"></i>
-
-                                        <span class="nav-label mininav-content ms-1">Tipo documento</span>
+                                        <span class="nav-label mininav-content ms-1">Usuarios</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -268,15 +289,9 @@ if (!isset($_SESSION['S_ID'])) {
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a onclick="cargar_contenido('content','modules/tupa/tupa.php')" class="nav-link mininav-toggle"><i class="bi bi-journal-bookmark fs-5 me-2"></i>
+                                    <a onclick="cargar_contenido('content','modules/area/area.php')" class="nav-link mininav-toggle"><i class="bi bi-journal-bookmark fs-5 me-2"></i>
 
-                                        <span class="nav-label mininav-content ms-1">TUPA</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a onclick="cargar_contenido('content','modules/horario/horario.php')" class="nav-link mininav-toggle"><i class="bi bi-alarm fs-5 me-2"></i>
-
-                                        <span class="nav-label mininav-content ms-1">Horario</span>
+                                        <span class="nav-label mininav-content ms-1">Areas y Oficinas</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -286,9 +301,15 @@ if (!isset($_SESSION['S_ID'])) {
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a onclick="cargar_contenido('content','modules/comunicados/comunicados.php')" class="nav-link mininav-toggle"><i class="bi bi-megaphone fs-5 me-2"></i>
+                                    <a onclick="cargar_contenido('content','modules/modal/modal.php')" class="nav-link mininav-toggle"><i class="bi bi-megaphone fs-5 me-2"></i>
 
-                                        <span class="nav-label mininav-content ms-1">Comunicados</span>
+                                        <span class="nav-label mininav-content ms-1">Comunicado Modal</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a onclick="cargar_contenido('content','modules/directorio/directorio.php')" class="nav-link mininav-toggle"><i class="bi bi-megaphone fs-5 me-2"></i>
+
+                                        <span class="nav-label mininav-content ms-1">Directorio</span>
                                     </a>
                                 </li>
                                 <!-- END : Regular menu link -->
@@ -342,89 +363,6 @@ if (!isset($_SESSION['S_ID'])) {
         </nav>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <!-- END - MAIN NAVIGATION -->
-        <aside class="sidebar">
-            <div class="sidebar__inner scrollable-content">
-
-                <!-- This element is only visible when sidebar Stick mode is active. -->
-                <div class="sidebar__stuck align-item-center mb-3 px-4">
-                    <p class="m-0 text-danger">Close the sidebar =&gt;</p>
-                    <button type="button" class="sidebar-toggler btn-close btn-lg rounded-circle ms-auto" aria-label="Close"></button>
-                </div>
-
-                <!-- Sidebar tabs nav -->
-                <div class="sidebar__wrap">
-                    <nav class="px-3">
-                        <div class="nav nav-callout nav-fill flex-nowrap" id="nav-tab" role="tablist">
-                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-settings" type="button" role="tab" aria-controls="nav-settings" aria-selected="false">
-                                <i class="d-block demo-pli-wrench fs-3 mb-2"></i>
-                                <span>Ajustes</span>
-                            </button>
-                        </div>
-                    </nav>
-                </div>
-                <!-- End - Sidebar tabs nav -->
-
-                <!-- Sideabar tabs content -->
-                <div class="tab-content sidebar__wrap" id="nav-tabContent">
-                    <!-- Settings content -->
-                    <div id="nav-settings" class="tab-pane fade py-4 show active" role="tabpanel" aria-labelledby="nav-settings-tab">
-                        <!-- Account settings -->
-                        <h5 class="px-3">Ajustes de Tema</h5>
-                        <!-- End - Account settings -->
-                        <div class="row list-group list-group-borderless ">
-                            <div class="col-lg-12 list-group-item mb-1">
-
-                                <div class="d-flex align-items-start position-relative">
-                                    <div class="flex-shrink-0 me-3">
-                                        <div class="_dm-color-box bg-primary"></div>
-                                    </div>
-                                    <div class="flex-grow-1 ">
-                                        <a href="#" data-dir="dark" onclick="llamar_check('Tema Original')" data-hd="expanded" class="_dm-themeColors schemes-btn h6 d-block mb-0 stretched-link text-decoration-none">Tema
-                                            Original</a>
-                                        <small class="text-muted">Tema del sistema por defecto.</small>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-12  list-group-item mb-1">
-
-                                <div class="d-flex align-items-start position-relative">
-                                    <div class="flex-shrink-0 me-3">
-                                        <div class="_dm-color-box bg-light"></div>
-                                    </div>
-                                    <div class="flex-grow-1 ">
-                                        <a href="#" onclick="llamar_check('Tema Claro')" id="txt_tema" data-dir="light" data-single="true" class="_dm-themeColors schemes-btn h6 d-block mb-0 stretched-link text-decoration-none">Tema
-                                            Claro</a>
-                                        <small class="text-muted">Tema del sistema Claro.</small>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-12 list-group-item mb-1">
-
-                                <div class="d-flex align-items-start position-relative">
-                                    <div class="flex-shrink-0 me-3">
-                                        <div class="_dm-color-box bg-dark"></div>
-                                    </div>
-                                    <div class="flex-grow-1 ">
-                                        <a href="#" onclick="llamar_check('Tema Oscuro')" data-dir="dark" data-hd="expanded" class="_dm-themeColors schemes-btn h6 d-block mb-0 stretched-link text-decoration-none">Tema
-                                            Oscuro</a>
-                                        <small class="text-muted">Tema del sistema Oscuro.</small>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- End - Settings content -->
-
-                </div>
-                <!-- End - Sidebar tabs content -->
-
-            </div>
-        </aside>
-
 
     </div>
 
@@ -498,8 +436,6 @@ if (!isset($_SESSION['S_ID'])) {
     <script>
         $('.mininav-toggle.nav-link').click(function() {
             $('.mininav-toggle.nav-link').removeClass('active');
-            $('.mininav-toggle.nav-link').addClass('collapsed');
-            $('.mininav-content').removeClass('show');
             $(this).addClass('active');
         });
         $('.mininav-content li a').click(function() {
@@ -538,16 +474,6 @@ if (!isset($_SESSION['S_ID'])) {
                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"
             }
         }
-        $(document).ready(function() {
-
-
-
-            mostrar_datos_emmpresa_interior();
-            cargar_comunicado();
-            llamar_tema();
-
-
-        });
         if (localStorage.cssB) {
             document.getElementById('bootstrapcss').href = localStorage.cssB;
             document.getElementById('niftycss').href = localStorage.cssN;
@@ -615,7 +541,7 @@ if (!isset($_SESSION['S_ID'])) {
     </script>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <!-- JAVASCRIPTS -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <script src="https://kit.fontawesome.com/bd7b24f1e0.js" crossorigin="anonymous"></script>
@@ -637,10 +563,6 @@ if (!isset($_SESSION['S_ID'])) {
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="../public/DataTables/datatables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="../public/js/perfil.js?rev=<?php echo time(); ?>"></script>
-    <script src="../public/js/entidad.js?rev=<?php echo time(); ?>"></script>
-    <script src="../public/js/inicio.js?rev=<?php echo time(); ?>"></script>
-
 
 </body>
 
