@@ -62,7 +62,7 @@
                 <li class="social-item"><a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
                 <li class="social-item"><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                 <li class="social-item"><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
-                <li class="social-item"><a href="#"><i class="fas fa-user-cog"></a></i>
+                <li class="social-item"><a href="admin"><i class="fas fa-user-cog"></a></i>
 
             </ul>
 

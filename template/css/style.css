@@ -295,15 +295,42 @@
 
 /*** Category ***/
 .cat-item {
-    display: block;
+    display: flex;
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    border: 1px solid transparent;
+    border: 6px solid white;
     transition: .5s;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
-
 .cat-item:hover {
-    border-color: rgba(0, 0, 0, .08);
-    box-shadow: none;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.services__item1{
+    background-color:#606eb9 ;
+}
+.services__item2{
+    background-color:#02a5a5 ;
+}
+.services__item3{
+    background-color:#0484cf ;
+}
+.services__item4{
+    background-color:#23a455;
+}
+.services__item5{
+    background-color:#ed9512 ;
+}
+.services__item6{
+    background-color:#d53f3f ;
 }
 
 

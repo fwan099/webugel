@@ -60,7 +60,7 @@ if(isset($_GET["url"])){
             include "view/modules/documento/".$_GET["url"].".php";
             break;
         case "admin":
-            include "admin/index.php";
+            header('Location: admin/index.php');
             break;
         default:
             include "view/modules/error/404.php";

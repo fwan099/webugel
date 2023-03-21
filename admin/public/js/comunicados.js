@@ -48,15 +48,16 @@ $('#tabla_comunicado').on('click', '.mas', function () {
         data = tbl_comunicado.row(this).data();
     }
     $("#modal_mas").modal('show');
-    document.getElementById('lbl_titulo_datos').innerHTML = "Datos del Expediente Nro: " + data.documento_id;
-    document.getElementById('txt_ndocumento').value = data.doc_nrodocumento;
-    document.getElementById('txt_folio').value = data.doc_folio;
-    document.getElementById('txt_asunto').value = data.doc_asunto;
-    document.getElementById('txt_proc').value = data.tupa_descripcion;
-    document.getElementById('txt_idtupaver').value = data.tupa_id;
-    document.getElementById('txt_fechareg').value = data.doc_fecharegistro;
-    $('#select_area_p').select2().val(data.area_origen).trigger('change.select2');
-    $('#select_area_d').select2().val(data.area_destino).trigger('change.select2');
-    $('#select_tipo').select2().val(data.tipodocumento_id).trigger('change.select2');
-
+    document.getElementById('txt_idcom_mas').value = data.comunicado_id;
+    document.getElementById('txt_area_mas').value = data.area_nombre;
+    document.getElementById('txt_fecha_mas').value = data.com_feccreacion;
+    document.getElementById('txt_estado_mas').value = data.com_estado;
+    document.getElementById('txt_titulo_mas').value = data.com_titulo;
+    document.getElementById('txt_desc_mas').value = data.com_descripcion;
+    document.getElementById('img_prev_mas').src ="../"+ data.com_imgprev;
 });
+
+function AbrirRegistro() {
+    $("#modal_registro").modal({  keyborad: false })
+    $("#modal_registro").modal('show');
+}

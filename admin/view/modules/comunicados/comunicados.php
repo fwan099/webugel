@@ -55,7 +55,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="modal_registro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">REGISTRO DE AREA</h5>
@@ -63,10 +63,19 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-12">
-                        <label for="">Area (*)</label>
-                        <input type="text" class="form-control" id="txt_area">
+                    <div class="col-lg-12 mb-3">
+                        <label for="">Titulo (*)</label>
+                        <input type="text" class="form-control" id="txt_titulo">
                     </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="">Descripción (*)</label>
+                        <textarea id="txt_desc_mas" rows="3" class="form-control" style="resize:none;"></textarea>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="">Cargar Documento (*)</label>
+                        <input type="file" class="form-control" id="txt_archivo">
+                    </div>
+                    
 
                 </div>
             </div>
@@ -106,29 +115,34 @@
                                     <div class="row">
                                         <div class="col-lg-6 mb-3">
                                             <label for="">Area Procedencia (*)</label>
-                                            <input type="text" class="form-control" id="txt_area_mas">
+                                            <input type="text" class="form-control" id="txt_area_mas" readonly>
+                                            <input type="text" class="form-control" id="txt_idcom_mas" hidden readonly>
                                         </div>
-                                        <div class="col-lg-6 mb-3">
+                                        <div class="col-lg-3 mb-3">
                                             <label for="">Fecha Creación (*)</label>
-                                            <input type="text" class="form-control" id="txt_fecha_mas">
+                                            <input type="text" class="form-control" id="txt_fecha_mas" readonly>
+                                        </div>
+                                        <div class="col-lg-3 mb-3">
+                                            <label for="">Estado (*)</label>
+                                            <input type="text" class="form-control" id="txt_estado_mas" readonly>
                                         </div>
                                         <div class="col-lg-12 mb-3">
                                             <label for="">Titulo (*)</label>
-                                            <input type="text" class="form-control" id="txt_titulo_mas">
+                                            <input type="text" class="form-control" id="txt_titulo_mas" readonly>
                                         </div>
                                         <div class="col-lg-12 mb-3">
                                             <label for="">Descripción (*)</label>
-                                            <textarea  id="txt_desc_mas" rows="3" class="form-control" style="resize:none;"></textarea>
+                                            <textarea id="txt_desc_mas" rows="3" class="form-control" style="resize:none;" readonly></textarea>
                                         </div>
-                                        <div class="col-lg-6 mb-3">
+                                        <div class="col-lg-12 mb-3 d-flex flex-column">
                                             <label for="">Vista Previa (*)</label>
-                                            <img src="" alt="">
+                                            <img src="" alt="" id="img_prev_mas" style="width: 160px; height: 160px;" class="align-self-center rounded rounded-2 border border-2 border-dark">
                                         </div>
                                     </div>
                                 </div>
                                 <div id="_dm-coTabsBaseProfile2" class="tab-pane fade" role="tabpanel" aria-labelledby="profile-tab">
                                     <div class="row">
-                                    <iframe id="fraViewDocumentsPDFViewer" src="../public/pdfjs/web/viewer.html?file=../../../controller/comunicado/docs/c3.pdf" width="100%" height="300px"></iframe>
+                                        <iframe id="fraViewDocumentsPDFViewer" src="../public/pdfjs/web/viewer.html?file=../../../controller/comunicado/docs/c3.pdf" width="100%" height="460px"></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +167,7 @@
 
 
     var myModal = document.getElementById('modal_registro');
-    var myInput = document.getElementById('txt_area');
+    var myInput = document.getElementById('txt_titulo');
 
     myModal.addEventListener('shown.bs.modal', function() {
         myInput.focus()
