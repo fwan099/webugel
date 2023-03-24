@@ -101,6 +101,9 @@ if (isset($_SESSION['S_ID'])) {
     <!-- Nifty JS [ OPTIONAL ] -->
     <script src="./view/assets/js/nifty.js" defer></script>
 
+    <script src="./view/assets/pages/file-uploads.js" defer=""></script>
+
+
     <!-- Nifty Settings [ DEMO ] -->
     <script src="./view/assets/js/demo-purpose-only.js" defer></script>
 

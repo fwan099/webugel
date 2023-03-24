@@ -33,6 +33,7 @@ if (!isset($_SESSION['S_ID'])) {
     <!-- Nifty Demo Icons [ OPTIONAL ] -->
     <link rel="stylesheet" href="./assets/css/demo-purpose/demo-icons.min.css">
 
+
     <!-- Demo purpose CSS [ DEMO ] -->
     <link rel="stylesheet" href="./assets/css/demo-purpose/demo-settings.min.css">
 
@@ -553,8 +554,10 @@ if (!isset($_SESSION['S_ID'])) {
     <!-- Nifty JS [ OPTIONAL ] -->
     <script src="./assets/js/nifty.js" defer></script>
 
+    
     <!-- Nifty Settings [ DEMO ] -->
     <script src="./assets/js/demo-purpose-only.js" defer></script>
+  
 
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 
@@ -563,7 +566,7 @@ if (!isset($_SESSION['S_ID'])) {
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="../public/DataTables/datatables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
+    
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 <script src="../public/js/comunicados.js?rev=<?php echo time(); ?>"></script>
+
 <div class="content__boxed">
     <div class="content__wrap">
         <nav aria-label="breadcrumb" class="pb-2">
@@ -58,7 +59,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">REGISTRO DE AREA</h5>
+                <h5 class="modal-title" id="exampleModalLabel">REGISTRO DE COMUNICADO</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -69,24 +70,68 @@
                     </div>
                     <div class="col-lg-12 mb-3">
                         <label for="">Descripción (*)</label>
-                        <textarea id="txt_desc_mas" rows="3" class="form-control" style="resize:none;"></textarea>
+                        <textarea id="txt_desc" rows="3" class="form-control" style="resize:none;"></textarea>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Cargar Documento (*)</label>
-                        <input type="file" class="form-control" id="txt_archivo">
+                        <label for="">Subir Vista Previa PNG/JPG (*)</label>
+                        <input type='file' class='form-control' id='txt_img_prev'>
                     </div>
-                    
-
+                    <div class="col-12 mb-3">
+                        <label for="">Cargar Documento PDF (*)</label>
+                        <input type="file" class="form-control" id="txt_documento">
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-outline-secondary" onclick="Registrar_Area()">Registrar</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="Registrar_Comunicados()">Registrar</button>
             </div>
         </div>
     </div>
 </div>
-
+<!-- Modal -->
+<div class="modal fade" id="modal_editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">EDITAR COMUNICADO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12 mb-3">
+                        <label for="">Titulo (*)</label>
+                        <input type="text" class="form-control" id="txt_titulo_edit">
+                        <input type="text" hidden id="txt_id_edit">
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="">Descripción (*)</label>
+                        <textarea id="txt_desc_edit" rows="3" class="form-control" style="resize:none;"></textarea>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="">Subir Vista Previa PNG/JPG (*)</label>
+                        <input type='file' class='form-control' id='txt_img_prev_edit'>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="">Cargar Documento PDF (*)</label>
+                        <input type="file" class="form-control" id="txt_documento_edit">
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="">Estado (*)</label>
+                        <select name="" id="select_estatus" class="form-select js-example-basic-single">
+                            <option value="ACTIVO">ACTIVO</option>
+                            <option value="INACTIVO">INACTIVO</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="Modificar_Comunicado()">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Modal -->
 <div class="modal fade" id="modal_mas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -141,8 +186,9 @@
                                     </div>
                                 </div>
                                 <div id="_dm-coTabsBaseProfile2" class="tab-pane fade" role="tabpanel" aria-labelledby="profile-tab">
-                                    <div class="row">
-                                        <iframe id="fraViewDocumentsPDFViewer" src="../public/pdfjs/web/viewer.html?file=../../../controller/comunicado/docs/c3.pdf" width="100%" height="460px"></iframe>
+                                    <div class="row" >
+                                        <iframe src="" width="100%" height="460px" frameborder="0" id="pdf_doc_mas"></iframe>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -170,8 +216,8 @@
     var myInput = document.getElementById('txt_titulo');
 
     myModal.addEventListener('shown.bs.modal', function() {
-        myInput.focus()
-    })
+        myInput.focus();
+    });
     $('#modal_editar').on('shown.bs.modal', function(event) {
 
         $('.js-example-basic-single').select2({
@@ -180,5 +226,46 @@
             width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
             placeholder: $(this).data('placeholder'),
         });
-    })
+    });
+    $('#txt_img_prev').on('change', function() { 
+        var ext = $(this).val().split('.').pop();
+        if ($(this).val() != '') {
+            if (ext == "png" || ext == "jpg") {
+                if ($(this)[0].files[0].size > 8048576) {
+                    $("#txt_img_prev").val("");
+                    Swal.fire("El archivo selecionado es demasiado pesado",
+                        "<label style='color:#9B0000;'>seleccionar un archivo mas liviano</label>",
+                        "warning");
+
+                } else {
+                    //$("#btn_subir").attr("disabled",false);
+                }
+                //$("#txtformato").val(ext);
+            } else {
+                $("#txt_img_prev").val("");
+                Swal.fire("Mensaje de Error", "Extensión no permitida: " + ext, "error");
+            }
+        }
+    });
+    $('#txt_documento').on('change', function() { 
+        var ext = $(this).val().split('.').pop();
+        if ($(this).val() != '') {
+            if (ext == "pdf" || ext == "PDF") {
+                if ($(this)[0].files[0].size > 8048576) {
+                    $("#txt_img_prev").val("");
+                    Swal.fire("El archivo selecionado es demasiado pesado",
+                        "<label style='color:#9B0000;'>seleccionar un archivo mas liviano</label>",
+                        "warning");
+
+                } else {
+                    //$("#btn_subir").attr("disabled",false);
+                }
+                //$("#txtformato").val(ext);
+            } else {
+                $("#txt_documento").val("");
+                Swal.fire("Mensaje de Error", "Extensión no permitida: " + ext, "error");
+            }
+        }
+    });
+
 </script>

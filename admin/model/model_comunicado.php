@@ -14,26 +14,33 @@
             return $arreglo;
             conexionDB::cerrar_conexion();
         }
-        public function Registrar_Area($area){
+        public function Registrar_Comunicado($titulo,$descripcion,$rutaImg,$ruta,$idarea){
             $c = conexionDB::conexionPDO();
-            $sql = "CALL SP_REGISTRAR_AREA(?)";
+            $sql = "CALL SP_REGISTRAR_COMUNICADO(?,?,?,?,?)";
             $arreglo = array();
             $query  = $c->prepare($sql);
-            $query->bindParam(1,$area); 
+            $query->bindParam(1,$titulo); 
+            $query->bindParam(2,$descripcion);
+            $query->bindParam(3,$rutaImg);
+            $query->bindParam(4,$ruta);
+            $query->bindParam(5,$idarea);
             $query->execute();
             if($row = $query->fetchColumn()){
                 return $row;
             }
             conexionDB::cerrar_conexion();
         }
-        public function Modificar_Area($id,$are,$esta){
+        public function Modificar_Comunicado($id,$titulo,$descripcion,$rutaImg,$ruta,$estado){
             $c = conexionDB::conexionPDO();
-            $sql = "CALL SP_MODIFICAR_AREA(?,?,?)";
+            $sql = "CALL SP_MODIFICAR_COMUNICADO(?,?,?,?,?,?)";
             $arreglo = array();
             $query  = $c->prepare($sql);
             $query->bindParam(1,$id); 
-            $query->bindParam(2,$are);
-            $query->bindParam(3,$esta);
+            $query->bindParam(2,$titulo);
+            $query->bindParam(3,$descripcion);
+            $query->bindParam(4,$rutaImg);
+            $query->bindParam(5,$ruta);
+            $query->bindParam(6,$estado);
             $query->execute();
             if($row = $query->fetchColumn()){
                 return $row;

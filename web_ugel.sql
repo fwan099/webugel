@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 20/03/2023 18:31:13
+ Date: 24/03/2023 17:49:37
 */
 
 SET NAMES utf8mb4;
@@ -43,7 +43,7 @@ DROP TABLE IF EXISTS `comunicados`;
 CREATE TABLE `comunicados`  (
   `comunicado_id` int NOT NULL AUTO_INCREMENT,
   `com_descripcion` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
-  `com_feccreacion` date NULL DEFAULT NULL,
+  `com_feccreacion` datetime NULL DEFAULT NULL,
   `com_imgprev` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   `com_documento` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   `area_origen_id` int NULL DEFAULT NULL,
@@ -52,12 +52,18 @@ CREATE TABLE `comunicados`  (
   PRIMARY KEY (`comunicado_id`) USING BTREE,
   INDEX `area_origen_id`(`area_origen_id` ASC) USING BTREE,
   CONSTRAINT `comunicados_ibfk_1` FOREIGN KEY (`area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of comunicados
 -- ----------------------------
-INSERT INTO `comunicados` VALUES (1, 'descr 1', '2023-03-20', NULL, NULL, 1, 'OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA UGEL YUNGUYO OFICIO MULTIPLE PARA PRUEBA DEL PORTAL WEB INSTITUCIONAL DE LA UGEL YUNGUYO', NULL);
+INSERT INTO `comunicados` VALUES (13, 'DDDDDDDDDDDDDD', '2023-03-24 10:00:05', 'controller/comunicado/img/IMG243202310330.PNG', 'controller/comunicado/docs/ARCH243202310330.PDF', 1, 'DDDDDDDDDD', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (14, 'DDDDDDDDDDDDDD', '2023-03-24 10:02:01', NULL, 'controller/comunicado/docs/', 1, 'DDDDDDDDDD', 'INACTIVO');
+INSERT INTO `comunicados` VALUES (15, 'RRRRRRRRRR', '2023-03-24 10:02:16', 'controller/comunicado/img/IMG243202310206.PNG', 'controller/comunicado/docs/ARCH243202310206.PDF', 1, 'RRRRRRR', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (16, 'TTTTTTTTTT', '2023-03-24 10:05:29', 'controller/comunicado/img/IMG243202310742.PNG', 'controller/comunicado/docs/ARCH243202310742.PDF', 1, 'TTTTTT', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (17, 'QAWRQWR', '2023-03-24 10:10:32', 'controller/comunicado/img/IMG243202310920.PNG', 'controller/comunicado/docs/ARCH243202310920.PDF', 1, 'FREREW', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (18, 'HUAYNAPATA UCHARICO', '2023-03-24 10:10:58', 'controller/comunicado/img/IMG243202311728.PNG', 'controller/comunicado/docs/ARCH243202311728.PDF', 1, 'FREDDY WALTER', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (19, 'SFASF', '2023-03-24 10:11:56', 'controller/comunicado/img/IMG243202311200.PNG', 'controller/comunicado/docs/ARCH243202311200.PDF', 1, 'TTRTRTR', 'ACTIVO');
 
 -- ----------------------------
 -- Table structure for empleado
@@ -223,6 +229,7 @@ FROM
 	area
 	ON 
 		comunicados.area_origen_id = area.area_cod
+		ORDER BY com_feccreacion DESC
 ;;
 delimiter ;
 
@@ -302,6 +309,38 @@ ELSE
 		SELECT 2;
 	END IF;
 END IF;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_MODIFICAR_COMUNICADO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_MODIFICAR_COMUNICADO`;
+delimiter ;;
+CREATE PROCEDURE `SP_MODIFICAR_COMUNICADO`(IN ID INT,IN TITULO VARCHAR(255),IN DESCRIPCION VARCHAR(255),IN RUTAIMG VARCHAR(255),IN RUTADOC VARCHAR(255),IN ESTADO VARCHAR(40))
+BEGIN
+DECLARE RUTAACTUALDOC VARCHAR(255);
+DECLARE RUTAACTUALIMG VARCHAR(255);
+DECLARE RUTANUEVADOC VARCHAR(255);
+DECLARE RUTANUEVAIMG VARCHAR(255);
+
+SET @RUTANUEVAIMG = RUTAIMG;
+SET @RUTANUEVADOC = RUTADOC;
+
+SET @RUTAACTUALIMG:= (SELECT comunicados.com_imgprev FROM comunicados WHERE comunicado_id=ID);
+SET @RUTAACTUALDOC:= (SELECT comunicados.com_documento FROM comunicados WHERE comunicado_id=ID);
+
+IF RUTAIMG = '' THEN
+	SET @RUTANUEVAIMG= @RUTAACTUALIMG;
+END IF;
+
+IF RUTADOC = '' THEN
+	SET @RUTANUEVADOC= @RUTAACTUALDOC;
+END IF;
+
+	UPDATE comunicados SET com_titulo = TITULO, com_descripcion = DESCRIPCION, com_imgprev = @RUTANUEVAIMG, com_documento = @RUTANUEVADOC, com_estado = ESTADO WHERE comunicado_id = ID;
+	SELECT 1;
 END
 ;;
 delimiter ;
@@ -393,6 +432,19 @@ IF @CANTIDAD = 0 THEN
 ELSE
 	SELECT 2;
 END IF;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_REGISTRAR_COMUNICADO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_REGISTRAR_COMUNICADO`;
+delimiter ;;
+CREATE PROCEDURE `SP_REGISTRAR_COMUNICADO`(IN TITULO VARCHAR(255),IN DESCRIPCION VARCHAR(255),IN RUTAIMG VARCHAR(255),IN RUTADOC VARCHAR(255),IN IDAREA INT)
+BEGIN
+	INSERT INTO comunicados(com_titulo,com_descripcion,com_imgprev,com_documento,com_feccreacion,com_estado,area_origen_id)VALUES(TITULO,DESCRIPCION,RUTAIMG,RUTADOC,NOW(),'ACTIVO',IDAREA);
+	SELECT 1;
 END
 ;;
 delimiter ;

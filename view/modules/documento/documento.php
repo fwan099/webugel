@@ -9,8 +9,7 @@
             <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                 <!--<iframe src="./public/docs/c1.pdf" frameborder="0" width="100%"  height="600px"></iframe>-->
                 <div style="text-align: center;" class="p-3">
-                    <iframe id="fraViewDocumentsPDFViewer" src="./public/pdfjs/web/viewer.html?file=../../docs/c2.pdf"
-                        width="100%" height="300px"></iframe>
+                <img src="./public/docs/preview-img-docs/c2.jpg" style="width: 100%; height: 300px;" class=" img-fluid border rounded">
                 </div>
             </div>
             <div class="col-lg-8 wow fadeInUp p-3" data-wow-delay="0.4s">
