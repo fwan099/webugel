@@ -1,6 +1,6 @@
 <?php
-    require "../../model/model_comunicado.php";
-    $MU = new Modelo_Comunicado();//Instaciamos
+    require "../../model/model_oficio.php";
+    $MU = new Modelo_Oficio();//Instaciamos
 
     $titulo =strtoupper(htmlspecialchars($_POST['titulo'],ENT_QUOTES,'UTF-8'));
     $descripcion =strtoupper(htmlspecialchars($_POST['descripcion'],ENT_QUOTES,'UTF-8'));
@@ -8,15 +8,16 @@
     $nombrearchivoImg =strtoupper(htmlspecialchars($_POST['nombrearchivoImg'],ENT_QUOTES,'UTF-8'));
     $idarea =strtoupper(htmlspecialchars($_POST['idarea'],ENT_QUOTES,'UTF-8'));
 
-    $ruta = 'controller/comunicado/docs/'.$nombrearchivo;
+    $ruta = 'controller/oficio/docs/'.$nombrearchivo;
     $rutaImg;
     if (empty($nombrearchivoImg)) {
-        $rutaImg = "controller/comunicado/img/default.png";
+        $rutaImg = "controller/oficio/img/default.png";
     } else {
-        $rutaImg = 'controller/comunicado/img/' . $nombrearchivoImg;
+        $rutaImg = 'controller/oficio/img/' . $nombrearchivoImg;
     }
+    
 
-    $consulta = $MU->Registrar_Comunicado($titulo,$descripcion,$rutaImg,$ruta,$idarea);
+    $consulta = $MU->Registrar_Oficio($titulo,$descripcion,$rutaImg,$ruta,$idarea);
     echo $consulta;
     if($consulta){
         if(move_uploaded_file($_FILES['archivoobj']['tmp_name'],"docs/".$nombrearchivo));

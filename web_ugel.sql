@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost_3306
+ Source Server         : localhost
  Source Server Type    : MySQL
  Source Server Version : 100427 (10.4.27-MariaDB)
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 24/03/2023 17:49:37
+ Date: 25/03/2023 21:38:16
 */
 
 SET NAMES utf8mb4;
@@ -27,7 +27,7 @@ CREATE TABLE `area`  (
   `area_fecha_registro` timestamp NULL DEFAULT current_timestamp,
   `area_estado` enum('ACTIVO','INACTIVO') CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT 'ACTIVO',
   PRIMARY KEY (`area_cod`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of area
@@ -52,18 +52,18 @@ CREATE TABLE `comunicados`  (
   PRIMARY KEY (`comunicado_id`) USING BTREE,
   INDEX `area_origen_id`(`area_origen_id` ASC) USING BTREE,
   CONSTRAINT `comunicados_ibfk_1` FOREIGN KEY (`area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of comunicados
 -- ----------------------------
-INSERT INTO `comunicados` VALUES (13, 'DDDDDDDDDDDDDD', '2023-03-24 10:00:05', 'controller/comunicado/img/IMG243202310330.PNG', 'controller/comunicado/docs/ARCH243202310330.PDF', 1, 'DDDDDDDDDD', 'ACTIVO');
-INSERT INTO `comunicados` VALUES (14, 'DDDDDDDDDDDDDD', '2023-03-24 10:02:01', NULL, 'controller/comunicado/docs/', 1, 'DDDDDDDDDD', 'INACTIVO');
 INSERT INTO `comunicados` VALUES (15, 'RRRRRRRRRR', '2023-03-24 10:02:16', 'controller/comunicado/img/IMG243202310206.PNG', 'controller/comunicado/docs/ARCH243202310206.PDF', 1, 'RRRRRRR', 'ACTIVO');
 INSERT INTO `comunicados` VALUES (16, 'TTTTTTTTTT', '2023-03-24 10:05:29', 'controller/comunicado/img/IMG243202310742.PNG', 'controller/comunicado/docs/ARCH243202310742.PDF', 1, 'TTTTTT', 'ACTIVO');
 INSERT INTO `comunicados` VALUES (17, 'QAWRQWR', '2023-03-24 10:10:32', 'controller/comunicado/img/IMG243202310920.PNG', 'controller/comunicado/docs/ARCH243202310920.PDF', 1, 'FREREW', 'ACTIVO');
 INSERT INTO `comunicados` VALUES (18, 'HUAYNAPATA UCHARICO', '2023-03-24 10:10:58', 'controller/comunicado/img/IMG243202311728.PNG', 'controller/comunicado/docs/ARCH243202311728.PDF', 1, 'FREDDY WALTER', 'ACTIVO');
 INSERT INTO `comunicados` VALUES (19, 'SFASF', '2023-03-24 10:11:56', 'controller/comunicado/img/IMG243202311200.PNG', 'controller/comunicado/docs/ARCH243202311200.PDF', 1, 'TTRTRTR', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (20, 'JJJJJ', '2023-03-25 20:33:14', 'controller/comunicado/img/', 'controller/comunicado/docs/ARCH253202320154.PDF', 1, 'HOYYYY', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (21, 'XXXXXXXXXXXXXXCCC', '2023-03-25 21:10:16', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH253202321452.PDF', 1, 'XXXXXXXXXCCC', 'INACTIVO');
 
 -- ----------------------------
 -- Table structure for empleado
@@ -83,7 +83,7 @@ CREATE TABLE `empleado`  (
   `emple_direccion` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   `emple_fotoperfil` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`empleado_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of empleado
@@ -104,12 +104,36 @@ CREATE TABLE `empresa`  (
   `emp_direccion` varchar(60) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   `emp_logo` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`empresa_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of empresa
 -- ----------------------------
 INSERT INTO `empresa` VALUES (1, 'UGEL YUNGUYO', 'UGEL@GMAIL.COM', '201245789874', '987654321', 'JR. INDEPENDENCIA N 1034', NULL);
+
+-- ----------------------------
+-- Table structure for oficios
+-- ----------------------------
+DROP TABLE IF EXISTS `oficios`;
+CREATE TABLE `oficios`  (
+  `oficio_id` int NOT NULL AUTO_INCREMENT,
+  `ofi_titulo` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `ofi_descripcion` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `ofi_feccreacion` datetime NULL DEFAULT NULL,
+  `ofi_img_prev` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `ofi_documento` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `ofi_estado` enum('ACTIVO','INACTIVO') CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT 'ACTIVO',
+  `area_origen_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`oficio_id`) USING BTREE,
+  INDEX `area_origen_id`(`area_origen_id` ASC) USING BTREE,
+  CONSTRAINT `oficios_ibfk_1` FOREIGN KEY (`area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of oficios
+-- ----------------------------
+INSERT INTO `oficios` VALUES (3, 'FREDD MULTIKPLE', 'DESCP', '2023-03-25 20:57:43', 'controller/oficio/img/', 'controller/oficio/docs/ARCH253202320346.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (4, 'CCCCCCC', 'CCCCCCCCCCCCC', '2023-03-25 21:06:02', 'controller/oficio/img/IMG253202321308.PNG', 'controller/oficio/docs/ARCH253202321410.PDF', 'ACTIVO', 1);
 
 -- ----------------------------
 -- Table structure for usuario
@@ -133,7 +157,7 @@ CREATE TABLE `usuario`  (
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`empresa_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`empleado_id`) REFERENCES `empleado` (`empleado_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `usuario_ibfk_3` FOREIGN KEY (`area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of usuario
@@ -174,6 +198,25 @@ FROM
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_ELIMINAR_COMUNICADO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_ELIMINAR_COMUNICADO`;
+delimiter ;;
+CREATE PROCEDURE `SP_ELIMINAR_COMUNICADO`(IN ID INT)
+BEGIN
+  DECLARE ESTADOACTUAL VARCHAR(30);
+  SET @ESTADOACTUAL:= (SELECT com_estado FROM comunicados WHERE comunicado_id=ID);
+  IF @ESTADOACTUAL = 'ACTIVO' THEN
+    SELECT 2;
+  ELSE
+    DELETE FROM comunicados WHERE comunicado_id=ID;
+    SELECT 1;
+  END IF;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_ELIMINAR_EMPLEADO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_ELIMINAR_EMPLEADO`;
@@ -186,6 +229,25 @@ BEGIN
     SELECT 2;
   ELSE
     DELETE FROM empleado WHERE empleado_id=ID;
+    SELECT 1;
+  END IF;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_ELIMINAR_OFICIO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_ELIMINAR_OFICIO`;
+delimiter ;;
+CREATE PROCEDURE `SP_ELIMINAR_OFICIO`(IN ID INT)
+BEGIN
+  DECLARE ESTADOACTUAL VARCHAR(30);
+  SET @ESTADOACTUAL:= (SELECT ofi_estado FROM oficios WHERE oficio_id=ID);
+  IF @ESTADOACTUAL = 'ACTIVO' THEN
+    SELECT 2;
+  ELSE
+    DELETE FROM oficios WHERE oficio_id=ID;
     SELECT 1;
   END IF;
 END
@@ -255,6 +317,31 @@ SELECT
 	
 FROM
 	empleado
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_LISTAR_OFICIO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_LISTAR_OFICIO`;
+delimiter ;;
+CREATE PROCEDURE `SP_LISTAR_OFICIO`()
+SELECT
+	oficios.oficio_id, 
+	oficios.ofi_titulo, 
+	oficios.ofi_descripcion, 
+	oficios.ofi_feccreacion, 
+	oficios.ofi_img_prev, 
+	oficios.ofi_documento, 
+	oficios.ofi_estado, 
+	area.area_nombre
+FROM
+	oficios
+	INNER JOIN
+	area
+	ON 
+		oficios.area_origen_id = area.area_cod
+		ORDER BY ofi_feccreacion DESC
 ;;
 delimiter ;
 
@@ -392,6 +479,38 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_MODIFICAR_OFICIO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_MODIFICAR_OFICIO`;
+delimiter ;;
+CREATE PROCEDURE `SP_MODIFICAR_OFICIO`(IN ID INT,IN TITULO VARCHAR(255),IN DESCRIPCION VARCHAR(255),IN RUTAIMG VARCHAR(255),IN RUTADOC VARCHAR(255),IN ESTADO VARCHAR(40))
+BEGIN
+DECLARE RUTAACTUALDOC VARCHAR(255);
+DECLARE RUTAACTUALIMG VARCHAR(255);
+DECLARE RUTANUEVADOC VARCHAR(255);
+DECLARE RUTANUEVAIMG VARCHAR(255);
+
+SET @RUTANUEVAIMG = RUTAIMG;
+SET @RUTANUEVADOC = RUTADOC;
+
+SET @RUTAACTUALIMG:= (SELECT oficios.ofi_img_prev FROM oficios WHERE oficio_id=ID);
+SET @RUTAACTUALDOC:= (SELECT oficios.ofi_documento FROM oficios WHERE oficio_id=ID);
+
+IF RUTAIMG = '' THEN
+	SET @RUTANUEVAIMG= @RUTAACTUALIMG;
+END IF;
+
+IF RUTADOC = '' THEN
+	SET @RUTANUEVADOC= @RUTAACTUALDOC;
+END IF;
+
+	UPDATE oficios SET ofi_titulo = TITULO, ofi_descripcion = DESCRIPCION, ofi_img_prev = @RUTANUEVAIMG, ofi_documento = @RUTANUEVADOC, ofi_estado = ESTADO WHERE oficio_id = ID;
+	SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_MODIFICAR_USUARIO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_MODIFICAR_USUARIO`;
@@ -464,6 +583,20 @@ IF @CANTIDAD = 0 THEN
 ELSE
 	SELECT 2;
 END IF;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_REGISTRAR_OFICIO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_REGISTRAR_OFICIO`;
+delimiter ;;
+CREATE PROCEDURE `SP_REGISTRAR_OFICIO`(IN TITULO VARCHAR(255),IN DESCRIPCION VARCHAR(255),IN RUTAIMG VARCHAR(255),IN RUTADOC VARCHAR(255),IN IDAREA INT)
+BEGIN
+	
+	INSERT INTO oficios(ofi_titulo, ofi_descripcion,ofi_img_prev,ofi_documento,ofi_feccreacion,ofi_estado,area_origen_id)VALUES(TITULO,DESCRIPCION,RUTAIMG,RUTADOC,NOW(),'ACTIVO',IDAREA);
+	SELECT 1;
 END
 ;;
 delimiter ;

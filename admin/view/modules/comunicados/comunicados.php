@@ -127,7 +127,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-outline-secondary" onclick="Modificar_Comunicado()">Registrar</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="Modificar_Comunicado()">Actualizar</button>
             </div>
         </div>
     </div>

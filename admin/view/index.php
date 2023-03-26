@@ -25,10 +25,10 @@ if (!isset($_SESSION['S_ID'])) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS [ REQUIRED ] -->
-    <link rel="stylesheet" href="./assets/css/color-schemes/primary-nav/navy/bootstrap.min.css" id="bootstrapcss">
+    <link rel="stylesheet" href="./assets/css/color-schemes/primary-nav/teal/bootstrap.min.css" id="bootstrapcss">
 
     <!-- Nifty CSS [ REQUIRED ] -->
-    <link rel="stylesheet" href="./assets/css/color-schemes/primary-nav/navy/nifty.min.css" id="niftycss">
+    <link rel="stylesheet" href="./assets/css/color-schemes/primary-nav/teal/nifty.min.css" id="niftycss">
 
     <!-- Nifty Demo Icons [ OPTIONAL ] -->
     <link rel="stylesheet" href="./assets/css/demo-purpose/demo-icons.min.css">
@@ -107,7 +107,7 @@ if (!isset($_SESSION['S_ID'])) {
                         </a>
 
                         <!-- Brand title -->
-                        <div class="brand-title">Portal Web</div>
+                        <div class="brand-title">UGEL Yunguyo</div>
 
                         <!-- You can also use IMG or SVG instead of a text element. -->
 

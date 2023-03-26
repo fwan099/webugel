@@ -73,8 +73,8 @@
 
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-            <a href="./" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
-                <img src="./public/img/logo.png" width="200" alt="" class="img-fluid">
+            <a href="./" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5 wow fadeInRight">
+                <img src="./public/img/logo.png" width="200" alt="" class="img-fluid ">
 
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
@@ -83,9 +83,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="./" class="nav-item nav-link active">Inicio</a>
+                    <a href="./" class="nav-item nav-link active wow fadeInDown" data-wow-delay="0.1s">Inicio</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Institucional</a>
+                        <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.2s">Institucional</a>
                         <div class="dropdown-menu rounded-0 m-0 p-0">
                             <a href="nosotros" class="dropdown-item">Sobre Nosotros</a>
                             <a href="directorio" class="dropdown-item">Directorio</a>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Areas</a>
+                        <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-wow-delay="0.3s" data-bs-toggle="dropdown">Areas</a>
                         <div class="dropdown-menu rounded-0 m-0 p-0">
                             <a href="administracion" class="dropdown-item">Administración</a>
                             <a href="gestionInstitucional" class="dropdown-item">Area de Gestión Institucional</a>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Convocatorias</a>
+                        <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-wow-delay="0.4s" data-bs-toggle="dropdown">Convocatorias</a>
                         <div class="dropdown-menu rounded-0 m-0 p-0">
                             <a href="convocatoriasCas" class="dropdown-item">Convocatorias CAS</a>
                             <a href="convocatoriasDocente" class="dropdown-item">Convocatorias Docentes</a>
@@ -113,14 +113,14 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Informacion</a>
+                        <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-wow-delay="0.5s" data-bs-toggle="dropdown">Informacion</a>
                         <div class="dropdown-menu rounded-0 m-0 p-0">
                             <a href="comunicados" class="dropdown-item">Comunicados</a>
                             <a href="oficiosMultiples" class="dropdown-item">Oficios Multiples</a>
                         </div>
                     </div>
-                    <a href="servicios" class="nav-item nav-link">Servicios</a>
-                    <a href="noticias" class="nav-item nav-link">Noticias</a>
+                    <a href="servicios" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.6s">Servicios</a>
+                    <a href="noticias" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.7s">Noticias</a>
                 </div>
             </div>
         </nav>

@@ -1,9 +1,9 @@
 <?php
     require_once "model_conexion.php";
-    class Modelo_Comunicado extends ConexionDB{
-        public function Listar_Comunicado(){
+    class Modelo_Oficio extends ConexionDB{
+        public function Listar_Oficio(){
             $c = conexionDB::conexionPDO();
-            $sql = "CALL SP_LISTAR_COMUNICADO()";
+            $sql = "CALL SP_LISTAR_OFICIO()";
             $arreglo = array();
             $query  = $c->prepare($sql);
             $query->execute();
@@ -14,9 +14,9 @@
             return $arreglo;
             conexionDB::cerrar_conexion();
         }
-        public function Registrar_Comunicado($titulo,$descripcion,$rutaImg,$ruta,$idarea){
+        public function Registrar_Oficio($titulo,$descripcion,$rutaImg,$ruta,$idarea){
             $c = conexionDB::conexionPDO();
-            $sql = "CALL SP_REGISTRAR_COMUNICADO(?,?,?,?,?)";
+            $sql = "CALL SP_REGISTRAR_OFICIO(?,?,?,?,?)";
             $arreglo = array();
             $query  = $c->prepare($sql);
             $query->bindParam(1,$titulo); 
@@ -30,9 +30,9 @@
             }
             conexionDB::cerrar_conexion();
         }
-        public function Modificar_Comunicado($id,$titulo,$descripcion,$rutaImg,$ruta,$estado){
+        public function Modificar_Oficio($id,$titulo,$descripcion,$rutaImg,$ruta,$estado){
             $c = conexionDB::conexionPDO();
-            $sql = "CALL SP_MODIFICAR_COMUNICADO(?,?,?,?,?,?)";
+            $sql = "CALL SP_MODIFICAR_OFICIO(?,?,?,?,?,?)";
             $arreglo = array();
             $query  = $c->prepare($sql);
             $query->bindParam(1,$id); 
@@ -48,9 +48,9 @@
             conexionDB::cerrar_conexion();
         }
 
-        public function Eliminar_Comunicado($id){
+        public function Eliminar_Oficio($id){
             $c = conexionDB::conexionPDO();
-            $sql = "CALL SP_ELIMINAR_COMUNICADO(?)";
+            $sql = "CALL SP_ELIMINAR_OFICIO(?)";
             $arreglo = array();
             $query  = $c->prepare($sql);
             $query->bindParam(1,$id); 

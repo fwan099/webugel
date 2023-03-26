@@ -1,6 +1,6 @@
-var tbl_comunicado;
-function listar_comunicado() {
-    tbl_comunicado = $("#tabla_comunicado").DataTable({
+var tbl_oficio;
+function listar_oficio() {
+    tbl_oficio = $("#tabla_oficio").DataTable({
         "ordering": false,
         "bLengthChange": true,
         "searching": { "regex": false },
@@ -10,16 +10,16 @@ function listar_comunicado() {
         "async": true,
         "processing": true,
         "ajax": {
-            "url": "../controller/comunicado/controller_listar_comunicado.php",
+            "url": "../controller/oficio/controller_listar_oficio.php",
             type: 'POST'
         },
         "columns": [
             { "defaultContent": "" },
-            { "data": "com_titulo" },
+            { "data": "ofi_titulo" },
             { "defaultContent": "<button class='mas btn btn-info btn-sm'><i class='fas fa-eye'></i></button>" },
-            { "data": "com_feccreacion" },
+            { "data": "ofi_feccreacion" },
             {
-                "data": "com_estado", render: function (data, type, row) {
+                "data": "ofi_estado", render: function (data, type, row) {
                     if (data == 'ACTIVO') {
                         return '<span class="badge bg-success">ACTIVO</span>';
                     } else {
@@ -33,50 +33,50 @@ function listar_comunicado() {
         "language": idioma_espanol,
         select: true
     });
-    tbl_comunicado.on('draw.td', function () {
-        var PageInfo = $("#tabla_comunicado").DataTable().page.info();
-        tbl_comunicado.column(0, { page: 'current' }).nodes().each(function (cell, i) {
+    tbl_oficio.on('draw.td', function () {
+        var PageInfo = $("#tabla_oficio").DataTable().page.info();
+        tbl_oficio.column(0, { page: 'current' }).nodes().each(function (cell, i) {
             cell.innerHTML = i + 1 + PageInfo.start;
         });
     });
 }
 
 
-$('#tabla_comunicado').on('click', '.mas', function () {
-    let data = tbl_comunicado.row($(this).parents('tr')).data();
-    if (tbl_comunicado.row(this).child.isShown()) {
-        data = tbl_comunicado.row(this).data();
+$('#tabla_oficio').on('click', '.mas', function () {
+    let data = tbl_oficio.row($(this).parents('tr')).data();
+    if (tbl_oficio.row(this).child.isShown()) {
+        data = tbl_oficio.row(this).data();
     }
     $("#modal_mas").modal('show');
-    document.getElementById('txt_idcom_mas').value = data.comunicado_id;
+    document.getElementById('txt_idcom_mas').value = data.oficio_id;
     document.getElementById('txt_area_mas').value = data.area_nombre;
-    document.getElementById('txt_fecha_mas').value = data.com_feccreacion;
-    document.getElementById('txt_estado_mas').value = data.com_estado;
-    document.getElementById('txt_titulo_mas').value = data.com_titulo;
-    document.getElementById('txt_desc_mas').value = data.com_descripcion;
-    document.getElementById('img_prev_mas').src = "../" + data.com_imgprev;
-    document.getElementById('pdf_doc_mas').src = "../" + data.com_documento;
+    document.getElementById('txt_fecha_mas').value = data.ofi_feccreacion;
+    document.getElementById('txt_estado_mas').value = data.ofi_estado;
+    document.getElementById('txt_titulo_mas').value = data.ofi_titulo;
+    document.getElementById('txt_desc_mas').value = data.ofi_descripcion;
+    document.getElementById('img_prev_mas').src = "../" + data.ofi_img_prev;
+    document.getElementById('pdf_doc_mas').src = "../" + data.ofi_documento;
 });
 
-$('#tabla_comunicado').on('click', '.editar', function () {
-    let data = tbl_comunicado.row($(this).parents('tr')).data();
-    if (tbl_comunicado.row(this).child.isShown()) {
-        data = tbl_comunicado.row(this).data();
+$('#tabla_oficio').on('click', '.editar', function () {
+    let data = tbl_oficio.row($(this).parents('tr')).data();
+    if (tbl_oficio.row(this).child.isShown()) {
+        data = tbl_oficio.row(this).data();
     }
     $("#modal_editar").modal('show');
-    document.getElementById('txt_id_edit').value = data.comunicado_id;
-    document.getElementById('txt_titulo_edit').value = data.com_titulo;
-    document.getElementById('txt_desc_edit').value = data.com_descripcion;
-    document.getElementById('select_estatus').value = data.com_estado;
+    document.getElementById('txt_id_edit').value = data.oficio_id;
+    document.getElementById('txt_titulo_edit').value = data.ofi_titulo;
+    document.getElementById('txt_desc_edit').value = data.ofi_descripcion;
+    document.getElementById('select_estatus').value = data.ofi_estado;
 });
 
-$('#tabla_comunicado').on('click', '.eliminar', function () {
-    let data = tbl_comunicado.row($(this).parents('tr')).data();
-    if (tbl_comunicado.row(this).child.isShown()) {
-        data = tbl_comunicado.row(this).data();
+$('#tabla_oficio').on('click', '.eliminar', function () {
+    let data = tbl_oficio.row($(this).parents('tr')).data();
+    if (tbl_oficio.row(this).child.isShown()) {
+        data = tbl_oficio.row(this).data();
     }
     Swal.fire({
-        title: '¿Desea Eliminar el Comunicado?',
+        title: '¿Desea Eliminar el Oficio Multiple?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -85,7 +85,7 @@ $('#tabla_comunicado').on('click', '.eliminar', function () {
         cancelButtonText: 'Cancelar'
     }).then((result) => {
         if (result.isConfirmed) {
-            eliminar_comunicado(data.comunicado_id);
+            eliminar_oficio(data.oficio_id);
         }
     });
 });
@@ -121,7 +121,7 @@ function Guardar_Requisitos(accion) {
     return documentosJSON;
 }*/
 
-function Registrar_Comunicados() {
+function Registrar_Oficio() {
     let titulo = document.getElementById("txt_titulo").value;
     let descripcion = document.getElementById("txt_desc").value;
     let img = document.getElementById("txt_img_prev").value;
@@ -157,7 +157,7 @@ function Registrar_Comunicados() {
     formData.append("archivoobj", archivoobj);
     formData.append("idarea", idarea);
     $.ajax({
-        "url": "../controller/comunicado/controller_registrar_comunicado.php",
+        "url": "../controller/oficio/controller_registrar_oficio.php",
         type: 'POST',
         data: formData,
         contentType: false,
@@ -174,12 +174,12 @@ function Registrar_Comunicados() {
                     }
                 }).then((result) => {
                     if (result.dismiss === Swal.DismissReason.timer) {
-                        Swal.fire("Mensaje de Confirmación", "El comunicado se registró con éxito", "success");
+                        Swal.fire("Mensaje de Confirmación", "El oficio se registró con éxito", "success");
                         document.getElementById('txt_titulo').value = "";
                         document.getElementById('txt_desc').value = "";
                         document.getElementById('txt_img_prev').value = "";
                         document.getElementById('txt_documento').value = "";
-                        tbl_comunicado.ajax.reload();
+                        tbl_oficio.ajax.reload();
                         $("#modal_registro").modal('hide');
                     }
                 });
@@ -190,7 +190,7 @@ function Registrar_Comunicados() {
     });
 }
 
-function Modificar_Comunicado() {
+function Modificar_Oficio() {
     let idcom = document.getElementById("txt_id_edit").value;
     let titulo = document.getElementById("txt_titulo_edit").value;
     let descripcion = document.getElementById("txt_desc_edit").value;
@@ -226,7 +226,7 @@ function Modificar_Comunicado() {
     formData.append("estado", estado);
 
     $.ajax({
-        "url": "../controller/comunicado/controller_modificar_comunicado.php",
+        "url": "../controller/oficio/controller_modificar_oficio.php",
         type: 'POST',
         data: formData,
         contentType: false,
@@ -243,8 +243,8 @@ function Modificar_Comunicado() {
                     }
                 }).then((result) => {
                     if (result.dismiss === Swal.DismissReason.timer) {
-                        Swal.fire("Mensaje de Confirmación", "El comunicado se Modifico con éxito", "success");
-                        tbl_comunicado.ajax.reload();
+                        Swal.fire("Mensaje de Confirmación", "El Oficio Multiple se Modifico con éxito", "success");
+                        tbl_oficio.ajax.reload();
                         document.getElementById("txt_img_prev_edit").value = "";
                         document.getElementById("txt_documento_edit").value = "";
                         $("#modal_editar").modal('hide');
@@ -257,22 +257,22 @@ function Modificar_Comunicado() {
     });
 }
 
-function eliminar_comunicado(id) {
+function eliminar_oficio(id) {
     $.ajax({
-        "url": "../controller/comunicado/controller_eliminar_comunicado.php",
+        "url": "../controller/oficio/controller_eliminar_oficio.php",
         type: 'POST',
         data: {
             id: id,
         }
     }).done(function (resp) {
         if (resp == 1) {
-            Swal.fire("Mensaje de Confirmacion", "Comunicado Eliminado con Exito", "success").then((value) => {
-                tbl_comunicado.ajax.reload();
+            Swal.fire("Mensaje de Confirmacion", "Oficio Multiple Eliminado con Exito", "success").then((value) => {
+                tbl_oficio.ajax.reload();
             });
 
 
         } else if (resp == 2) {
-            Swal.fire("Mensaje de Advertencia", "El Comunicado se Encuentra Activo", "warning");
+            Swal.fire("Mensaje de Advertencia", "El Oficio Multiple se Encuentra Activo", "warning");
         } else {
             Swal.fire("Mensaje de Error", "Comuniquese con Soporte Informatico", "error");
         }
