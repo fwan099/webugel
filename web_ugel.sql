@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 25/03/2023 21:38:16
+ Date: 26/03/2023 20:58:50
 */
 
 SET NAMES utf8mb4;
@@ -133,7 +133,31 @@ CREATE TABLE `oficios`  (
 -- Records of oficios
 -- ----------------------------
 INSERT INTO `oficios` VALUES (3, 'FREDD MULTIKPLE', 'DESCP', '2023-03-25 20:57:43', 'controller/oficio/img/', 'controller/oficio/docs/ARCH253202320346.PDF', 'ACTIVO', 1);
-INSERT INTO `oficios` VALUES (4, 'CCCCCCC', 'CCCCCCCCCCCCC', '2023-03-25 21:06:02', 'controller/oficio/img/IMG253202321308.PNG', 'controller/oficio/docs/ARCH253202321410.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (4, 'CCCCCCC', 'CCCCCCCCCCCCC', '2023-03-25 21:06:02', 'controller/oficio/img/IMG263202320654.PNG', 'controller/oficio/docs/ARCH253202321410.PDF', 'INACTIVO', 1);
+
+-- ----------------------------
+-- Table structure for slider
+-- ----------------------------
+DROP TABLE IF EXISTS `slider`;
+CREATE TABLE `slider`  (
+  `slider_id` int NOT NULL AUTO_INCREMENT,
+  `slider_titulo` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `slider_descripcion` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `slider_imagen` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `slider_feccreacion` datetime NULL DEFAULT NULL,
+  `slider_area_origen_id` int NULL DEFAULT NULL,
+  `slider_orden` int NULL DEFAULT NULL,
+  `slider_estado` enum('ACTIVO','INACTIVO') CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`slider_id`) USING BTREE,
+  INDEX `slider_area_origen_id`(`slider_area_origen_id` ASC) USING BTREE,
+  CONSTRAINT `slider_ibfk_1` FOREIGN KEY (`slider_area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of slider
+-- ----------------------------
+INSERT INTO `slider` VALUES (1, 'TITULO PHP', 'DESCRIPCION PHP', 'controller/slider/img/SLIDER263202320749.JPG', '2023-03-26 18:05:54', 1, 1, 'ACTIVO');
+INSERT INTO `slider` VALUES (6, 'SGSG', 'GSDGSDG', 'controller/slider/img/SLIDER263202319552.JPG', '2023-03-26 19:04:59', 1, 2, 'ACTIVO');
 
 -- ----------------------------
 -- Table structure for usuario
@@ -255,6 +279,25 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_ELIMINAR_SLIDER
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_ELIMINAR_SLIDER`;
+delimiter ;;
+CREATE PROCEDURE `SP_ELIMINAR_SLIDER`(IN ID INT)
+BEGIN
+  DECLARE ESTADOACTUAL VARCHAR(30);
+  SET @ESTADOACTUAL:= (SELECT slider_estado FROM slider WHERE slider_id=ID);
+  IF @ESTADOACTUAL = 'ACTIVO' THEN
+    SELECT 2;
+  ELSE
+    DELETE FROM slider WHERE slider_id=ID;
+    SELECT 1;
+  END IF;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_LISTAR_AREA
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_LISTAR_AREA`;
@@ -346,6 +389,31 @@ FROM
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_LISTAR_SLIDER
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_LISTAR_SLIDER`;
+delimiter ;;
+CREATE PROCEDURE `SP_LISTAR_SLIDER`()
+SELECT
+	slider.slider_id, 
+	slider.slider_titulo, 
+	slider.slider_descripcion, 
+	slider.slider_imagen, 
+	slider.slider_feccreacion, 
+	slider.slider_orden, 
+	area.area_nombre,
+	slider.slider_estado
+FROM
+	slider
+	INNER JOIN
+	area
+	ON 
+		slider.slider_area_origen_id = area.area_cod
+		ORDER BY slider_orden ASC
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_LISTAR_USUARIO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_LISTAR_USUARIO`;
@@ -371,6 +439,30 @@ FROM
 	area
 	ON 
 		usuario.area_id = area.area_cod
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_MODIFCAR_SLIDER
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_MODIFCAR_SLIDER`;
+delimiter ;;
+CREATE PROCEDURE `SP_MODIFCAR_SLIDER`(IN ID INT,IN TITULO VARCHAR(255),IN DESCRIPCION VARCHAR(255),IN RUTAIMG VARCHAR(255),IN ORDEN INT,IN ESTADO VARCHAR(40))
+BEGIN
+DECLARE RUTAACTUALIMG VARCHAR(255);
+DECLARE RUTANUEVAIMG VARCHAR(255);
+
+SET @RUTANUEVAIMG = RUTAIMG;
+
+SET @RUTAACTUALIMG:= (SELECT slider_imagen FROM slider WHERE slider_id=ID);
+
+IF RUTAIMG = '' THEN
+	SET @RUTANUEVAIMG= @RUTAACTUALIMG;
+END IF;
+
+	UPDATE slider SET slider_titulo = TITULO, slider_descripcion = DESCRIPCION, slider_imagen = @RUTANUEVAIMG, slider_orden = ORDEN, slider_estado = ESTADO WHERE slider_id = ID;
+	SELECT 1;
+END
 ;;
 delimiter ;
 
@@ -511,6 +603,30 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_MODIFICAR_SLIDER
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_MODIFICAR_SLIDER`;
+delimiter ;;
+CREATE PROCEDURE `SP_MODIFICAR_SLIDER`(IN ID INT,IN TITULO VARCHAR(255),IN DESCRIPCION VARCHAR(255),IN RUTAIMG VARCHAR(255),IN ORDEN INT,IN ESTADO VARCHAR(40))
+BEGIN
+DECLARE RUTAACTUALIMG VARCHAR(255);
+DECLARE RUTANUEVAIMG VARCHAR(255);
+
+SET @RUTANUEVAIMG = RUTAIMG;
+
+SET @RUTAACTUALIMG:= (SELECT slider_imagen FROM slider WHERE slider_id=ID);
+
+IF RUTAIMG = '' THEN
+	SET @RUTANUEVAIMG= @RUTAACTUALIMG;
+END IF;
+
+	UPDATE slider SET slider_titulo = TITULO, slider_descripcion = DESCRIPCION, slider_imagen = @RUTANUEVAIMG, slider_orden = ORDEN, slider_estado = ESTADO WHERE slider_id = ID;
+	SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_MODIFICAR_USUARIO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_MODIFICAR_USUARIO`;
@@ -596,6 +712,19 @@ CREATE PROCEDURE `SP_REGISTRAR_OFICIO`(IN TITULO VARCHAR(255),IN DESCRIPCION VAR
 BEGIN
 	
 	INSERT INTO oficios(ofi_titulo, ofi_descripcion,ofi_img_prev,ofi_documento,ofi_feccreacion,ofi_estado,area_origen_id)VALUES(TITULO,DESCRIPCION,RUTAIMG,RUTADOC,NOW(),'ACTIVO',IDAREA);
+	SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_REGISTRAR_SLIDER
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_REGISTRAR_SLIDER`;
+delimiter ;;
+CREATE PROCEDURE `SP_REGISTRAR_SLIDER`(IN TITULO VARCHAR(255),IN DESCRIPCION VARCHAR(255),IN RUTAIMG VARCHAR(255),IN ORDEN INT,IN IDAREA INT)
+BEGIN
+	INSERT INTO slider(slider_titulo,slider_descripcion,slider_imagen,slider_orden,slider_area_origen_id,slider_feccreacion,slider_estado)VALUES(TITULO,DESCRIPCION,RUTAIMG,ORDEN,IDAREA,NOW(),'ACTIVO');
 	SELECT 1;
 END
 ;;
