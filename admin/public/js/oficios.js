@@ -163,7 +163,7 @@ function Registrar_Oficio() {
         contentType: false,
         processData: false,
         success: function (resp) {
-            if (resp.length > 0) {
+            if (resp== 1) {
                 Swal.fire({
                     title: 'Publicando...',
                     text: 'Subiendo Archivos al servidor',
@@ -232,7 +232,7 @@ function Modificar_Oficio() {
         contentType: false,
         processData: false,
         success: function (resp) {
-            if (resp.length > 0) {
+            if (resp == 1) {
                 Swal.fire({
                     title: 'Publicando...',
                     text: 'Subiendo Archivos al Servidor',

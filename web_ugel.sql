@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : localhost_3306
  Source Server Type    : MySQL
  Source Server Version : 100427 (10.4.27-MariaDB)
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 26/03/2023 20:58:50
+ Date: 28/03/2023 19:07:08
 */
 
 SET NAMES utf8mb4;
@@ -52,7 +52,7 @@ CREATE TABLE `comunicados`  (
   PRIMARY KEY (`comunicado_id`) USING BTREE,
   INDEX `area_origen_id`(`area_origen_id` ASC) USING BTREE,
   CONSTRAINT `comunicados_ibfk_1` FOREIGN KEY (`area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of comunicados
@@ -64,6 +64,40 @@ INSERT INTO `comunicados` VALUES (18, 'HUAYNAPATA UCHARICO', '2023-03-24 10:10:5
 INSERT INTO `comunicados` VALUES (19, 'SFASF', '2023-03-24 10:11:56', 'controller/comunicado/img/IMG243202311200.PNG', 'controller/comunicado/docs/ARCH243202311200.PDF', 1, 'TTRTRTR', 'ACTIVO');
 INSERT INTO `comunicados` VALUES (20, 'JJJJJ', '2023-03-25 20:33:14', 'controller/comunicado/img/', 'controller/comunicado/docs/ARCH253202320154.PDF', 1, 'HOYYYY', 'ACTIVO');
 INSERT INTO `comunicados` VALUES (21, 'XXXXXXXXXXXXXXCCC', '2023-03-25 21:10:16', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH253202321452.PDF', 1, 'XXXXXXXXXCCC', 'INACTIVO');
+INSERT INTO `comunicados` VALUES (22, 'VVVVVVVV', '2023-03-28 12:28:13', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH28320231237.PDF', 1, 'VVVVVVV', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (23, 'SDFSD', '2023-03-28 12:29:05', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH283202312670.PDF', 1, 'SEFSEF', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (24, 'SSSSSS', '2023-03-28 12:29:22', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH283202312654.PDF', 1, 'SSSSS', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (25, 'SSSSSS', '2023-03-28 12:29:25', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH283202312965.PDF', 1, 'SSSSS', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (26, 'TTTTTTTT', '2023-03-28 12:30:51', 'controller/comunicado/img/IMG283202312117.PNG', 'controller/comunicado/docs/ARCH283202312725.PDF', 1, 'TT', 'ACTIVO');
+
+-- ----------------------------
+-- Table structure for convocatorias
+-- ----------------------------
+DROP TABLE IF EXISTS `convocatorias`;
+CREATE TABLE `convocatorias`  (
+  `convocatoria_id` int NOT NULL AUTO_INCREMENT,
+  `conv_titulo` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `conv_fecpublicacion` date NULL DEFAULT NULL,
+  `conv_bases` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `conv_preliminar_cv` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `conv_reclamos` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `conv_final_cv` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `conv_final` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `conv_estado` enum('ABIERTO','FINALIZADO') CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `conv_area_id` int NULL DEFAULT NULL,
+  `conv_tipo` enum('CAS','DOCENTES','AUXILIARES','DIRECTIVOS','CAP') CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`convocatoria_id`) USING BTREE,
+  INDEX `conv_area_id`(`conv_area_id` ASC) USING BTREE,
+  CONSTRAINT `convocatorias_ibfk_1` FOREIGN KEY (`conv_area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of convocatorias
+-- ----------------------------
+INSERT INTO `convocatorias` VALUES (1, 'PRUEBA', '2023-03-28', 'controller/convocatorias/docs/CONV1283202312174.PDF', 'controller/convocatorias/docs/CONV2283202312893.PDF', 'controller/convocatorias/docs/CONV3283202312237.PDF', 'controller/convocatorias/docs/CONV4283202312237.PDF', NULL, 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (2, 'CONVOCATORIA CAS 001', '2023-03-28', 'controller/convocatorias/docs/CONV1283202318251.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (3, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-28', 'controller/convocatorias/docs/CONV1283202310300.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (4, 'WALTER', '2023-03-28', 'controller/convocatorias/docs/CONV1283202311221.PDF', 'controller/convocatorias/docs/CONV2283202311221.PDF', '', '', '', 'ABIERTO', 1, 'CAS');
 
 -- ----------------------------
 -- Table structure for empleado
@@ -127,13 +161,18 @@ CREATE TABLE `oficios`  (
   PRIMARY KEY (`oficio_id`) USING BTREE,
   INDEX `area_origen_id`(`area_origen_id` ASC) USING BTREE,
   CONSTRAINT `oficios_ibfk_1` FOREIGN KEY (`area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of oficios
 -- ----------------------------
 INSERT INTO `oficios` VALUES (3, 'FREDD MULTIKPLE', 'DESCP', '2023-03-25 20:57:43', 'controller/oficio/img/', 'controller/oficio/docs/ARCH253202320346.PDF', 'ACTIVO', 1);
-INSERT INTO `oficios` VALUES (4, 'CCCCCCC', 'CCCCCCCCCCCCC', '2023-03-25 21:06:02', 'controller/oficio/img/IMG263202320654.PNG', 'controller/oficio/docs/ARCH253202321410.PDF', 'INACTIVO', 1);
+INSERT INTO `oficios` VALUES (4, 'CCCCCCC', 'CCCCCCCCCCCCC', '2023-03-25 21:06:02', 'controller/oficio/img/IMG263202320654.PNG', 'controller/oficio/docs/ARCH253202321410.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (5, 'FFFF', 'FFFFFFFFFF', '2023-03-28 10:35:05', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH283202310820.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (6, 'XXXXXXXXXXXX', 'XXXXXXXXXX', '2023-03-28 12:23:35', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH28320231229.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (7, 'PPP', 'PPPPPPPPP', '2023-03-28 12:24:49', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH283202312630.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (8, 'PPP', 'PPPPPPPPP', '2023-03-28 12:24:55', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH283202312261.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (9, 'OOOOOOO', 'OOOOOOO', '2023-03-28 12:26:57', 'controller/oficio/img/IMG283202312973.PNG', 'controller/oficio/docs/ARCH28320231262.PDF', 'ACTIVO', 1);
 
 -- ----------------------------
 -- Table structure for slider
@@ -151,7 +190,7 @@ CREATE TABLE `slider`  (
   PRIMARY KEY (`slider_id`) USING BTREE,
   INDEX `slider_area_origen_id`(`slider_area_origen_id` ASC) USING BTREE,
   CONSTRAINT `slider_ibfk_1` FOREIGN KEY (`slider_area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of slider
@@ -335,6 +374,35 @@ FROM
 	ON 
 		comunicados.area_origen_id = area.area_cod
 		ORDER BY com_feccreacion DESC
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_LISTAR_CONVOCATORIA
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_LISTAR_CONVOCATORIA`;
+delimiter ;;
+CREATE PROCEDURE `SP_LISTAR_CONVOCATORIA`(IN TIPO VARCHAR(40))
+SELECT
+	convocatorias.convocatoria_id, 
+	convocatorias.conv_titulo, 
+	convocatorias.conv_fecpublicacion, 
+	convocatorias.conv_bases, 
+	convocatorias.conv_preliminar_cv, 
+	convocatorias.conv_reclamos, 
+	convocatorias.conv_final_cv, 
+	convocatorias.conv_final, 
+	convocatorias.conv_estado, 
+	area.area_nombre, 
+	convocatorias.conv_tipo
+FROM
+	convocatorias
+	INNER JOIN
+	area
+	ON 
+		convocatorias.conv_area_id = area.area_cod
+		
+		WHERE conv_tipo = TIPO ORDER BY conv_fecpublicacion DESC
 ;;
 delimiter ;
 
@@ -525,6 +593,60 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_MODIFICAR_CONVOCATORIA
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_MODIFICAR_CONVOCATORIA`;
+delimiter ;;
+CREATE PROCEDURE `SP_MODIFICAR_CONVOCATORIA`(IN ID INT,IN TITULO VARCHAR(255),IN RUTA1 VARCHAR(255),IN RUTA2 VARCHAR(255),IN RUTA3 VARCHAR(255),IN RUTA4 VARCHAR(255),IN RUTA5 VARCHAR(255), IN ESTADO VARCHAR(40))
+BEGIN
+DECLARE RUTAACTUALDOC1 VARCHAR(255);
+DECLARE RUTAACTUALDOC2 VARCHAR(255);
+DECLARE RUTAACTUALDOC3 VARCHAR(255);
+DECLARE RUTAACTUALDOC4 VARCHAR(255);
+DECLARE RUTAACTUALDOC5 VARCHAR(255);
+
+DECLARE RUTANUEVADOC1 VARCHAR(255);
+DECLARE RUTANUEVADOC2 VARCHAR(255);
+DECLARE RUTANUEVADOC3 VARCHAR(255);
+DECLARE RUTANUEVADOC4 VARCHAR(255);
+DECLARE RUTANUEVADOC5 VARCHAR(255);
+
+
+SET @RUTANUEVADOC1 = RUTA1;
+SET @RUTANUEVADOC2 = RUTA2;
+SET @RUTANUEVADOC3 = RUTA3;
+SET @RUTANUEVADOC4 = RUTA4;
+SET @RUTANUEVADOC5 = RUTA5;
+
+SET @RUTAACTUALDOC1:= (SELECT conv_bases  FROM convocatorias WHERE convocatoria_id=ID);
+SET @RUTAACTUALDOC2:= (SELECT conv_preliminar_cv  FROM convocatorias WHERE convocatoria_id=ID);
+SET @RUTAACTUALDOC3:= (SELECT conv_reclamos  FROM convocatorias WHERE convocatoria_id=ID);
+SET @RUTAACTUALDOC4:= (SELECT conv_final_cv  FROM convocatorias WHERE convocatoria_id=ID);
+SET @RUTAACTUALDOC5:= (SELECT conv_final  FROM convocatorias WHERE convocatoria_id=ID);
+
+IF RUTA1 = '' THEN
+	SET @RUTANUEVADOC1= @RUTAACTUALDOC1;
+END IF;
+IF RUTA2 = '' THEN
+	SET @RUTANUEVADOC2= @RUTAACTUALDOC2;
+END IF;
+IF RUTA3 = '' THEN
+	SET @RUTANUEVADOC3= @RUTAACTUALDOC3;
+END IF;
+IF RUTA4 = '' THEN
+	SET @RUTANUEVADOC4= @RUTAACTUALDOC4;
+END IF;
+IF RUTA5 = '' THEN
+	SET @RUTANUEVADOC5= @RUTAACTUALDOC5;
+END IF;
+
+	UPDATE convocatorias SET conv_titulo = TITULO,conv_bases = @RUTANUEVADOC1,conv_preliminar_cv = @RUTANUEVADOC2,conv_reclamos = @RUTANUEVADOC3,conv_final_cv = @RUTANUEVADOC4,conv_final = @RUTANUEVADOC5, conv_estado = ESTADO WHERE convocatoria_id = ID;
+	SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_MODIFICAR_EMPLEADO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_MODIFICAR_EMPLEADO`;
@@ -680,6 +802,19 @@ CREATE PROCEDURE `SP_REGISTRAR_COMUNICADO`(IN TITULO VARCHAR(255),IN DESCRIPCION
 BEGIN
 	INSERT INTO comunicados(com_titulo,com_descripcion,com_imgprev,com_documento,com_feccreacion,com_estado,area_origen_id)VALUES(TITULO,DESCRIPCION,RUTAIMG,RUTADOC,NOW(),'ACTIVO',IDAREA);
 	SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_REGISTRAR_CONVOCATORIA
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_REGISTRAR_CONVOCATORIA`;
+delimiter ;;
+CREATE PROCEDURE `SP_REGISTRAR_CONVOCATORIA`(IN TIPO VARCHAR(40),IN TITULO VARCHAR(255),IN RUTA1 VARCHAR(255),IN RUTA2 VARCHAR(255),IN RUTA3 VARCHAR(255),IN RUTA4 VARCHAR(255),IN RUTA5 VARCHAR(255),IN IDAREA INT)
+BEGIN
+INSERT INTO convocatorias(conv_titulo,conv_fecpublicacion,conv_bases,conv_preliminar_cv,conv_reclamos,conv_final_cv,conv_final,conv_estado,conv_area_id,conv_tipo)VALUES(TITULO,NOW(),RUTA1,RUTA2,RUTA3,RUTA4,RUTA5,'ABIERTO',IDAREA,TIPO);
+SELECT 1;
 END
 ;;
 delimiter ;

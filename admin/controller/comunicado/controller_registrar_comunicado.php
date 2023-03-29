@@ -18,9 +18,13 @@
 
     $consulta = $MU->Registrar_Comunicado($titulo,$descripcion,$rutaImg,$ruta,$idarea);
     echo $consulta;
-    if($consulta){
-        if(move_uploaded_file($_FILES['archivoobj']['tmp_name'],"docs/".$nombrearchivo));
-        if(move_uploaded_file($_FILES['archivoobjImg']['tmp_name'],"img/".$nombrearchivoImg));
+    if($consulta==1){
+        if (!empty($nombrearchivo)) {
+            if (move_uploaded_file($_FILES['archivoobj']['tmp_name'], "docs/" . $nombrearchivo));
+        }
+        if (!empty($nombrearchivoImg)) {
+            if (move_uploaded_file($_FILES['archivoobjImg']['tmp_name'], "img/" . $nombrearchivoImg));
+        }
     }
 
 ?>
