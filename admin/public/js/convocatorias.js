@@ -20,50 +20,54 @@ function listar_convocatorias() {
         "columns": [
             { "defaultContent": "" },
             { "data": "conv_titulo" },
-            { "data": "conv_fecpublicacion" },
+            { "data": "fechapublicacion" , "className": "text-center"},
             {
-                "data": "conv_bases", render: function (data, type, row) {
+                "data": "conv_bases", "className": "text-center", render: function (data, type, row) {
                     if (data == null || data == '' ) {
                         return '';
                     } else {
                         let filename = row.conv_titulo + '.' + data.split('.').pop();
-                        return '<a href="../'+data+'" download="'+filename+'" target="_blank" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
+                        return '<a href="../'+data+'" download="BASES_'+filename+'" target="_blank" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
                     }
                 }
             },
             {
-                "data": "conv_preliminar_cv", render: function (data, type, row) {
+                "data": "conv_preliminar_cv",  "className": "text-center", render: function (data, type, row) {
                     if (data == null || data == '') {
                         return '';
                     } else {
-                        return '<a href="" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
+                        let filename = row.conv_titulo + '.' + data.split('.').pop();
+                        return '<a href="../'+data+'" download="RESULTADO_CURRICULAR_PRELIMINAR_'+filename+'" target="_blank" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
                     }
                 }
             },
             {
-                "data": "conv_reclamos", render: function (data, type, row) {
+                "data": "conv_reclamos", "className": "text-center", render: function (data, type, row) {
                     if (data == null || data == '') {
                         return '';
                     } else {
-                        return '<a href="" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
+                        let filename = row.conv_titulo + '.' + data.split('.').pop();
+                        return '<a href="../'+data+'" download="ABSOLUCION_RECLAMOS_'+filename+'" target="_blank" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
                     }
                 }
             },
             {
-                "data": "conv_final_cv", render: function (data, type, row) {
+                "data": "conv_final_cv",  "className": "text-center", render: function (data, type, row) {
                     if (data == null || data == '') {
                         return '';
                     } else {
-                        return '<a href="" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
+                        let filename = row.conv_titulo + '.' + data.split('.').pop();
+                        return '<a href="../'+data+'" download="RESULTADO_CURRICULAR_FINAL_'+filename+'" target="_blank" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
                     }
                 }
             },
             {
-                "data": "conv_final", render: function (data, type, row) {
+                "data": "conv_final", "className": "text-center", render: function (data, type, row) {
                     if (data == null || data == '') {
                         return '';
                     } else {
-                        return '<a href="" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
+                        let filename = row.conv_titulo + '.' + data.split('.').pop();
+                        return '<a href="../'+data+'" download="RESULTADO_FINAL_'+filename+'" target="_blank" class="link-danger fa-2x"><i class="fa-solid fa-file"></i></a>';
                     }
                 }
             },
@@ -109,7 +113,7 @@ $('#tabla_convocatorias').on('click', '.eliminar', function () {
         data = tbl_convocatorias.row(this).data();
     }
     Swal.fire({
-        title: '¿Desea Eliminar el Comunicado?',
+        title: '¿Desea Eliminar la Convoatoria?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -118,7 +122,7 @@ $('#tabla_convocatorias').on('click', '.eliminar', function () {
         cancelButtonText: 'Cancelar'
     }).then((result) => {
         if (result.isConfirmed) {
-            eliminar_comunicado(data.comunicado_id);
+            eliminar_convocatoria(data.convocatoria_id);
         }
     });
 });
@@ -343,22 +347,22 @@ function Modificar_Convocatoria() {
     });
 }
 
-function eliminar_comunicado(id) {
+function eliminar_convocatoria(id) {
     $.ajax({
-        "url": "../controller/comunicado/controller_eliminar_comunicado.php",
+        "url": "../controller/convocatorias/controller_eliminar_convocatoria.php",
         type: 'POST',
         data: {
             id: id,
         }
     }).done(function (resp) {
         if (resp == 1) {
-            Swal.fire("Mensaje de Confirmacion", "Comunicado Eliminado con Exito", "success").then((value) => {
+            Swal.fire("Mensaje de Confirmacion", "Convocatoria Eliminada con Exito", "success").then((value) => {
                 tbl_convocatorias.ajax.reload();
             });
 
 
         } else if (resp == 2) {
-            Swal.fire("Mensaje de Advertencia", "El Comunicado se Encuentra Activo", "warning");
+            Swal.fire("Mensaje de Advertencia", "La convocatoria se Encuentra En Proceso", "warning");
         } else {
             Swal.fire("Mensaje de Error", "Comuniquese con Soporte Informatico", "error");
         }

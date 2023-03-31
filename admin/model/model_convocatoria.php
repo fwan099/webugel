@@ -54,9 +54,9 @@
             conexionDB::cerrar_conexion();
         }
 
-        public function Eliminar_Comunicado($id){
+        public function Eliminar_Convocatoria($id){
             $c = conexionDB::conexionPDO();
-            $sql = "CALL SP_ELIMINAR_COMUNICADO(?)";
+            $sql = "CALL SP_ELIMINAR_CONVOCATORIA(?)";
             $arreglo = array();
             $query  = $c->prepare($sql);
             $query->bindParam(1,$id); 

@@ -36,15 +36,15 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Convocatoria</th>
-                                <th>Fecha de Publicación</th>
-                                <th>Bases</th>
-                                <th>Evaluación Preliminar Curricular</th>
-                                <th>Absolución de Reclamos</th>
-                                <th>Evaluaciónn Final Curricular</th>
-                                <th>Resultado Final</th>
-                                <th>Estado</th>
-                                <th style="min-width:90px">Accion</th>
+                                <th >Convocatoria</th>
+                                <th >Fecha de Publicación</th>
+                                <th >Bases</th>
+                                <th >Evaluación Preliminar Curricular</th>
+                                <th >Absolución de Reclamos</th>
+                                <th >Evaluaciónn Final Curricular</th>
+                                <th >Resultado Final</th>
+                                <th >Estado</th>
+                                <th style="min-width:90px" class="text-center">Accion</th>
                             </tr>
                         </thead>
 
