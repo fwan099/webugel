@@ -76,7 +76,7 @@
                         <textarea id="txt_desc" rows="3" class="form-control" style="resize:none;"></textarea>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Subir Vista Previa PNG/JPG 960x300 Pixeles (*)</label>
+                        <label for="">Subir Vista Previa PNG/JPG 900x300 Pixeles (*)</label>
                         <input type='file' class='form-control' id='txt_img_prev'>
                     </div>
                     <div class="col-lg-6 mb-3">
