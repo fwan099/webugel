@@ -184,6 +184,9 @@
                 case "documento":
                     include "view/modules/documento/" . $_GET["url"] . ".php";
                     break;
+                case "documentoOficio":
+                    include "view/modules/documento/" . $_GET["url"] . ".php";
+                    break;
                 case "admin":
                     header('Location: admin/index.php');
                     break;

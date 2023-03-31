@@ -1,11 +1,12 @@
 <?php
     require_once "web_model_conexion.php";
-    class Modelo_Comunicado extends ConexionDB{
-        public function Listar_Comunicado(){
+    class Modelo_Convocatoria extends ConexionDB{
+        public function Listar_Convocatorias_Recientes($cantidad){
             $c = conexionDB::conexionPDO();
-            $sql = "CALL SP_LISTAR_COMUNICADO()";
+            $sql = "CALL SP_LISTAR_CONVOCATORIAS_RECIENTES(?)";
             $arreglo = array();
             $query  = $c->prepare($sql);
+            $query->bindParam(1,$cantidad); 
             $query->execute();
             $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
             foreach($resultado as $resp){

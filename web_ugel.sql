@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 28/03/2023 19:07:08
+ Date: 31/03/2023 17:05:24
 */
 
 SET NAMES utf8mb4;
@@ -67,8 +67,8 @@ INSERT INTO `comunicados` VALUES (21, 'XXXXXXXXXXXXXXCCC', '2023-03-25 21:10:16'
 INSERT INTO `comunicados` VALUES (22, 'VVVVVVVV', '2023-03-28 12:28:13', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH28320231237.PDF', 1, 'VVVVVVV', 'ACTIVO');
 INSERT INTO `comunicados` VALUES (23, 'SDFSD', '2023-03-28 12:29:05', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH283202312670.PDF', 1, 'SEFSEF', 'ACTIVO');
 INSERT INTO `comunicados` VALUES (24, 'SSSSSS', '2023-03-28 12:29:22', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH283202312654.PDF', 1, 'SSSSS', 'ACTIVO');
-INSERT INTO `comunicados` VALUES (25, 'SSSSSS', '2023-03-28 12:29:25', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH283202312965.PDF', 1, 'SSSSS', 'ACTIVO');
-INSERT INTO `comunicados` VALUES (26, 'TTTTTTTT', '2023-03-28 12:30:51', 'controller/comunicado/img/IMG283202312117.PNG', 'controller/comunicado/docs/ARCH283202312725.PDF', 1, 'TT', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (25, 'SSSSSS MUNDO COMO ESTAS UGEL YUNGUYO', '2023-03-28 12:29:25', 'controller/comunicado/img/default.png', 'controller/comunicado/docs/ARCH283202312965.PDF', 1, 'SSSSS', 'ACTIVO');
+INSERT INTO `comunicados` VALUES (26, 'COMUNICADO SOBRE ENTREGA DE MATERIALES PARA INSTITUCIONES EDUCATIVAS COMUNICADO SOBRE ENTREGA DE MATERIALES PARA INSTITUCIONES EDUCATIVASCOMUNICADO SOBRE ENTREGA DE MATERIALES PARA INSTITUCIONES EDUCATIVAS', '2023-03-31 12:30:51', 'controller/comunicado/img/IMG283202312117.PNG', 'controller/comunicado/docs/ARCH283202312725.PDF', 1, 'COMUNICADO SOBRE ENTREGA DE MATERIALES PARA INSTITUCIONES EDUCATIVAS', 'ACTIVO');
 
 -- ----------------------------
 -- Table structure for convocatorias
@@ -77,7 +77,7 @@ DROP TABLE IF EXISTS `convocatorias`;
 CREATE TABLE `convocatorias`  (
   `convocatoria_id` int NOT NULL AUTO_INCREMENT,
   `conv_titulo` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
-  `conv_fecpublicacion` date NULL DEFAULT NULL,
+  `conv_fecpublicacion` datetime NULL DEFAULT NULL,
   `conv_bases` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   `conv_preliminar_cv` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   `conv_reclamos` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
@@ -89,15 +89,18 @@ CREATE TABLE `convocatorias`  (
   PRIMARY KEY (`convocatoria_id`) USING BTREE,
   INDEX `conv_area_id`(`conv_area_id` ASC) USING BTREE,
   CONSTRAINT `convocatorias_ibfk_1` FOREIGN KEY (`conv_area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of convocatorias
 -- ----------------------------
-INSERT INTO `convocatorias` VALUES (1, 'PRUEBA', '2023-03-28', 'controller/convocatorias/docs/CONV1283202312174.PDF', 'controller/convocatorias/docs/CONV2283202312893.PDF', 'controller/convocatorias/docs/CONV3283202312237.PDF', 'controller/convocatorias/docs/CONV4283202312237.PDF', NULL, 'ABIERTO', 1, 'CAS');
-INSERT INTO `convocatorias` VALUES (2, 'CONVOCATORIA CAS 001', '2023-03-28', 'controller/convocatorias/docs/CONV1283202318251.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
-INSERT INTO `convocatorias` VALUES (3, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-28', 'controller/convocatorias/docs/CONV1283202310300.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
-INSERT INTO `convocatorias` VALUES (4, 'WALTER', '2023-03-28', 'controller/convocatorias/docs/CONV1283202311221.PDF', 'controller/convocatorias/docs/CONV2283202311221.PDF', '', '', '', 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (1, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-28 00:00:00', 'controller/convocatorias/docs/CONV1283202312174.PDF', 'controller/convocatorias/docs/CONV2283202312893.PDF', 'controller/convocatorias/docs/CONV3283202312237.PDF', 'controller/convocatorias/docs/CONV4283202312237.PDF', 'controller/convocatorias/docs/CONV531320239502.PDF', 'FINALIZADO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (2, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-28 00:00:00', 'controller/convocatorias/docs/CONV1283202318251.PDF', '', '', '', '', 'FINALIZADO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (3, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-28 00:00:00', 'controller/convocatorias/docs/CONV1283202310300.PDF', '', '', '', '', 'FINALIZADO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (4, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-28 00:00:00', 'controller/convocatorias/docs/CONV1283202311221.PDF', 'controller/convocatorias/docs/CONV2283202311221.PDF', '', '', '', 'FINALIZADO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (5, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-31 09:35:45', 'controller/convocatorias/docs/CONV131320239365.PDF', '', '', '', '', 'ABIERTO', 1, 'DOCENTES');
+INSERT INTO `convocatorias` VALUES (6, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-31 09:36:05', 'controller/convocatorias/docs/CONV131320239645.PDF', '', '', '', '', 'ABIERTO', 1, 'AUXILIARES');
+INSERT INTO `convocatorias` VALUES (7, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-31 09:36:22', 'controller/convocatorias/docs/CONV131320239629.PDF', '', '', '', '', 'ABIERTO', 1, 'DIRECTIVOS');
 
 -- ----------------------------
 -- Table structure for empleado
@@ -161,18 +164,19 @@ CREATE TABLE `oficios`  (
   PRIMARY KEY (`oficio_id`) USING BTREE,
   INDEX `area_origen_id`(`area_origen_id` ASC) USING BTREE,
   CONSTRAINT `oficios_ibfk_1` FOREIGN KEY (`area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of oficios
 -- ----------------------------
-INSERT INTO `oficios` VALUES (3, 'FREDD MULTIKPLE', 'DESCP', '2023-03-25 20:57:43', 'controller/oficio/img/', 'controller/oficio/docs/ARCH253202320346.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (3, 'FREDD MULTIKPLE', 'DESCP', '2023-03-25 20:57:43', 'controller/oficio/img/IMG313202310112.PNG', 'controller/oficio/docs/ARCH253202320346.PDF', 'ACTIVO', 1);
 INSERT INTO `oficios` VALUES (4, 'CCCCCCC', 'CCCCCCCCCCCCC', '2023-03-25 21:06:02', 'controller/oficio/img/IMG263202320654.PNG', 'controller/oficio/docs/ARCH253202321410.PDF', 'ACTIVO', 1);
 INSERT INTO `oficios` VALUES (5, 'FFFF', 'FFFFFFFFFF', '2023-03-28 10:35:05', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH283202310820.PDF', 'ACTIVO', 1);
 INSERT INTO `oficios` VALUES (6, 'XXXXXXXXXXXX', 'XXXXXXXXXX', '2023-03-28 12:23:35', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH28320231229.PDF', 'ACTIVO', 1);
 INSERT INTO `oficios` VALUES (7, 'PPP', 'PPPPPPPPP', '2023-03-28 12:24:49', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH283202312630.PDF', 'ACTIVO', 1);
 INSERT INTO `oficios` VALUES (8, 'PPP', 'PPPPPPPPP', '2023-03-28 12:24:55', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH283202312261.PDF', 'ACTIVO', 1);
 INSERT INTO `oficios` VALUES (9, 'OOOOOOO', 'OOOOOOO', '2023-03-28 12:26:57', 'controller/oficio/img/IMG283202312973.PNG', 'controller/oficio/docs/ARCH28320231262.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (10, 'OFICIO MULTIUPLE 012-2023  REUNION PARA TALLER DE PROYECTOS DE INVERSION', 'OFICIO MULTIUPLE 012-2023  REUNION PARA TALLER DE PROYECTOS DE INVERSIONOFICIO MULTIUPLE 012-2023  REUNION PARA TALLER DE PROYECTOS DE INVERSIONOFICIO MULTIUPLE 012-2023  REUNION PARA TALLER DE PROYECTOS DE INVERSION', '2023-03-31 09:58:14', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH31320239578.PDF', 'ACTIVO', 1);
 
 -- ----------------------------
 -- Table structure for slider
@@ -190,13 +194,12 @@ CREATE TABLE `slider`  (
   PRIMARY KEY (`slider_id`) USING BTREE,
   INDEX `slider_area_origen_id`(`slider_area_origen_id` ASC) USING BTREE,
   CONSTRAINT `slider_ibfk_1` FOREIGN KEY (`slider_area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of slider
 -- ----------------------------
-INSERT INTO `slider` VALUES (1, 'TITULO PHP', 'DESCRIPCION PHP', 'controller/slider/img/SLIDER263202320749.JPG', '2023-03-26 18:05:54', 1, 1, 'ACTIVO');
-INSERT INTO `slider` VALUES (6, 'SGSG', 'GSDGSDG', 'controller/slider/img/SLIDER263202319552.JPG', '2023-03-26 19:04:59', 1, 2, 'ACTIVO');
+INSERT INTO `slider` VALUES (7, '', '', 'controller/slider/img/SLIDER31320231418.JPG', '2023-03-31 14:12:55', 1, 5, 'ACTIVO');
 
 -- ----------------------------
 -- Table structure for usuario
@@ -229,6 +232,25 @@ INSERT INTO `usuario` VALUES (1, 'admin', '$2y$12$am6UQg3sjkZxgBsBagU/YO46PKwGgW
 INSERT INTO `usuario` VALUES (2, 'CONTA', '$2y$12$xULGuAbbZOPMCJkCo4pD9uDxiYomtlY8Ek.R2LUf0tz/7JGXtQCyC', '2023-03-20', NULL, 'ACTIVO', 'Publicador', 1, 3, 2);
 INSERT INTO `usuario` VALUES (4, 'EDG', '$2y$12$4cOssnQ/e.REbBJtuxzivuhsilHegkCfjRLBQmSWTawwFNV3u9KmO', '2023-03-20', NULL, 'ACTIVO', 'Publicador', 1, 3, 2);
 INSERT INTO `usuario` VALUES (5, 'Yun', '$2y$12$dKGEvB1SabLLhdjTGNrkceV0R2MwWm37NKSr8jCP0x8ED31NvlXCe', '2023-03-20', NULL, 'ACTIVO', 'Publicador', 1, 1, 1);
+
+-- ----------------------------
+-- Procedure structure for SP_BUSCAR_COMUNICADO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_BUSCAR_COMUNICADO`;
+delimiter ;;
+CREATE PROCEDURE `SP_BUSCAR_COMUNICADO`(IN TEXTO VARCHAR(255))
+SELECT
+	comunicados.comunicado_id, 
+	comunicados.com_descripcion, 
+	comunicados.com_imgprev, 
+	comunicados.com_feccreacion, 
+	comunicados.com_documento, 
+	comunicados.com_titulo
+FROM
+	comunicados
+  WHERE com_titulo LIKE CONCAT('%', TEXTO, '%')
+;;
+delimiter ;
 
 -- ----------------------------
 -- Procedure structure for SP_CARGAR_SELECT_AREA
@@ -360,11 +382,11 @@ delimiter ;;
 CREATE PROCEDURE `SP_LISTAR_COMUNICADO`()
 SELECT
 	comunicados.comunicado_id, 
-	comunicados.com_titulo, 
 	comunicados.com_descripcion, 
 	comunicados.com_feccreacion, 
 	comunicados.com_imgprev, 
 	comunicados.com_documento, 
+	comunicados.com_titulo, 
 	comunicados.com_estado, 
 	area.area_nombre
 FROM
@@ -373,7 +395,25 @@ FROM
 	area
 	ON 
 		comunicados.area_origen_id = area.area_cod
-		ORDER BY com_feccreacion DESC
+	ORDER BY com_feccreacion DESC
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_LISTAR_COMUNICADOS_RECIENTES
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_LISTAR_COMUNICADOS_RECIENTES`;
+delimiter ;;
+CREATE PROCEDURE `SP_LISTAR_COMUNICADOS_RECIENTES`(IN CANTIDAD INT)
+SELECT
+	comunicados.comunicado_id, 
+	comunicados.com_descripcion, 
+	comunicados.com_feccreacion, 
+	comunicados.com_imgprev, 
+	comunicados.com_titulo, 
+	comunicados.com_estado
+FROM
+	comunicados ORDER BY com_feccreacion DESC LIMIT CANTIDAD
 ;;
 delimiter ;
 
@@ -386,7 +426,7 @@ CREATE PROCEDURE `SP_LISTAR_CONVOCATORIA`(IN TIPO VARCHAR(40))
 SELECT
 	convocatorias.convocatoria_id, 
 	convocatorias.conv_titulo, 
-	convocatorias.conv_fecpublicacion, 
+	DATE_FORMAT(DATE(convocatorias.conv_fecpublicacion), '%d/%m/%Y') as fechapublicacion, 
 	convocatorias.conv_bases, 
 	convocatorias.conv_preliminar_cv, 
 	convocatorias.conv_reclamos, 
@@ -403,6 +443,23 @@ FROM
 		convocatorias.conv_area_id = area.area_cod
 		
 		WHERE conv_tipo = TIPO ORDER BY conv_fecpublicacion DESC
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_LISTAR_CONVOCATORIAS_RECIENTES
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_LISTAR_CONVOCATORIAS_RECIENTES`;
+delimiter ;;
+CREATE PROCEDURE `SP_LISTAR_CONVOCATORIAS_RECIENTES`(IN CANTIDAD INT)
+SELECT
+	convocatorias.convocatoria_id, 
+	convocatorias.conv_titulo, 
+	convocatorias.conv_fecpublicacion, 
+	convocatorias.conv_estado, 
+	convocatorias.conv_tipo
+FROM
+	convocatorias ORDER BY conv_fecpublicacion DESC LIMIT CANTIDAD
 ;;
 delimiter ;
 
@@ -453,6 +510,24 @@ FROM
 	ON 
 		oficios.area_origen_id = area.area_cod
 		ORDER BY ofi_feccreacion DESC
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_LISTAR_OFICIOS_RECIENTES
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_LISTAR_OFICIOS_RECIENTES`;
+delimiter ;;
+CREATE PROCEDURE `SP_LISTAR_OFICIOS_RECIENTES`(IN CANTIDAD INT)
+SELECT
+	oficios.oficio_id, 
+	oficios.ofi_titulo, 
+	oficios.ofi_descripcion, 
+	oficios.ofi_feccreacion, 
+	oficios.ofi_img_prev, 
+	oficios.ofi_estado
+FROM
+	oficios ORDER BY ofi_feccreacion DESC LIMIT CANTIDAD
 ;;
 delimiter ;
 
@@ -881,6 +956,44 @@ ELSE
 	SELECT 2;
 END IF;
 END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_TRAER_DOCUMENTO_COM
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_TRAER_DOCUMENTO_COM`;
+delimiter ;;
+CREATE PROCEDURE `SP_TRAER_DOCUMENTO_COM`(IN ID INT)
+SELECT
+	comunicados.comunicado_id, 
+	comunicados.com_descripcion, 
+	comunicados.com_feccreacion, 
+	comunicados.com_imgprev, 
+	comunicados.com_documento, 
+	comunicados.com_titulo
+FROM
+	comunicados
+	WHERE comunicado_id = ID
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_TRAER_DOCUMENTO_OFI
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_TRAER_DOCUMENTO_OFI`;
+delimiter ;;
+CREATE PROCEDURE `SP_TRAER_DOCUMENTO_OFI`(IN ID INT)
+SELECT
+	oficios.oficio_id, 
+	oficios.ofi_titulo, 
+	oficios.ofi_descripcion, 
+	oficios.ofi_img_prev, 
+	oficios.ofi_documento, 
+	oficios.ofi_feccreacion
+FROM
+	oficios
+	WHERE oficio_id= ID
 ;;
 delimiter ;
 
