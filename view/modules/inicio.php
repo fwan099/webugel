@@ -91,7 +91,7 @@
     <div class="container">
         <h3 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.8s">Publicaciones Recientes</h3>
         <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.9s">
-            <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+            <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5 gap-3 ">
                 <li class="nav-item">
                     <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
                         <h6 class="mt-n1 mb-0">Comunicados</h6>
@@ -155,7 +155,5 @@
         traer_recientes_comunicados();
         traer_recientes_oficios();
         traer_recientes_convocatorias()
-
-
     });
 </script>

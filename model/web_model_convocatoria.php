@@ -59,6 +59,20 @@
             return $arreglo;
             conexionDB::cerrar_conexion();
         }
+        public function Listar_Convocatoria($tipo){
+            $c = conexionDB::conexionPDO();
+            $sql = "CALL SP_LISTAR_CONVOCATORIA(?)";
+            $arreglo = array();
+            $query  = $c->prepare($sql);
+            $query->bindParam(1,$tipo); 
+            $query->execute();
+            $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+            foreach($resultado as $resp){
+                $arreglo["data"][]=$resp;
+            }
+            return $arreglo;
+            conexionDB::cerrar_conexion();
+        }
 
     }
 ?>

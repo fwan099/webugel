@@ -6,8 +6,11 @@
   --dorado: #efb810;
   --light2: #cce5ff;
   --light3: #f0ebd7;
+  --bs-success: #9FCC2E;
 }
-
+.bg-success{
+  background-color: var(--bs-success) !important;
+}
 .bg-light2 {
   background-color: var(--light2);
 }
