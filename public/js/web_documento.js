@@ -8,6 +8,7 @@ function ver_documento(id){
         }
     }).done(function (resp) {
         data = JSON.parse(resp);
+
         document.getElementById('principal_title').innerHTML = data[0]['com_titulo'];
         document.getElementById('titulo_com').innerHTML = data[0]['com_titulo'];
         document.getElementById('descripcion_com').innerHTML = data[0]['com_descripcion'];
@@ -15,6 +16,7 @@ function ver_documento(id){
         document.getElementById('document_link').href = "admin/"+data[0]['com_documento'];
         document.getElementById('document_link').download = data[0]['com_titulo'];
         document.getElementById('vista_previa').src = "admin/"+data[0]['com_imgprev'];
+        verficar_datos_doc();
     });
 
 }
@@ -73,4 +75,14 @@ function Calcular_Fecha(fechahora) {
 
     }
     return dia + ' ' + mesLetra + ' ' + anio;
+}
+
+function verficar_datos_doc(){
+    let caja = document.getElementById("box__all_document");
+    let imagen = document.getElementById("vista_previa");
+    if(imagen.src =="" || imagen.src == null){
+        caja.style.display = "none";
+    }else{
+        caja.style.display = "flex";
+    }
 }

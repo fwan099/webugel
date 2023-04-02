@@ -15,6 +15,7 @@ function ver_documento(id){
         document.getElementById('document_link').href = "admin/"+data[0]['ofi_documento'];
         document.getElementById('document_link').download = data[0]['ofi_titulo'];
         document.getElementById('vista_previa').src = "admin/"+data[0]['ofi_img_prev'];
+        verficar_datos_doc();
     });
 
 }
@@ -73,4 +74,13 @@ function Calcular_Fecha(fechahora) {
 
     }
     return dia + ' ' + mesLetra + ' ' + anio;
+}
+function verficar_datos_doc(){
+    let caja = document.getElementById("box__all_document");
+    let imagen = document.getElementById("vista_previa");
+    if(imagen.src =="" || imagen.src == null){
+        caja.style.display = "none";
+    }else{
+        caja.style.display = "flex";
+    }
 }

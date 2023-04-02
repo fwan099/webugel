@@ -2,7 +2,7 @@
 <!-- Job Detail Start -->
 <div class="container-xxl py-5">
     <div class="container">
-        <div class="row bg-light">
+        <div class="row bg-light" id="box__all_document" style="display:none">
             <div class="col-lg-12 bg-light  mb-1">
                 <h5 id="principal_title" class="text-primary text-center p-3 animated slideInLeft mb-0"></h5>
             </div>
