@@ -100,11 +100,16 @@
                     </div>
                     <div class="col-lg-12 mb-3">
                         <label for="">Direccion (*)</label>
-                        <input type="text" class="form-control" id="txt_dire" autocomplete="off">
+                        <input type="text" class="form-control" id="txt_dire" >
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 mb-3">
                         <label for="">Email (*)</label>
-                        <input type="text" class="form-control" id="txt_email" autocomplete="off">
+                        <input type="text" class="form-control" id="txt_email" >
+                    </div>
+                    <div class="col-lg-12 d">
+                        <label for="">Foto (*)</label>
+                        <img class="mb-3" src="../controller/empleado/foto/default.png" alt="" id="imagen__prev">
+                        <input type="file" class="form-control" id="txt_foto" >
                     </div>
 
                 </div>
@@ -165,11 +170,16 @@
                         <label for="">Direccion</label>
                         <input type="text" class="form-control" id="txt_dire_editar">
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 mb-3" >
                         <label for="">Email</label>
                         <input type="text" class="form-control" id="txt_email_editar">
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-8 mb-3">
+                        <label for="">Foto (*)</label>
+                        <input type="file" class="form-control mb-3" id="txt_foto_edit" >
+                        <img class="mb-3" src="../controller/empleado/foto/default.png" alt="" id="imagen__prev_edit">
+                    </div>
+                    <div class="col-lg-4 mb-3">
                         <label for="">Estatus</label>
                         <select name="" id="select_estatus" class="form-select js-example-basic-single">
                             <option value="ACTIVO">ACTIVO</option>
@@ -191,6 +201,20 @@
 <script>
 $(document).ready(function() {
     listar_empleado();
+    let img = document.querySelector("#imagen__prev");
+    
+let input = document.querySelector("#txt_foto");
+input.addEventListener("change",()=>{
+    img.src = URL.createObjectURL(input.files[0]);
+});
+
+
+let img2 = document.querySelector("#imagen__prev_edit");
+    
+let input2 = document.querySelector("#txt_foto_edit");
+input2.addEventListener("change",()=>{
+    img2.src = URL.createObjectURL(input2.files[0]);
+});
 
 });
 $('#modal_editar').on('shown.bs.modal', function(event) {
@@ -211,5 +235,33 @@ var myInput = document.getElementById('txt_nro');
 
 myModal.addEventListener('shown.bs.modal', function() {
     myInput.focus()
-})
+
+    
+});
+
+
+$('#txt_foto').on('change', function() {
+            var ext = $(this).val().split('.').pop();
+            if ($(this).val() != '') {
+                if (ext == "JPG" || ext == "jpg" || ext == "PNG" || ext == "png") {
+                    if ($(this)[0].files[0].size > 8048576) {
+                        Swal.fire("El archivo selecionado es demasiado pesado",
+                            "<label style='color:#9B0000;'>seleccionar un archivo mas liviano</label>",
+                            "warning");
+                        //$("#txtformato").val("");
+                        //$("#txt_archivo").val("");
+                        //$("#lb_archivo").html("Seleccionar Archivo");
+                        //return;
+                        //$("#btn_subir").prop("disabled",true);
+                    } else {
+                        //$("#btn_subir").attr("disabled",false);
+
+                    }
+                    $("#txtformato").val(ext);
+                } else {
+                    $("#txt_archivo").val("");
+                    Swal.fire("Mensaje de Error", "Extensión no permitida: " + ext, "error");
+                }
+            }
+        });
 </script>

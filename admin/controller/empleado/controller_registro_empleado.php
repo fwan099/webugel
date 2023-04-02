@@ -9,7 +9,20 @@
     $movil =strtoupper(htmlspecialchars($_POST['movil'],ENT_QUOTES,'UTF-8'));
     $dire =strtoupper(htmlspecialchars($_POST['dire'],ENT_QUOTES,'UTF-8'));
     $email =strtoupper(htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8'));
-    $consulta = $MU->Registrar_Empleado($nro,$nom,$apepa,$apema,$fnac,$movil,$dire,$email);
+    $nombrearchivoImg =strtoupper(htmlspecialchars($_POST['nombrearchivoImg'],ENT_QUOTES,'UTF-8'));
+
+    $rutaImg;
+    if (empty($nombrearchivoImg)) {
+        $rutaImg = "controller/empleado/foto/default.png";
+    } else {
+        $rutaImg = 'controller/empleado/foto/'.$nombrearchivoImg;
+    }
+    $consulta = $MU->Registrar_Empleado($nro,$nom,$apepa,$apema,$fnac,$movil,$dire,$email,$rutaImg);
     echo $consulta;
+    if($consulta==1){
+        if (!empty($nombrearchivoImg)) {
+            if (move_uploaded_file($_FILES['archivoobjImg']['tmp_name'], "foto/" . $nombrearchivoImg));
+        }
+    }
 
 ?>

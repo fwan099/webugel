@@ -81,3 +81,12 @@
   .border_input{
       border-color:  transparent !important;
   }
+#imagen__prev,#imagen__prev_edit{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

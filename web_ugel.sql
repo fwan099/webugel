@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost_3306
+ Source Server         : localhost
  Source Server Type    : MySQL
  Source Server Version : 100427 (10.4.27-MariaDB)
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 31/03/2023 19:01:18
+ Date: 02/04/2023 16:11:49
 */
 
 SET NAMES utf8mb4;
@@ -89,7 +89,7 @@ CREATE TABLE `convocatorias`  (
   PRIMARY KEY (`convocatoria_id`) USING BTREE,
   INDEX `conv_area_id`(`conv_area_id` ASC) USING BTREE,
   CONSTRAINT `convocatorias_ibfk_1` FOREIGN KEY (`conv_area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of convocatorias
@@ -98,11 +98,38 @@ INSERT INTO `convocatorias` VALUES (1, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN A
 INSERT INTO `convocatorias` VALUES (2, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-28 00:00:00', 'controller/convocatorias/docs/CONV1283202318251.PDF', '', '', '', '', 'FINALIZADO', 1, 'CAS');
 INSERT INTO `convocatorias` VALUES (3, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-28 00:00:00', 'controller/convocatorias/docs/CONV1283202310300.PDF', '', '', '', '', 'FINALIZADO', 1, 'CAS');
 INSERT INTO `convocatorias` VALUES (4, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-28 00:00:00', 'controller/convocatorias/docs/CONV1283202311221.PDF', 'controller/convocatorias/docs/CONV2283202311221.PDF', '', '', '', 'FINALIZADO', 1, 'CAS');
-INSERT INTO `convocatorias` VALUES (5, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-31 09:35:45', 'controller/convocatorias/docs/CONV131320239365.PDF', '', '', '', '', 'ABIERTO', 1, 'DOCENTES');
+INSERT INTO `convocatorias` VALUES (5, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-31 09:35:45', 'controller/convocatorias/docs/CONV131320239365.PDF', '', '', '', 'controller/convocatorias/docs/CONV524202314522.PDF', 'ABIERTO', 1, 'DOCENTES');
 INSERT INTO `convocatorias` VALUES (6, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-31 09:36:05', 'controller/convocatorias/docs/CONV131320239645.PDF', '', '', '', '', 'ABIERTO', 1, 'AUXILIARES');
 INSERT INTO `convocatorias` VALUES (7, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-31 09:36:22', 'controller/convocatorias/docs/CONV131320239629.PDF', '', '', '', '', 'ABIERTO', 1, 'DIRECTIVOS');
 INSERT INTO `convocatorias` VALUES (8, 'CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-31 18:58:51', 'controller/convocatorias/docs/CONV1313202318850.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
 INSERT INTO `convocatorias` VALUES (9, 'FREDDY CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-03-31 18:59:12', 'controller/convocatorias/docs/CONV1313202318811.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (10, 'FREDDY CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-04-02 12:01:01', 'controller/convocatorias/docs/CONV124202312183.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (11, 'FREDDY CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-04-02 12:01:13', 'controller/convocatorias/docs/CONV124202312181.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (12, 'FREDDY CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-04-02 12:01:26', 'controller/convocatorias/docs/CONV12420231298.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (13, 'FREDDY CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-04-02 12:01:48', 'controller/convocatorias/docs/CONV124202312478.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (14, '.PAGE-ITEM', '2023-04-02 12:02:56', 'controller/convocatorias/docs/CONV124202312232.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
+
+-- ----------------------------
+-- Table structure for directorio
+-- ----------------------------
+DROP TABLE IF EXISTS `directorio`;
+CREATE TABLE `directorio`  (
+  `directorio_id` int NOT NULL AUTO_INCREMENT,
+  `empleado_id` int NULL DEFAULT NULL,
+  `area_id` int NULL DEFAULT NULL,
+  `dir_cargo` varchar(60) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `dir_profesion` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`directorio_id`) USING BTREE,
+  INDEX `empleado_id`(`empleado_id` ASC) USING BTREE,
+  INDEX `area_id`(`area_id` ASC) USING BTREE,
+  CONSTRAINT `directorio_ibfk_1` FOREIGN KEY (`empleado_id`) REFERENCES `empleado` (`empleado_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `directorio_ibfk_2` FOREIGN KEY (`area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of directorio
+-- ----------------------------
+INSERT INTO `directorio` VALUES (1, 1, 1, 'ESP. EN RECURSOS HUMANOS', 'ING.');
 
 -- ----------------------------
 -- Table structure for empleado
@@ -122,13 +149,17 @@ CREATE TABLE `empleado`  (
   `emple_direccion` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   `emple_fotoperfil` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`empleado_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of empleado
 -- ----------------------------
 INSERT INTO `empleado` VALUES (1, 'FREDDY WALTER', 'HUAYNAPATA', 'UCHARICO', '2023-03-17', '1999-07-15', '73744393', '967444616', 'FREDDY.LEDIS099@GMAIL.COM', 'ACTIVO', 'JR. 31 DE MARZO S/NM', NULL);
 INSERT INTO `empleado` VALUES (3, 'OBED', 'QUISPE', 'TORRES', '2023-03-20', '2023-03-21', '98765432', '987654321', 'OBED@GMAIL.COM', 'ACTIVO', 'PUNO', 'controller/empleado/foto/default.png');
+INSERT INTO `empleado` VALUES (4, 'GDFGD', 'FDGDFG', 'DFGDFGD', '2023-04-02', '2023-04-02', '78575', '867867', 'XGXDGXDSGF@GMAIL.COM', 'ACTIVO', 'XDGXDG', 'controller/empleado/foto/default.png');
+INSERT INTO `empleado` VALUES (6, 'MOMO', 'GYGDF', 'GDFGDFGDF', '2023-04-02', '2023-04-08', '65465', '756756', 'FGDFGD@GMAIL.COM', 'ACTIVO', 'DFGDFG', 'controller/empleado/foto/default.png');
+INSERT INTO `empleado` VALUES (7, 'PEPRE', 'PEREX', 'FSF', '2023-04-02', '2023-04-08', '545', '46456', 'REGERG@GMAIL.COM', 'ACTIVO', 'TETRET', 'controller/empleado/foto/EMPLE24202315848.PNG');
+INSERT INTO `empleado` VALUES (8, 'XXXXXXXXXXXXXXXXXXXX', 'CCCCC', 'CCCCCCCCCCCCC', '2023-04-02', '2023-04-07', '35345', '555555555', 'DFG@GMAIL.COM', 'INACTIVO', '5FDCC', 'controller/empleado/foto/EMPLE24202315767.PNG');
 
 -- ----------------------------
 -- Table structure for empresa
@@ -196,12 +227,13 @@ CREATE TABLE `slider`  (
   PRIMARY KEY (`slider_id`) USING BTREE,
   INDEX `slider_area_origen_id`(`slider_area_origen_id` ASC) USING BTREE,
   CONSTRAINT `slider_ibfk_1` FOREIGN KEY (`slider_area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of slider
 -- ----------------------------
 INSERT INTO `slider` VALUES (7, '', '', 'controller/slider/img/SLIDER31320231418.JPG', '2023-03-31 14:12:55', 1, 5, 'ACTIVO');
+INSERT INTO `slider` VALUES (9, 'ETESWT', 'SFDSF', 'controller/slider/img/SLIDER2420231565.PNG', '2023-04-02 15:34:23', 1, 0, 'ACTIVO');
 
 -- ----------------------------
 -- Table structure for usuario
@@ -462,6 +494,37 @@ SELECT
 	convocatorias.conv_tipo
 FROM
 	convocatorias ORDER BY conv_fecpublicacion DESC LIMIT CANTIDAD
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_LISTAR_DIRECTORIO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_LISTAR_DIRECTORIO`;
+delimiter ;;
+CREATE PROCEDURE `SP_LISTAR_DIRECTORIO`()
+SELECT
+	directorio.directorio_id, 
+	empleado.emple_nombre, 
+	empleado.emple_apepat, 
+	empleado.emple_apemat, 
+	empleado.emple_email, 
+	empleado.emple_movil, 
+	empleado.emple_fotoperfil, 
+	area.area_nombre, 
+	directorio.dir_cargo, 
+	directorio.dir_profesion,
+	CONCAT_WS(' ',empleado.emple_nombre,empleado.emple_apepat,empleado.emple_apemat) AS namecomplet
+FROM
+	directorio
+	INNER JOIN
+	empleado
+	ON 
+		directorio.empleado_id = empleado.empleado_id
+	INNER JOIN
+	area
+	ON 
+		directorio.area_id = area.area_cod
 ;;
 delimiter ;
 
@@ -728,11 +791,20 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_MODIFICAR_EMPLEADO`;
 delimiter ;;
-CREATE PROCEDURE `SP_MODIFICAR_EMPLEADO`(IN ID INT, IN NDOCUMENTO VARCHAR(12), IN NOMBRE VARCHAR(45), IN APEPAT VARCHAR(45), IN APEMAT VARCHAR(45), IN FECHA DATE, IN MOVIL VARCHAR(9), IN DIRECCION VARCHAR(45), IN EMAIL VARCHAR(45), IN ESTATUS VARCHAR(20))
+CREATE PROCEDURE `SP_MODIFICAR_EMPLEADO`(IN ID INT, IN NDOCUMENTO VARCHAR(12), IN NOMBRE VARCHAR(45), IN APEPAT VARCHAR(45), IN APEMAT VARCHAR(45), IN FECHA DATE, IN MOVIL VARCHAR(9), IN DIRECCION VARCHAR(45), IN EMAIL VARCHAR(45), IN ESTATUS VARCHAR(20),IN IMGRUT VARCHAR(255))
 BEGIN
+DECLARE RUTAACTUALIMG VARCHAR(255);
+DECLARE RUTANUEVAIMG VARCHAR(255);
 DECLARE NDOCUMENTOACTUAL VARCHAR(12);
 DECLARE CANTIDAD INT;
+SET @RUTANUEVAIMG = IMGRUT;
+
+
+SET @RUTAACTUALIMG:= (SELECT empleado.emple_fotoperfil FROM empleado WHERE empleado_id=ID);
 SET @NDOCUMENTOACTUAL:= (SELECT emple_nrodocumento FROM empleado WHERE empleado_id=ID);
+IF IMGRUT = '' THEN
+	SET @RUTANUEVAIMG= @RUTAACTUALIMG;
+END IF;
 IF @NDOCUMENTOACTUAL = NDOCUMENTO THEN
 	UPDATE empleado SET 
 	emple_nrodocumento=NDOCUMENTO,
@@ -743,7 +815,8 @@ IF @NDOCUMENTOACTUAL = NDOCUMENTO THEN
 	emple_movil=MOVIL,
 	emple_direccion=DIRECCION,
 	emple_email=EMAIL,
-	emple_estatus=ESTATUS
+	emple_estatus=ESTATUS,
+	emple_fotoperfil = @RUTANUEVAIMG
 	WHERE empleado_id=ID;
 	SELECT 1;
 ELSE
@@ -758,7 +831,8 @@ ELSE
 		emple_movil=MOVIL,
 		emple_direccion=DIRECCION,
 		emple_email=EMAIL,
-		emple_estatus=ESTATUS
+		emple_estatus=ESTATUS,
+		emple_fotoperfil = @RUTANUEVAIMG
 		WHERE empleado_id=ID;
 		SELECT 1; 
 	ELSE
@@ -901,12 +975,12 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_REGISTRAR_EMPLEADO`;
 delimiter ;;
-CREATE PROCEDURE `SP_REGISTRAR_EMPLEADO`(IN NDOCUMENTO VARCHAR(12), IN NOMBRE VARCHAR(45), IN APEPAT VARCHAR(45), IN APEMAT VARCHAR(45), IN FECHA DATE, IN MOVIL VARCHAR(9), IN DIRECCION VARCHAR(45), IN EMAIL VARCHAR(45))
+CREATE PROCEDURE `SP_REGISTRAR_EMPLEADO`(IN NDOCUMENTO VARCHAR(12), IN NOMBRE VARCHAR(45), IN APEPAT VARCHAR(45), IN APEMAT VARCHAR(45), IN FECHA DATE, IN MOVIL VARCHAR(9), IN DIRECCION VARCHAR(45), IN EMAIL VARCHAR(45),IN FOTOURL VARCHAR(255))
 BEGIN
 DECLARE CANTIDAD INT;
 SET @CANTIDAD:=(SELECT COUNT(*) FROM empleado WHERE emple_nrodocumento=NDOCUMENTO);
 IF @CANTIDAD = 0 THEN
-	INSERT INTO empleado(emple_nrodocumento,emple_nombre,emple_apepat,emple_apemat,emple_fechanacimiento,emple_movil,emple_direccion,emple_email,emple_feccreacion,emple_estatus,emple_fotoperfil)VALUES(NDOCUMENTO,NOMBRE,APEPAT,APEMAT,FECHA,MOVIL,DIRECCION,EMAIL,CURDATE(),'ACTIVO','controller/empleado/foto/default.png');
+	INSERT INTO empleado(emple_nrodocumento,emple_nombre,emple_apepat,emple_apemat,emple_fechanacimiento,emple_movil,emple_direccion,emple_email,emple_feccreacion,emple_estatus,emple_fotoperfil)VALUES(NDOCUMENTO,NOMBRE,APEPAT,APEMAT,FECHA,MOVIL,DIRECCION,EMAIL,CURDATE(),'ACTIVO',FOTOURL);
 	SELECT 1; 
 ELSE
 	SELECT 2;

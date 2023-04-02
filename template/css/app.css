@@ -221,3 +221,26 @@ textarea:focus {
 .text-secondary{
   color: var(--secondary) !important;
 }
+
+.page-item{
+  padding: inherit !important;
+  margin: inherit !important;
+  border:none !important;
+}
+.page-link:focus{
+ color: white !important;
+ box-shadow: none !important;
+}
+.page-link:hover{
+  color: #000000 !important;
+}
+td{
+  font-size: 12px !important;
+  font-family: sans-serif;
+}
+
+table .selected td {
+    color: white !important;
+    background-color: #eeeeee !important;
+    box-shadow: initial;
+}

@@ -70,6 +70,7 @@ $('#tabla_empleado').on('click', '.editar', function () {
     document.getElementById('txt_dire_editar').value = data.emple_direccion;
     document.getElementById('txt_email_editar').value = data.emple_email;
     document.getElementById('select_estatus').value = data.emple_estatus;
+    document.getElementById('imagen__prev_edit').src = "../"+data.emple_fotoperfil;
 })
 $('#tabla_empleado').on('click', '.eliminar', function () {
     let data = tbl_empleado.row($(this).parents('tr')).data();
@@ -129,6 +130,7 @@ function Registrar_Empleado() {
     let movil = document.getElementById('txt_movil').value;
     let dire = document.getElementById('txt_dire').value;
     let email = document.getElementById('txt_email').value;
+    let foto = document.getElementById('txt_foto').value;
     if (nro.length == 0 || nom.length == 0 || apepa.length == 0 || apema.length == 0 || fnac.length == 0 || movil.length == 0 || dire.length == 0 || email.length == 0) {
         return Swal.fire("Mensaje de Advetencia", "Tiene campos vacios", "warning");
     }
@@ -137,19 +139,32 @@ function Registrar_Empleado() {
     } else {
         return Swal.fire("Mensaje de Advetencia", "Formato de Email Incorrecto", "warning");
     }
+
+    let extensionImg = foto.split('.').pop();
+    let nombrearchivoImg = "";
+    let fImg = new Date();
+    if (foto.length > 0) {
+        nombrearchivoImg = "EMPLE" + fImg.getDate() + "" + (fImg.getMonth() + 1) + "" + fImg.getFullYear() + "" + fImg.getHours() + "" + fImg.getMilliseconds() + "." + extensionImg;
+    }
+    let formData = new FormData();
+    let archivoobjImg = $("#txt_foto")[0].files[0];
+    formData.append("nro", nro);
+    formData.append("nom", nom);
+    formData.append("apepa", apepa);
+    formData.append("apema", apema);
+    formData.append("fnac", fnac);
+    formData.append("movil", movil);
+    formData.append("dire", dire);
+    formData.append("email", email);
+    formData.append("nombrearchivoImg", nombrearchivoImg);
+    formData.append("archivoobjImg", archivoobjImg);
     $.ajax({
         "url": "../controller/empleado/controller_registro_empleado.php",
         type: 'POST',
-        data: {
-            nro: nro,
-            nom: nom,
-            apepa: apepa,
-            apema: apema,
-            fnac: fnac,
-            movil: movil,
-            dire: dire,
-            email: email
-        }
+        data: formData,
+        contentType: false,
+        processData: false,
+
     }).done(function (resp) {
         if (resp > 0) {
             if (resp == 1) {
@@ -162,6 +177,7 @@ function Registrar_Empleado() {
                     document.getElementById('txt_movil').value = "";
                     document.getElementById('txt_dire').value = "";
                     document.getElementById('txt_email').value = "";
+                    document.getElementById('txt_foto').value = "";
                     tbl_empleado.ajax.reload();
                     $("#modal_registro").modal('hide');
 
@@ -189,6 +205,7 @@ function Modificar_Empleado() {
     let dire = document.getElementById('txt_dire_editar').value;
     let email = document.getElementById('txt_email_editar').value;
     let esta = document.getElementById('select_estatus').value;
+    let foto = document.getElementById('txt_foto_edit').value;
     if (id.length == 0 || esta.length == 0 || nro.length == 0 || nom.length == 0 || apepa.length == 0 || apema.length == 0 || fnac.length == 0 || movil.length == 0 || dire.length == 0 || email.length == 0) {
         return Swal.fire("Mensaje de Advetencia", "Tiene campos vacios", "warning");
     }
@@ -197,21 +214,33 @@ function Modificar_Empleado() {
     } else {
         return Swal.fire("Mensaje de Advetencia", "Formato de Email Incorrecto", "warning");
     }
+
+    let extensionImg = foto.split('.').pop();
+    let nombrearchivoImg = "";
+    let fImg = new Date();
+    if (foto.length > 0) {
+        nombrearchivoImg = "EMPLE" + fImg.getDate() + "" + (fImg.getMonth() + 1) + "" + fImg.getFullYear() + "" + fImg.getHours() + "" + fImg.getMilliseconds() + "." + extensionImg;
+    }
+    let formData = new FormData();
+    let archivoobjImg = $("#txt_foto_edit")[0].files[0];
+    formData.append("id", id);
+    formData.append("nro", nro);
+    formData.append("nom", nom);
+    formData.append("apepa", apepa);
+    formData.append("apema", apema);
+    formData.append("fnac", fnac);
+    formData.append("movil", movil);
+    formData.append("dire", dire);
+    formData.append("email", email);
+    formData.append("esta", esta);
+    formData.append("nombrearchivoImg", nombrearchivoImg);
+    formData.append("archivoobjImg", archivoobjImg);
     $.ajax({
         "url": "../controller/empleado/controller_modificar_empleado.php",
         type: 'POST',
-        data: {
-            id: id,
-            nro: nro,
-            nom: nom,
-            apepa: apepa,
-            apema: apema,
-            fnac: fnac,
-            movil: movil,
-            dire: dire,
-            email: email,
-            esta: esta
-        }
+        data: formData,
+        contentType: false,
+        processData: false,
     }).done(function (resp) {
         if (resp > 0) {
             if (resp == 1) {

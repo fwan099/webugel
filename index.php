@@ -34,6 +34,7 @@
 
     <!-- Template Stylesheet -->
     <link href="./template/css/app.css" rel="stylesheet">
+    
 
     <link rel="stylesheet" type="text/css" href="./public/DataTables/datatables.min.css" />
 
@@ -283,6 +284,8 @@
 
 <!-- Template Javascript -->
 <script src="./template/js/main.js"></script>
+
+<script type="text/javascript" src="./public/DataTables/datatables.min.js"></script>
 
 <!-- Librerias  -->
 <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>

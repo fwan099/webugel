@@ -11,6 +11,7 @@ function listar_convocatorias() {
         "destroy": true,
         "async": true,
         "processing": true,
+        "responsive":true,
         "ajax": {
             "url": "controller/web_controller_listar_convocatorias.php",
             type: 'POST',

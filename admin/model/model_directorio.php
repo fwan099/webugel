@@ -1,9 +1,9 @@
 <?php
     require_once "model_conexion.php";
-    class Modelo_Empleado extends ConexionDB{
-        public function Listar_Empleado(){
+    class Modelo_Directorio extends ConexionDB{
+        public function Listar_Directorio(){
             $c = conexionDB::conexionPDO();
-            $sql = "CALL SP_LISTAR_EMPLEADO()";
+            $sql = "CALL SP_LISTAR_DIRECTORIO()";
             $arreglo = array();
             $query  = $c->prepare($sql);
             $query->execute();
