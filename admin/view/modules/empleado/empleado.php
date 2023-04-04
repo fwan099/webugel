@@ -209,8 +209,7 @@ input.addEventListener("change",()=>{
 });
 
 
-let img2 = document.querySelector("#imagen__prev_edit");
-    
+let img2 = document.querySelector("#imagen__prev_edit");  
 let input2 = document.querySelector("#txt_foto_edit");
 input2.addEventListener("change",()=>{
     img2.src = URL.createObjectURL(input2.files[0]);

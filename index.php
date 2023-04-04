@@ -90,7 +90,7 @@
                         <div class="dropdown-menu rounded-0 m-0 p-0">
                             <a href="nosotros" class="dropdown-item">Sobre Nosotros</a>
                             <a href="directorio" class="dropdown-item">Directorio</a>
-                            <a href="documentosdegestion" class="dropdown-item">Documentos de Gestión</a>
+                            <a href="documentosdegestion" class="dropdown-item">Instrumentos de Gestión</a>
                             <a href="organigrama" class="dropdown-item">Organigrama</a>
                         </div>
                     </div>
@@ -189,6 +189,9 @@
                 case "documentoOficio":
                     include "view/modules/documento/" . $_GET["url"] . ".php";
                     break;
+                case "reclamos":
+                    include "view/modules/reclamos/" . $_GET["url"] . ".php";
+                    break;
                 case "admin":
                     header('Location: admin/index.php');
                     break;
@@ -226,7 +229,7 @@
                 
             </div>
             <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-center"> 
-                <a href="#" id="libro"><img src="./public/img/icons/libro.png" class="libro__re" alt="" width="160"></a>
+                <a href="reclamos" id="libro"><img src="./public/img/icons/libro.png" class="libro__re" alt="" width="160"></a>
             </div>
         </div>
     </div>
@@ -290,6 +293,8 @@
 <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 
 <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="./public/js/app.js"></script>
 

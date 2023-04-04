@@ -296,9 +296,9 @@ if (!isset($_SESSION['S_ID'])) {
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a onclick="cargar_contenido('content','modules/entidad/entidad.php')" class="nav-link mininav-toggle"><i class="bi bi-bank fs-5 me-2"></i>
+                                    <a onclick="cargar_contenido('content','modules/reclamos/reclamos.php')" class="nav-link mininav-toggle"><i class="bi bi-bank fs-5 me-2"></i>
 
-                                        <span class="nav-label mininav-content ms-1">Entidad</span>
+                                        <span class="nav-label mininav-content ms-1">Reclamos</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">

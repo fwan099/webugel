@@ -90,3 +90,6 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+#imagen__prev_modal,#imagen__prev_modal_edit{
+  width: 150px;
+}

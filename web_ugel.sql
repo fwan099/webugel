@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 03/04/2023 19:28:18
+ Date: 04/04/2023 17:30:46
 */
 
 SET NAMES utf8mb4;
@@ -184,6 +184,26 @@ CREATE TABLE `empresa`  (
 INSERT INTO `empresa` VALUES (1, 'UGEL YUNGUYO', 'UGEL@GMAIL.COM', '201245789874', '987654321', 'JR. INDEPENDENCIA N 1034', NULL);
 
 -- ----------------------------
+-- Table structure for modal
+-- ----------------------------
+DROP TABLE IF EXISTS `modal`;
+CREATE TABLE `modal`  (
+  `modal_id` int NOT NULL AUTO_INCREMENT,
+  `modal_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `modal_imagen` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `modal_fecha` date NULL DEFAULT NULL,
+  `modal_area_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`modal_id`) USING BTREE,
+  INDEX `modal_area_id`(`modal_area_id` ASC) USING BTREE,
+  CONSTRAINT `modal_ibfk_1` FOREIGN KEY (`modal_area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of modal
+-- ----------------------------
+INSERT INTO `modal` VALUES (5, '', 'controller/modal/img/ARCH44202317374.JPG', '2023-04-04', 1);
+
+-- ----------------------------
 -- Table structure for oficios
 -- ----------------------------
 DROP TABLE IF EXISTS `oficios`;
@@ -199,7 +219,7 @@ CREATE TABLE `oficios`  (
   PRIMARY KEY (`oficio_id`) USING BTREE,
   INDEX `area_origen_id`(`area_origen_id` ASC) USING BTREE,
   CONSTRAINT `oficios_ibfk_1` FOREIGN KEY (`area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of oficios
@@ -212,6 +232,40 @@ INSERT INTO `oficios` VALUES (7, 'PPP', 'PPPPPPPPP', '2023-03-28 12:24:49', 'con
 INSERT INTO `oficios` VALUES (8, 'PPP', 'PPPPPPPPP', '2023-03-28 12:24:55', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH283202312261.PDF', 'ACTIVO', 1);
 INSERT INTO `oficios` VALUES (9, 'OOOOOOO', 'OOOOOOO', '2023-03-28 12:26:57', 'controller/oficio/img/IMG283202312973.PNG', 'controller/oficio/docs/ARCH28320231262.PDF', 'ACTIVO', 1);
 INSERT INTO `oficios` VALUES (10, 'OFICIO MULTIUPLE 012-2023  REUNION PARA TALLER DE PROYECTOS DE INVERSION', 'OFICIO MULTIUPLE 012-2023  REUNION PARA TALLER DE PROYECTOS DE INVERSIONOFICIO MULTIUPLE 012-2023  REUNION PARA TALLER DE PROYECTOS DE INVERSIONOFICIO MULTIUPLE 012-2023  REUNION PARA TALLER DE PROYECTOS DE INVERSION', '2023-03-31 09:58:14', 'controller/oficio/img/default.png', 'controller/oficio/docs/ARCH31320239578.PDF', 'ACTIVO', 1);
+INSERT INTO `oficios` VALUES (11, 'OFICIO MULTIPLEN° 0025-2023-GRP-GRDS-DREP/UGEL-Y/AGP-EEIB', 'COMUNICA INICIO DE INSCRIPCION PARA LA EVALUACION DE DOMINIO DE\r\nLENGUA ORIGINARIA 2023. ', '2023-04-04 15:57:28', 'controller/oficio/img/IMG44202315505.JPG', 'controller/oficio/docs/ARCH44202315505.PDF', 'ACTIVO', 1);
+
+-- ----------------------------
+-- Table structure for reclamos
+-- ----------------------------
+DROP TABLE IF EXISTS `reclamos`;
+CREATE TABLE `reclamos`  (
+  `reclamo_id` int NOT NULL AUTO_INCREMENT,
+  `tipo_doc` enum('DNI','Carnet de Extranjeria','Pasaporte') CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_nombre` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_apepat` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_apemat` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_direccion` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_telefono` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_email` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `tipo_rec` enum('QUEJA','RECLAMO') CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_fecha` date NULL DEFAULT NULL,
+  `rec_hora` time NULL DEFAULT NULL,
+  `rec_asunto` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_archivo` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_area_destino` int NULL DEFAULT NULL,
+  `rec_documento` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `rec_fecha_registro` datetime NULL DEFAULT NULL,
+  PRIMARY KEY (`reclamo_id`) USING BTREE,
+  INDEX `rec_area_destino`(`rec_area_destino` ASC) USING BTREE,
+  CONSTRAINT `reclamos_ibfk_1` FOREIGN KEY (`rec_area_destino`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of reclamos
+-- ----------------------------
+INSERT INTO `reclamos` VALUES (9, 'DNI', 'FREDDY WALTER', 'HUAYNAPATA', 'UCHARICO', 'JR. 31 DE MARZO S/N COPANI', '987654321', 'FREDDY.HU099@GMAIL.COM', 'RECLAMO', '2023-04-04', '14:43:42', 'OCURRIO CORTE DE ENERGIA', '', 1, '73744393', '2023-04-04 14:43:42');
+INSERT INTO `reclamos` VALUES (10, 'DNI', 'JUAN ALBERTO', 'MAMANI', 'QUISPE', 'JR. YUNGUYO', '987456321', 'FREDDY.HU099@GMAIL.COM', 'RECLAMO', '2023-03-27', '20:46:00', 'APAGON DE LAPTOPS', 'controller/reclamo/archivos/ARCH44202314659.PDF', 1, '01878587', '2023-04-04 14:47:13');
+INSERT INTO `reclamos` VALUES (11, 'DNI', 'ASFASF', 'ASFAS', 'FASFSA', 'FSAFASF', '3534543', 'FHUAYNAPATAU@EST.UNAP.EDU.PE', 'QUEJA', '2023-03-26', '16:52:00', 'DSADSA', 'controller/reclamo/archivos/ARCH44202314726.JPG', 1, '321423423', '2023-04-04 14:52:54');
 
 -- ----------------------------
 -- Table structure for slider
@@ -355,6 +409,19 @@ CREATE PROCEDURE `SP_ELIMINAR_EMPLEADO`(IN ID INT)
 BEGIN
     DELETE FROM empleado WHERE empleado_id=ID;
     SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_ELIMINAR_MODAL
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_ELIMINAR_MODAL`;
+delimiter ;;
+CREATE PROCEDURE `SP_ELIMINAR_MODAL`(IN ID INT)
+BEGIN
+ DELETE FROM modal WHERE modal_id=ID;
+ SELECT 1;
 END
 ;;
 delimiter ;
@@ -562,6 +629,27 @@ FROM
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_LISTAR_MODAL
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_LISTAR_MODAL`;
+delimiter ;;
+CREATE PROCEDURE `SP_LISTAR_MODAL`()
+SELECT
+	modal.modal_id, 
+	modal.modal_desc, 
+	modal.modal_imagen, 
+	modal.modal_fecha, 
+	area.area_nombre
+FROM
+	modal
+	INNER JOIN
+	area
+	ON 
+		modal.modal_area_id = area.area_cod
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_LISTAR_OFICIO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_LISTAR_OFICIO`;
@@ -601,6 +689,39 @@ SELECT
 	oficios.ofi_estado
 FROM
 	oficios ORDER BY ofi_feccreacion DESC LIMIT CANTIDAD
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_LISTAR_RECLAMO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_LISTAR_RECLAMO`;
+delimiter ;;
+CREATE PROCEDURE `SP_LISTAR_RECLAMO`()
+SELECT
+	reclamos.reclamo_id, 
+	reclamos.tipo_doc, 
+	reclamos.rec_nombre, 
+	reclamos.rec_apepat, 
+	reclamos.rec_apemat, 
+	reclamos.rec_direccion, 
+	reclamos.rec_telefono, 
+	reclamos.rec_email, 
+	reclamos.tipo_rec, 
+	reclamos.rec_fecha, 
+	reclamos.rec_hora, 
+	reclamos.rec_asunto, 
+	reclamos.rec_archivo, 
+	reclamos.rec_documento, 
+	reclamos.rec_fecha_registro, 
+	area.area_nombre,
+	CONCAT_WS(' ',reclamos.rec_nombre,reclamos.rec_apepat,reclamos.rec_apemat) AS administrado
+FROM
+	reclamos
+	INNER JOIN
+	area
+	ON 
+		reclamos.rec_area_destino = area.area_cod
 ;;
 delimiter ;
 
@@ -865,6 +986,30 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_MODIFICAR_MODAL
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_MODIFICAR_MODAL`;
+delimiter ;;
+CREATE PROCEDURE `SP_MODIFICAR_MODAL`(IN ID INT,IN COMUNICADO VARCHAR(255),IN RUTA VARCHAR(255))
+BEGIN
+DECLARE RUTAACTUALIMG VARCHAR(255);
+DECLARE RUTANUEVAIMG VARCHAR(255);
+
+SET @RUTANUEVAIMG = RUTA;
+
+SET @RUTAACTUALIMG:= (SELECT modal_imagen FROM modal WHERE modal_id=ID);
+
+IF RUTA = '' THEN
+	SET @RUTANUEVAIMG= @RUTAACTUALIMG;
+END IF;
+
+	UPDATE modal SET modal_desc=COMUNICADO,modal_imagen=@RUTANUEVAIMG WHERE modal_id=ID;
+	SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_MODIFICAR_OFICIO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_MODIFICAR_OFICIO`;
@@ -1024,6 +1169,19 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_REGISTRAR_MODAL
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_REGISTRAR_MODAL`;
+delimiter ;;
+CREATE PROCEDURE `SP_REGISTRAR_MODAL`(IN COMUNICADO VARCHAR(255),IN RUTA VARCHAR(255), IN IDAREA INT)
+BEGIN
+INSERT INTO  modal(modal_desc,modal_imagen,modal_fecha,modal_area_id)VALUES(COMUNICADO,RUTA,NOW(),IDAREA);
+SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_REGISTRAR_OFICIO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_REGISTRAR_OFICIO`;
@@ -1033,6 +1191,20 @@ BEGIN
 	
 	INSERT INTO oficios(ofi_titulo, ofi_descripcion,ofi_img_prev,ofi_documento,ofi_feccreacion,ofi_estado,area_origen_id)VALUES(TITULO,DESCRIPCION,RUTAIMG,RUTADOC,NOW(),'ACTIVO',IDAREA);
 	SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_REGISTRAR_RECLAMO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_REGISTRAR_RECLAMO`;
+delimiter ;;
+CREATE PROCEDURE `SP_REGISTRAR_RECLAMO`(IN TIPODOC VARCHAR(40),IN NRODOC VARCHAR(40),IN NOMBRE VARCHAR(255),IN PATERNO VARCHAR(255),IN MATERNO VARCHAR(255), DIRECCION VARCHAR(255),IN TELEFONO VARCHAR(40),IN EMAIL VARCHAR(60),IN TIPOREC VARCHAR(60),IN FECHA DATE,IN HORA TIME,IN ASUNTO VARCHAR(255),IN DOCUMENTO VARCHAR(255))
+BEGIN
+INSERT INTO reclamos(tipo_doc,rec_documento,rec_nombre,rec_apepat,rec_apemat,rec_direccion,rec_telefono,rec_email,tipo_rec,rec_fecha,rec_hora,rec_asunto,rec_archivo,rec_area_destino,rec_fecha_registro)VALUES(TIPODOC,NRODOC,NOMBRE,PATERNO,MATERNO,DIRECCION,TELEFONO,EMAIL,TIPOREC,FECHA,HORA,ASUNTO,DOCUMENTO,1,NOW());
+SELECT 1;
+
 END
 ;;
 delimiter ;

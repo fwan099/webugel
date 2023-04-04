@@ -7,7 +7,7 @@
             <div class="col-lg-12 bg-primary border rounded-pill mb-5">
                 <h5 class="text-white text-center p-2 animated slideInLeft mb-0">Convocatorias CAP</h5>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
                 <table id="tabla_convocatorias" class="display compact " style="width:100%">
                     <thead>
                         <tr>

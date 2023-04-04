@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <script src="public/js/web_inicio.js?rev=<?php echo time(); ?>"></script>
 <script src="public/js/web_slider.js?rev=<?php echo time(); ?>"></script>
 <!-- Carousel Start -->
@@ -69,11 +70,11 @@
             <div class="col-lg-2 col-6 wow fadeInUp" data-wow-delay="0.7s">
                 <a class="cat-item  p-4 services__item5" href="">
                     <i class="fa-solid fa-book-bookmark fa-3x text-primary mb-4 text-white"></i>
-                    <h6 class="mb-3 text-center text-white">Documentos de Gestión</h6>
+                    <h6 class="mb-3 text-center text-white">Instrumentos de Gestión</h6>
                 </a>
             </div>
             <div class="col-lg-2 col-6 wow fadeInUp" data-wow-delay="0.7s">
-                <a class="cat-item  p-4 services__item6" href="">
+                <a class="cat-item  p-4 services__item6" href="reclamos">
                     <i class="fa-solid fa-book-open fa-3x text-primary mb-4 text-white"></i>
                     <h6 class="mb-3 text-center text-white">Libro de Reclamaciones</h6>
                 </a>
@@ -86,7 +87,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-8">
                 <h5 class="text-left p-3 border-bottom-style mb-5 wow fadeInLeft" data-wow-delay="0.8s">Publicaciones Recientes</h5>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.9s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5 gap-3 ">
@@ -120,16 +121,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-            <h5 class="text-center p-3 border-bottom-style mb-5 wow fadeInRight" data-wow-delay="0.8s">Redes Sociales</h5>
-
-
+            <div class="col-lg-4 access__direct">
+                <h5 class="text-center p-3 border-bottom-style mb-2 wow fadeInRight " data-wow-delay="0.8s">Accesos Directos</h5>
+                <a href="" class="" ><img src="./public/img/icons/boleta.jpg" alt="" class="img-fluid mb-3   wow fadeInRight" data-wow-delay="0.8s"></a>
+                <a href="" class="" ><img src="./public/img/icons/asistencia.jpg" alt="" class="img-fluid mb-3  wow fadeInRight" data-wow-delay="0.8s"></a>
+                <a href="" class="" ><img src="./public/img/icons/intranet.jpg" alt="" class="img-fluid mb-3   wow fadeInRight" data-wow-delay="0.8s"></a>
+                <h5 class="text-center p-3 border-bottom-style mb-2 wow fadeInRight " data-wow-delay="0.8s">Redes Sociales</h5>
+                <div class="w-100">
+                    <div class="fb-page wow fadeInLeft" data-wow-delay="0.6s" data-href="https://www.facebook.com/ugelyunguyooficial2023/" data-tabs="timeline" data-width="420" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/ugelyunguyooficial2023/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ugelyunguyooficial2023/">UGEL Yunguyo 2023</a></blockquote>
+                    </div>
+                </div>
+                
+                
             </div>
-
         </div>
-
     </div>
-
 </div>
 
 
@@ -186,13 +193,17 @@
 
 
 
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v16.0" nonce="P4TS2NgO"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $(document).ready(function() {
         traer_slider();
         traer_recientes_comunicados();
         traer_recientes_oficios();
-        traer_recientes_convocatorias()
+        traer_recientes_convocatorias();
+
+        mostrar_comunicado_externo();
     });
 </script>

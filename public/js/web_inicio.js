@@ -1,5 +1,5 @@
 function traer_recientes_comunicados() {
-    let cantidad = 4;
+    let cantidad = 6;
     $.ajax({
         url: "controller/web_controller_comunicados_recientes.php",
         type: 'POST',
@@ -39,7 +39,7 @@ function traer_recientes_comunicados() {
     });
 }
 function traer_recientes_oficios() {
-    let cantidad = 4;
+    let cantidad = 6;
     $.ajax({
         url: "controller/web_controller_oficios_recientes.php",
         type: 'POST',
@@ -79,7 +79,7 @@ function traer_recientes_oficios() {
     });
 }
 function traer_recientes_convocatorias() {
-    let cantidad = 4;
+    let cantidad = 6;
     $.ajax({
         url: "controller/web_controller_convocatorias_recientes.php",
         type: 'POST',
@@ -178,11 +178,52 @@ function Calcular_Fecha(fechahora) {
 }
 
 function limitarTexto(texto) {
-    let limite = 8;
+    let limite = 7;
     if (texto.split(" ").length > limite) {
         const palabras = texto.split(" ");
         const nuevoTexto = palabras.slice(0, limite).join(" ") + "...";
         return nuevoTexto;
     }
     return texto;
+}
+
+
+function mostrar_comunicado_externo() {
+    $.ajax({
+        "url": "controller/web_controller_traer_modal.php",
+        type: 'POST',
+    }).done(function (resp) {
+        let data = JSON.parse(resp);
+
+        // función para mostrar alertas de forma consecutiva
+        function mostrarAlertas(i) {
+            if (i < data.length) {
+                Swal.fire({
+                    title: 'COMUNICADO',
+                    html:
+                        '<div class="mb-1" style="text-align: justify;font-size:14px">' + data[i]["modal_desc"] + '</div><br>' +
+                        (data[i]["modal_imagen"] ? '<div class="mb-1 figure" style="width:100%; height:340px;overflow:auto"><img src="admin/' + data[i]["modal_imagen"] + '" alt="" style="width:100%;objet-fit:contain;"></div>' : '<div class="figure" style="display:none"></div>') +
+                        '<div style="text-align: left;font-size:14px">' + '<b>Fecha Creacion: </b>' +Calcular_Fecha(data[i]["modal_fecha"])  + '</div>',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    },
+                    width:500,
+                }).then((value) => {
+                    mostrarAlertas(i + 1);
+                })
+
+            }
+
+        }
+
+        if (data.length > 0) {
+            mostrarAlertas(0); // empezar a mostrar las alertas desde la primera
+        }
+
+
+
+    })
 }
