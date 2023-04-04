@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : localhost_3306
  Source Server Type    : MySQL
  Source Server Version : 100427 (10.4.27-MariaDB)
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 02/04/2023 16:11:49
+ Date: 03/04/2023 19:28:18
 */
 
 SET NAMES utf8mb4;
@@ -27,14 +27,15 @@ CREATE TABLE `area`  (
   `area_fecha_registro` timestamp NULL DEFAULT current_timestamp,
   `area_estado` enum('ACTIVO','INACTIVO') CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT 'ACTIVO',
   PRIMARY KEY (`area_cod`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of area
 -- ----------------------------
 INSERT INTO `area` VALUES (1, 'AREA DE ADMINISTRACION', '2023-03-17 09:10:23', 'ACTIVO');
 INSERT INTO `area` VALUES (2, 'AREA DE GESTION PEDAGOGICA', '2023-03-20 14:49:13', 'ACTIVO');
-INSERT INTO `area` VALUES (3, 'AREA DE GESTION INSTITUCIONAL', '2023-03-20 14:49:44', 'INACTIVO');
+INSERT INTO `area` VALUES (3, 'AREA DE GESTION INSTITUCIONAL', '2023-03-20 14:49:44', 'ACTIVO');
+INSERT INTO `area` VALUES (4, 'DIRECCION', '2023-04-03 11:15:33', 'ACTIVO');
 
 -- ----------------------------
 -- Table structure for comunicados
@@ -119,17 +120,20 @@ CREATE TABLE `directorio`  (
   `area_id` int NULL DEFAULT NULL,
   `dir_cargo` varchar(60) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   `dir_profesion` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
+  `dir_orden` int NULL DEFAULT NULL,
   PRIMARY KEY (`directorio_id`) USING BTREE,
   INDEX `empleado_id`(`empleado_id` ASC) USING BTREE,
   INDEX `area_id`(`area_id` ASC) USING BTREE,
   CONSTRAINT `directorio_ibfk_1` FOREIGN KEY (`empleado_id`) REFERENCES `empleado` (`empleado_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `directorio_ibfk_2` FOREIGN KEY (`area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 28 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of directorio
 -- ----------------------------
-INSERT INTO `directorio` VALUES (1, 1, 1, 'ESP. EN RECURSOS HUMANOS', 'ING.');
+INSERT INTO `directorio` VALUES (25, 11, 2, 'Director', 'LIC.', 1);
+INSERT INTO `directorio` VALUES (26, 12, 1, 'Jefe de Administración', 'Ing.', 2);
+INSERT INTO `directorio` VALUES (27, 13, 1, 'Esp. Remuenraciones', 'Lic.', 3);
 
 -- ----------------------------
 -- Table structure for empleado
@@ -149,17 +153,15 @@ CREATE TABLE `empleado`  (
   `emple_direccion` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   `emple_fotoperfil` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`empleado_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of empleado
 -- ----------------------------
-INSERT INTO `empleado` VALUES (1, 'FREDDY WALTER', 'HUAYNAPATA', 'UCHARICO', '2023-03-17', '1999-07-15', '73744393', '967444616', 'FREDDY.LEDIS099@GMAIL.COM', 'ACTIVO', 'JR. 31 DE MARZO S/NM', NULL);
-INSERT INTO `empleado` VALUES (3, 'OBED', 'QUISPE', 'TORRES', '2023-03-20', '2023-03-21', '98765432', '987654321', 'OBED@GMAIL.COM', 'ACTIVO', 'PUNO', 'controller/empleado/foto/default.png');
-INSERT INTO `empleado` VALUES (4, 'GDFGD', 'FDGDFG', 'DFGDFGD', '2023-04-02', '2023-04-02', '78575', '867867', 'XGXDGXDSGF@GMAIL.COM', 'ACTIVO', 'XDGXDG', 'controller/empleado/foto/default.png');
-INSERT INTO `empleado` VALUES (6, 'MOMO', 'GYGDF', 'GDFGDFGDF', '2023-04-02', '2023-04-08', '65465', '756756', 'FGDFGD@GMAIL.COM', 'ACTIVO', 'DFGDFG', 'controller/empleado/foto/default.png');
-INSERT INTO `empleado` VALUES (7, 'PEPRE', 'PEREX', 'FSF', '2023-04-02', '2023-04-08', '545', '46456', 'REGERG@GMAIL.COM', 'ACTIVO', 'TETRET', 'controller/empleado/foto/EMPLE24202315848.PNG');
-INSERT INTO `empleado` VALUES (8, 'XXXXXXXXXXXXXXXXXXXX', 'CCCCC', 'CCCCCCCCCCCCC', '2023-04-02', '2023-04-07', '35345', '555555555', 'DFG@GMAIL.COM', 'INACTIVO', '5FDCC', 'controller/empleado/foto/EMPLE24202315767.PNG');
+INSERT INTO `empleado` VALUES (1, 'FREDDY', 'HUAYNAPATA', 'UCHARICO', '2023-03-17', '1999-07-15', '73744393', '967444616', 'FREDDY.LEDIS099@GMAIL.COM', 'ACTIVO', 'JR. 31 DE MARZO S/NM', 'controller/empleado/foto/EMPLE34202311634.PNG');
+INSERT INTO `empleado` VALUES (11, 'Efrain', 'Condori', 'Rivera', '2023-04-03', '2023-04-05', '78965412', '987456321', 'efraincondori34543@gmail.com', 'ACTIVO', 'JR. YUNGUYO', 'controller/empleado/foto/default.png');
+INSERT INTO `empleado` VALUES (12, 'Jesus Henry', 'Rivera', 'Cauhuya', '2023-04-03', '2023-04-13', '745745', '987456231', 'ecoriverra@hotmail.com', 'ACTIVO', 'YUNGUYO', 'controller/empleado/foto/default.png');
+INSERT INTO `empleado` VALUES (13, 'Obed Desiderio', 'Quispe', 'Torres', '2023-04-03', '2023-04-06', '6465', '987456321', 'obedfsdesiedro@gmail.com', 'ACTIVO', '123', 'controller/empleado/foto/default.png');
 
 -- ----------------------------
 -- Table structure for empresa
@@ -233,7 +235,6 @@ CREATE TABLE `slider`  (
 -- Records of slider
 -- ----------------------------
 INSERT INTO `slider` VALUES (7, '', '', 'controller/slider/img/SLIDER31320231418.JPG', '2023-03-31 14:12:55', 1, 5, 'ACTIVO');
-INSERT INTO `slider` VALUES (9, 'ETESWT', 'SFDSF', 'controller/slider/img/SLIDER2420231565.PNG', '2023-04-02 15:34:23', 1, 0, 'ACTIVO');
 
 -- ----------------------------
 -- Table structure for usuario
@@ -263,9 +264,6 @@ CREATE TABLE `usuario`  (
 -- Records of usuario
 -- ----------------------------
 INSERT INTO `usuario` VALUES (1, 'admin', '$2y$12$am6UQg3sjkZxgBsBagU/YO46PKwGgWmcfXB7usiVWic3y5cOY.Y7K', '2023-03-17', NULL, 'ACTIVO', 'Administrador', 1, 1, 1);
-INSERT INTO `usuario` VALUES (2, 'CONTA', '$2y$12$xULGuAbbZOPMCJkCo4pD9uDxiYomtlY8Ek.R2LUf0tz/7JGXtQCyC', '2023-03-20', NULL, 'ACTIVO', 'Publicador', 1, 3, 2);
-INSERT INTO `usuario` VALUES (4, 'EDG', '$2y$12$4cOssnQ/e.REbBJtuxzivuhsilHegkCfjRLBQmSWTawwFNV3u9KmO', '2023-03-20', NULL, 'ACTIVO', 'Publicador', 1, 3, 2);
-INSERT INTO `usuario` VALUES (5, 'Yun', '$2y$12$dKGEvB1SabLLhdjTGNrkceV0R2MwWm37NKSr8jCP0x8ED31NvlXCe', '2023-03-20', NULL, 'ACTIVO', 'Publicador', 1, 1, 1);
 
 -- ----------------------------
 -- Procedure structure for SP_BUSCAR_COMUNICADO
@@ -336,20 +334,27 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_ELIMINAR_DIRECTORIO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_ELIMINAR_DIRECTORIO`;
+delimiter ;;
+CREATE PROCEDURE `SP_ELIMINAR_DIRECTORIO`(IN ID INT)
+BEGIN
+ DELETE FROM directorio WHERE directorio_id=ID;
+ SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_ELIMINAR_EMPLEADO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_ELIMINAR_EMPLEADO`;
 delimiter ;;
 CREATE PROCEDURE `SP_ELIMINAR_EMPLEADO`(IN ID INT)
 BEGIN
-  DECLARE ESTADOACTUAL VARCHAR(30);
-  SET @ESTADOACTUAL:= (SELECT empleado.emple_estatus FROM empleado WHERE empleado_id=ID);
-  IF @ESTADOACTUAL = 'ACTIVO' THEN
-    SELECT 2;
-  ELSE
     DELETE FROM empleado WHERE empleado_id=ID;
     SELECT 1;
-  END IF;
 END
 ;;
 delimiter ;
@@ -514,6 +519,9 @@ SELECT
 	area.area_nombre, 
 	directorio.dir_cargo, 
 	directorio.dir_profesion,
+	directorio.dir_orden,
+	directorio.empleado_id,
+	directorio.area_id,
 	CONCAT_WS(' ',empleado.emple_nombre,empleado.emple_apepat,empleado.emple_apemat) AS namecomplet
 FROM
 	directorio
@@ -524,7 +532,7 @@ FROM
 	INNER JOIN
 	area
 	ON 
-		directorio.area_id = area.area_cod
+		directorio.area_id = area.area_cod ORDER BY directorio.dir_orden ASC
 ;;
 delimiter ;
 
@@ -787,6 +795,19 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_MODIFICAR_DIRECTORIO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_MODIFICAR_DIRECTORIO`;
+delimiter ;;
+CREATE PROCEDURE `SP_MODIFICAR_DIRECTORIO`(IN ID INT,IN CARGO VARCHAR(255),IN AREA INT, IN EMPLEADO INT, IN PROFESION VARCHAR(40), IN ORDEN INT)
+BEGIN
+UPDATE directorio SET dir_cargo = CARGO, area_id = AREA, empleado_id = EMPLEADO, dir_profesion = PROFESION, dir_orden = ORDEN WHERE directorio_id = ID;
+SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_MODIFICAR_EMPLEADO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_MODIFICAR_EMPLEADO`;
@@ -965,6 +986,19 @@ delimiter ;;
 CREATE PROCEDURE `SP_REGISTRAR_CONVOCATORIA`(IN TIPO VARCHAR(40),IN TITULO VARCHAR(255),IN RUTA1 VARCHAR(255),IN RUTA2 VARCHAR(255),IN RUTA3 VARCHAR(255),IN RUTA4 VARCHAR(255),IN RUTA5 VARCHAR(255),IN IDAREA INT)
 BEGIN
 INSERT INTO convocatorias(conv_titulo,conv_fecpublicacion,conv_bases,conv_preliminar_cv,conv_reclamos,conv_final_cv,conv_final,conv_estado,conv_area_id,conv_tipo)VALUES(TITULO,NOW(),RUTA1,RUTA2,RUTA3,RUTA4,RUTA5,'ABIERTO',IDAREA,TIPO);
+SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_REGISTRAR_DIRECTORIO
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_REGISTRAR_DIRECTORIO`;
+delimiter ;;
+CREATE PROCEDURE `SP_REGISTRAR_DIRECTORIO`(IN CARGO VARCHAR(255),IN AREA INT, IN EMPLEADO INT, IN PROFESION VARCHAR(40), IN ORDEN INT)
+BEGIN
+INSERT INTO directorio(empleado_id,area_id,dir_cargo,dir_profesion,dir_orden)VALUES(EMPLEADO,AREA,CARGO,PROFESION,ORDEN);
 SELECT 1;
 END
 ;;

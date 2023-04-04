@@ -83,70 +83,109 @@
 </div>
 <!-- Category End -->
 
-
-
-
-<!-- Jobs Start -->
 <div class="container-xxl py-5">
     <div class="container">
-        <h3 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.8s">Publicaciones Recientes</h3>
-        <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.9s">
-            <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5 gap-3 ">
-                <li class="nav-item">
-                    <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                        <h6 class="mt-n1 mb-0">Comunicados</h6>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                        <h6 class="mt-n1 mb-0">Oficios Multiples</h6>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                        <h6 class="mt-n1 mb-0">Convocatorias</h6>
-                    </a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
+        <div class="row">
+            <div class="col-lg-9">
+                <h5 class="text-left p-3 border-bottom-style mb-5 wow fadeInLeft" data-wow-delay="0.8s">Publicaciones Recientes</h5>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.9s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5 gap-3 ">
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                                <h6 class="mt-n1 mb-0">Comunicados</h6>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                                <h6 class="mt-n1 mb-0">Oficios Multiples</h6>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                                <h6 class="mt-n1 mb-0">Convocatorias</h6>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
 
-                </div>
-                <div id="tab-2" class="tab-pane fade show p-0">
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
 
-                </div>
-                <div id="tab-3" class="tab-pane fade show p-0">
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
 
 
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-3">
+            <h5 class="text-center p-3 border-bottom-style mb-5 wow fadeInRight" data-wow-delay="0.8s">Redes Sociales</h5>
+
+
+            </div>
+
         </div>
+
     </div>
+
 </div>
-<!-- Jobs End -->
+
 
 
 <!-- Testimonial Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
-        <h1 class="text-center mb-5">Enlaces de Interes</h1>
+        <h3 class="text-center mb-5 p-3 border-bottom-style">Enlaces de Interes</h3>
         <div class="owl-carousel testimonial-carousel">
             <div class="testimonial-item">
-                <img src="./public/img/interes.jpg" alt="">
+                <a href="#">
+                    <img src="./public/img/icons/link1.jpg" alt="">
+                </a>
             </div>
             <div class="testimonial-item">
-                <img src="./public/img/interes.jpg" alt="">
+                <a href="#">
+                    <img src="./public/img/icons/link2.jpg" alt="">
+                </a>
             </div>
             <div class="testimonial-item">
-                <img src="./public/img/interes.jpg" alt="">
+                <a href="#">
+                    <img src="./public/img/icons/link3.jpg" alt="">
+                </a>
             </div>
             <div class="testimonial-item">
-                <img src="./public/img/interes.jpg" alt="">
+                <a href="#">
+                    <img src="./public/img/icons/link4.jpg" alt="">
+                </a>
+            </div>
+            <div class="testimonial-item">
+                <a href="#">
+                    <img src="./public/img/icons/link5.jpg" alt="">
+                </a>
+            </div>
+            <div class="testimonial-item">
+                <a href="#">
+                    <img src="./public/img/icons/link6.jpg" alt="">
+                </a>
+            </div>
+            <div class="testimonial-item">
+                <a href="#">
+                    <img src="./public/img/icons/link7.jpg" alt="">
+                </a>
+            </div>
+            <div class="testimonial-item">
+                <a href="#">
+                    <img src="./public/img/icons/link8.jpg" alt="">
+                </a>
             </div>
         </div>
     </div>
 </div>
 <!-- Testimonial End -->
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script>

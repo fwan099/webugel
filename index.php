@@ -120,8 +120,7 @@
                             <a href="oficiosMultiples" class="dropdown-item">Oficios Multiples</a>
                         </div>
                     </div>
-                    <a href="servicios" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.6s">Servicios</a>
-                    <a href="noticias" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.7s">Noticias</a>
+                    <a href="servicios" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.6s">Servicios UGEL</a>
                 </div>
             </div>
         </nav>

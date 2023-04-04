@@ -41,6 +41,7 @@
                                 <th>Profesion</th>
                                 <th>Area</th>
                                 <th>Cargo</th>
+                                <th>Orden</th>
                                 <th>Accion</th>
                             </tr>
                         </thead>
@@ -67,7 +68,7 @@
                 <div class="row">
                     <div class="col-lg-6 mb-3">
                         <label for="">Cargo (*)</label>
-                        <input type="text" class="form-control" id="txt_area">
+                        <input type="text" class="form-control" id="txt_cargo">
                     </div>
                     <div class="col-lg-6 mb-3">
                         <label for="">Area (*)</label>
@@ -81,22 +82,64 @@
                     </div>
                     <div class="col-lg-6 mb-3">
                         <label for="">Profesion (*)</label>
-                        <input type="text" class="form-control" id="txt_area">
+                        <input type="text" class="form-control" id="txt_profesion">
                     </div>
                     <div class="col-lg-6 mb-3">
                         <label for="">Orden (*)</label>
-                        <input type="text" class="form-control" id="txt_area">
+                        <input type="text" class="form-control" id="txt_orden">
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-outline-secondary" onclick="Registrar_Area()">Registrar</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="registrar_directorio()">Registrar</button>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="modal_editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">EDITAR DATOS DE DIRECTORIO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <label for="">Cargo (*)</label>
+                        <input type="text" class="form-control" id="txt_cargo_edit">
+                        <input type="text" class="" id="txt_id" hidden>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <label for="">Area (*)</label>
+                        <select class="js-example-basic-single" id="select_area_edit" style="width:100%">
+                        </select>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="">Empleado (*)</label>
+                        <select class="js-example-basic-single" id="select_empleado_edit" style="width:100%">
+                        </select>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <label for="">Profesion (*)</label>
+                        <input type="text" class="form-control" id="txt_profesion_edit">
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <label for="">Orden (*)</label>
+                        <input type="text" class="form-control" id="txt_orden_edit">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary" onclick="editar_directorio()">Actualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
 

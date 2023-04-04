@@ -24,7 +24,7 @@ function traer_recientes_comunicados() {
                     '</div>' +
                     '<div class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">' +
                     '<div class="d-flex mb-3">' +
-                    '<a class="btn btn-secondary btn-rounded" href="documento?id=' + data[i]["comunicado_id"] + '"><i class="fa-solid fa-eye me-2"></i>Ver Documento</a>' +
+                    '<a class="btn btn-secondary btn-rounded" href="documento?id=' + data[i]["comunicado_id"] + '"><i class="fa-solid fa-eye me-2"></i>Ver</a>' +
                     '</div>' +
                     '<small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>' + Calcular_Fecha(data[i]["com_feccreacion"]) + '</small>' +
                     '</div>' +
@@ -64,7 +64,7 @@ function traer_recientes_oficios() {
                     '</div>' +
                     '<div class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">' +
                     '<div class="d-flex mb-3">' +
-                    '<a class="btn btn-secondary btn-rounded" href="documentoOficio?id=' + data[i]["oficio_id"] + '"><i class="fa-solid fa-eye me-2"></i>Ver Documento</a>' +
+                    '<a class="btn btn-secondary btn-rounded" href="documentoOficio?id=' + data[i]["oficio_id"] + '"><i class="fa-solid fa-eye me-2"></i>Ver</a>' +
                     '</div>' +
                     '<small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>' + Calcular_Fecha(data[i]["ofi_feccreacion"]) + '</small>' +
                     '</div>' +
@@ -104,7 +104,7 @@ function traer_recientes_convocatorias() {
                     '</div>' +
                     '<div class=" col-lg-2 d-flex flex-column align-items-start align-items-md-end justify-content-center">' +
                     '<div class="d-flex mb-3">' +
-                    '<a class="btn btn-secondary btn-rounded" href="convocatorias"><i class="fa-solid fa-eye me-2"></i>Ver Documento</a>' +
+                    '<a class="btn btn-secondary btn-rounded" href="convocatorias"><i class="fa-solid fa-eye me-2"></i>Ver</a>' +
                     '</div>' +
                     '<small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>' + Calcular_Fecha(data[i]["conv_fecpublicacion"]) + '</small>' +
                     '</div>' +
@@ -178,7 +178,7 @@ function Calcular_Fecha(fechahora) {
 }
 
 function limitarTexto(texto) {
-    let limite = 12;
+    let limite = 8;
     if (texto.split(" ").length > limite) {
         const palabras = texto.split(" ");
         const nuevoTexto = palabras.slice(0, limite).join(" ") + "...";

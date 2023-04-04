@@ -71,7 +71,7 @@ $('#tabla_empleado').on('click', '.editar', function () {
     document.getElementById('txt_email_editar').value = data.emple_email;
     document.getElementById('select_estatus').value = data.emple_estatus;
     document.getElementById('imagen__prev_edit').src = "../"+data.emple_fotoperfil;
-})
+});
 $('#tabla_empleado').on('click', '.eliminar', function () {
     let data = tbl_empleado.row($(this).parents('tr')).data();
     if (tbl_empleado.row(this).child.isShown()) {
@@ -105,8 +105,6 @@ function eliminar_empleado(id) {
             Swal.fire("Mensaje de Confirmacion", "Empleado Eliminado con Exito", "success").then((value) => {
                 tbl_empleado.ajax.reload();
             });
-
-
         } else if (resp == 2) {
             Swal.fire("Mensaje de Advertencia", "No se puede Eliminar, el Empleado se Encuentra Activo", "warning");
         } else {
@@ -114,8 +112,8 @@ function eliminar_empleado(id) {
         }
 
     });
-
 }
+
 function AbrirRegistro() {
     $("#modal_registro").modal({ backdrop: 'static', keyborad: false })
     $("#modal_registro").modal('show');

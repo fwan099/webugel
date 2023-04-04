@@ -1,3 +1,5 @@
+<script src="public/js/web_directorio_area.js?rev=<?php echo time(); ?>"></script>
+<input type="text" value="AREA DE ADMINISTRACION" id="text_area_dir" hidden>
 <!-- Job Detail Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
@@ -60,178 +62,10 @@
             </div>
 
             <div class="col-lg-4">
-                <div class="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
-                    <h4 class="mb-4">Directorio</h4>
+                <div class="bg-light rounded rounded-3 px-3 py-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
+                    <h4 class="mb-4">Directorio del Area</h4>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    Jefe de Area de Administración
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="d-flex flex-lg-row flex-column gap-3 align-items-center">
-                                        <img src="./template/img/profile-img/1.png" class="img-fluid" width="80"
-                                            alt="...">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h5 class="card-title fs-6">Lic. Efrain Condori Rivera</h5>
-                                            <ul class=" list-unstyled card__date m-0 ">
-                                                <li><i class="fa fa-user-tie card-text me-2 "></i><span
-                                                        class="card-text">Director</span></li>
-                                                <li><i
-                                                        class="fa-solid fa-envelope me-2"></i><span>riveraefrain_093g@gmail.com</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                    Encargado de Recursos Humanos
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="d-flex flex-lg-row flex-column gap-3 align-items-center">
-                                        <img src="./template/img/profile-img/4.png" class="img-fluid" width="80"
-                                            alt="...">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h5 class="card-title fs-6">Lic. Efrain Condori Rivera</h5>
-                                            <ul class=" list-unstyled card__date m-0 ">
-                                                <li><i class="fa fa-user-tie card-text me-2 "></i><span
-                                                        class="card-text">Director</span></li>
-                                                <li><i
-                                                        class="fa-solid fa-envelope me-2"></i><span>riveraefrain_093g@gmail.com</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    Encargado de abastecimientos
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="d-flex flex-lg-row flex-column gap-3 align-items-center">
-                                        <img src="./template/img/profile-img/8.png" class="img-fluid" width="80"
-                                            alt="...">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h5 class="card-title fs-6">Lic. Efrain Condori Rivera</h5>
-                                            <ul class=" list-unstyled card__date m-0 ">
-                                                <li><i class="fa fa-user-tie card-text me-2 "></i><span
-                                                        class="card-text">Director</span></li>
-                                                <li><i
-                                                        class="fa-solid fa-envelope me-2"></i><span>riveraefrain_093g@gmail.com</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingFor">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseFor" aria-expanded="false"
-                                    aria-controls="flush-collapseFor">
-                                    Encargado de Patrimonio
-                                </button>
-                            </h2>
-                            <div id="flush-collapseFor" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingFor" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="d-flex flex-lg-row flex-column gap-3 align-items-center">
-                                        <img src="./template/img/profile-img/10.png" class="img-fluid" width="80"
-                                            alt="...">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h5 class="card-title fs-6">Lic. Efrain Condori Rivera</h5>
-                                            <ul class=" list-unstyled card__date m-0 ">
-                                                <li><i class="fa fa-user-tie card-text me-2 "></i><span
-                                                        class="card-text">Director</span></li>
-                                                <li><i
-                                                        class="fa-solid fa-envelope me-2"></i><span>riveraefrain_093g@gmail.com</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
-                                    aria-controls="flush-collapseFive">
-                                    Encargado de Remuneraciones
-                                </button>
-                            </h2>
-                            <div id="flush-collapseFive" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="d-flex flex-lg-row flex-column gap-3 align-items-center">
-                                        <img src="./template/img/profile-img/2.png" class="img-fluid" width="80"
-                                            alt="...">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h5 class="card-title fs-6">Lic. Efrain Condori Rivera</h5>
-                                            <ul class=" list-unstyled card__date m-0 ">
-                                                <li><i class="fa fa-user-tie card-text me-2 "></i><span
-                                                        class="card-text">Director</span></li>
-                                                <li><i
-                                                        class="fa-solid fa-envelope me-2"></i><span>riveraefrain_093g@gmail.com</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseSix" aria-expanded="false"
-                                    aria-controls="flush-collapseSix">
-                                    Encargado de Nexus
-                                </button>
-                            </h2>
-                            <div id="flush-collapseSix" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="d-flex flex-lg-row flex-column gap-3 align-items-center">
-                                        <img src="./template/img/profile-img/3.png" class="img-fluid" width="80"
-                                            alt="...">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h5 class="card-title fs-6">Ing. Edwin Ronald Cori Checalla</h5>
-                                            <ul class=" list-unstyled card__date m-0 ">
-                                                <li><i class="fa fa-user-tie card-text me-2 "></i><span
-                                                        class="card-text">Enc. Sistema Nexus</span></li>
-                                                <li><i
-                                                        class="fa-solid fa-envelope me-2"></i><span>riveraefrain_093g@gmail.com</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -239,3 +73,10 @@
     </div>
 </div>
 <!-- Job Detail End -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        mostrar_directorio_area();
+
+    });
+</script>
