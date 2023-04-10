@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 04/04/2023 17:30:46
+ Date: 10/04/2023 09:02:09
 */
 
 SET NAMES utf8mb4;
@@ -196,12 +196,11 @@ CREATE TABLE `modal`  (
   PRIMARY KEY (`modal_id`) USING BTREE,
   INDEX `modal_area_id`(`modal_area_id` ASC) USING BTREE,
   CONSTRAINT `modal_ibfk_1` FOREIGN KEY (`modal_area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of modal
 -- ----------------------------
-INSERT INTO `modal` VALUES (5, '', 'controller/modal/img/ARCH44202317374.JPG', '2023-04-04', 1);
 
 -- ----------------------------
 -- Table structure for oficios
@@ -283,12 +282,13 @@ CREATE TABLE `slider`  (
   PRIMARY KEY (`slider_id`) USING BTREE,
   INDEX `slider_area_origen_id`(`slider_area_origen_id` ASC) USING BTREE,
   CONSTRAINT `slider_ibfk_1` FOREIGN KEY (`slider_area_origen_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of slider
 -- ----------------------------
-INSERT INTO `slider` VALUES (7, '', '', 'controller/slider/img/SLIDER31320231418.JPG', '2023-03-31 14:12:55', 1, 5, 'ACTIVO');
+INSERT INTO `slider` VALUES (12, '', '', 'controller/slider/img/SLIDER54202316782.JPG', '2023-04-05 16:54:05', 1, 0, 'ACTIVO');
+INSERT INTO `slider` VALUES (15, '', '', 'controller/slider/img/SLIDER54202317999.JPG', '2023-04-05 17:20:45', 1, 0, 'ACTIVO');
 
 -- ----------------------------
 -- Table structure for usuario
