@@ -3,7 +3,7 @@
     <div class="content__wrap">
         <nav aria-label="breadcrumb" class="pb-2">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">Portal Web UGEL Yunguyo</li>
+                <li class="breadcrumb-item">Portal Web</li>
                 <li class="breadcrumb-item">Area</li>
             </ol>
         </nav>
@@ -64,7 +64,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-12">
-                        <label for="">Area (*)</label>
+                        <label for="" class="fw-bolder">Area (*) :</label>
                         <input type="text" class="form-control" id="txt_area">
 
                     </div>
@@ -90,12 +90,12 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-12 mb-3">
-                        <label for="">Area</label>
+                        <label for="" class="fw-bolder">Area (*) :</label>
                         <input type="text" class="form-control" id="txt_area_editar">
                         <input type="text" id="txt_idarea" hidden>
                     </div>
                     <div class="col-12">
-                        <label for="">Estatus</label>
+                        <label for="" class="fw-bolder">Estatus (*) :</label>
                         <select name="" id="select_estatus" class="form-select js-example-basic-single">
                             <option value="ACTIVO">ACTIVO</option>
                             <option value="INACTIVO">INACTIVO</option>

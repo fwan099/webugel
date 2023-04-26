@@ -68,6 +68,7 @@ $('#tabla_oficio').on('click', '.editar', function () {
     document.getElementById('txt_titulo_edit').value = data.ofi_titulo;
     document.getElementById('txt_desc_edit').value = data.ofi_descripcion;
     document.getElementById('select_estatus').value = data.ofi_estado;
+    document.getElementById('imagen__prev_e').src = "../" + data.ofi_img_prev;
 });
 
 $('#tabla_oficio').on('click', '.eliminar', function () {

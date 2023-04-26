@@ -4,7 +4,7 @@
     <div class="content__wrap">
         <nav aria-label="breadcrumb" class="pb-2">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">Portal Web UGEL Yunguyo</li>
+                <li class="breadcrumb-item">Portal Web</li>
                 <li class="breadcrumb-item">Empleado</li>
             </ol>
         </nav>
@@ -70,44 +70,44 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-4 mb-3">
-                        <label for="">Nro Documento (*)</label>
+                        <label for="" class="fw-bolder">Nro Documento (*) :</label>
                         <input type="text" class="form-control" id="txt_nro" onkeypress="return soloNumeros(event)"
                             autocomplete="off">
                     </div>
                     <div class="col-lg-8 mb-3">
-                        <label for="">Nombres (*)</label>
+                        <label for="" class="fw-bolder">Nombres (*) :</label>
                         <input type="text" class="form-control" id="txt_nom" onkeypress="return sololetras(event)"
                             autocomplete="off">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Apellido Paterno (*)</label>
+                        <label for="" class="fw-bolder">Apellido Paterno (*) :</label>
                         <input type="text" class="form-control" id="txt_apepa" onkeypress="return sololetras(event)"
                             autocomplete="off">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Apellido Materno (*)</label>
+                        <label for="" class="fw-bolder">Apellido Materno (*) :</label>
                         <input type="text" class="form-control" id="txt_apema" onkeypress="return sololetras(event)"
                             autocomplete="off">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Fecha Nacimiento (*)</label>
+                        <label for="" class="fw-bolder">Fecha Nacimiento (*) :</label>
                         <input type="date" class="form-control" id="txt_fnac">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Nro Celular (*)</label>
+                        <label for="" class="fw-bolder">Nro Celular (*) :</label>
                         <input type="text" class="form-control" id="txt_movil" onkeypress="return soloNumeros(event)"
                             autocomplete="off">
                     </div>
-                    <div class="col-lg-12 mb-3">
-                        <label for="">Direccion (*)</label>
+                    <div class="col-lg-6 mb-3">
+                        <label for="" class="fw-bolder">Direccion (*) :</label>
                         <input type="text" class="form-control" id="txt_dire" >
                     </div>
-                    <div class="col-lg-12 mb-3">
-                        <label for="">Email (*)</label>
+                    <div class="col-lg-6 mb-3">
+                        <label for="" class="fw-bolder">Email (*) :</label>
                         <input type="text" class="form-control" id="txt_email" >
                     </div>
                     <div class="col-lg-12 d">
-                        <label for="">Foto (*)</label>
+                        <label for="" class="fw-bolder">Foto (*) :</label>
                         <img class="mb-3" src="../controller/empleado/foto/default.png" alt="" id="imagen__prev">
                         <input type="file" class="form-control" id="txt_foto" >
                     </div>
@@ -117,8 +117,8 @@
             <div class="modal-footer justify-content-between">
                 <label class="text-danger">(*) Indica que los campos son obligatorios</label>
                 <div>
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-outline-secondary"
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary"
                         onclick="Registrar_Empleado()">Registrar</button>
                 </div>
             </div>
@@ -138,49 +138,49 @@
                 <div class="row">
                     <div class="col-lg-4 mb-3">
                         <input type="text" id="txt_idempleado" hidden>
-                        <label for="">Nro Documento</label>
+                        <label for="" class="fw-bolder">Nro Documento (*) :</label>
                         <input type="text" class="form-control" id="txt_nro_editar"
                             onkeypress="return soloNumeros(event)">
                     </div>
                     <div class="col-lg-8 mb-3">
-                        <label for="">Nombres</label>
+                        <label for="" class="fw-bolder">Nombres (*) :</label>
                         <input type="text" class="form-control" id="txt_nom_editar"
                             onkeypress="return sololetras(event)">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Apellido Paterno</label>
+                        <label for="" class="fw-bolder">Apellido Paterno (*) :</label>
                         <input type="text" class="form-control" id="txt_apepa_editar"
                             onkeypress="return sololetras(event)">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Apellido Materno</label>
+                        <label for="" class="fw-bolder">Apellido Materno (*) :</label>
                         <input type="text" class="form-control" id="txt_apema_editar"
                             onkeypress="return sololetras(event)">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Fecha Nacimiento</label>
+                        <label for="" class="fw-bolder">Fecha Nacimiento (*) :</label>
                         <input type="date" class="form-control" id="txt_fnac_editar">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Nro Celular</label>
+                        <label for="" class="fw-bolder">Nro Celular (*) :</label>
                         <input type="text" class="form-control" id="txt_movil_editar"
                             onkeypress="return soloNumeros(event)">
                     </div>
-                    <div class="col-lg-12 mb-3">
-                        <label for="">Direccion</label>
+                    <div class="col-lg-6 mb-3">
+                        <label for="" class="fw-bolder">Direccion (*) :</label>
                         <input type="text" class="form-control" id="txt_dire_editar">
                     </div>
-                    <div class="col-lg-8 mb-3" >
-                        <label for="">Email</label>
+                    <div class="col-lg-6 mb-3" >
+                        <label for="" class="fw-bolder">Email (*) :</label>
                         <input type="text" class="form-control" id="txt_email_editar">
                     </div>
-                    <div class="col-lg-8 mb-3">
-                        <label for="">Foto (*)</label>
+                    <div class="col-lg-6 mb-3">
+                        <label for="" class="fw-bolder">Foto (*) :</label>
                         <input type="file" class="form-control mb-3" id="txt_foto_edit" >
                         <img class="mb-3" src="../controller/empleado/foto/default.png" alt="" id="imagen__prev_edit">
                     </div>
-                    <div class="col-lg-4 mb-3">
-                        <label for="">Estatus</label>
+                    <div class="col-lg-6 mb-3">
+                        <label for="" class="fw-bolder">Estatus (*) :</label>
                         <select name="" id="select_estatus" class="form-select js-example-basic-single">
                             <option value="ACTIVO">ACTIVO</option>
                             <option value="INACTIVO">INACTIVO</option>

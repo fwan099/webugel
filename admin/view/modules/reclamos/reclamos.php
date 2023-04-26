@@ -3,7 +3,7 @@
     <div class="content__wrap">
         <nav aria-label="breadcrumb" class="pb-2">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">Portal Web UGEL Yunguyo</li>
+                <li class="breadcrumb-item">Portal Web</li>
                 <li class="breadcrumb-item">Libro de Reclamaciones</li>
             </ol>
         </nav>
@@ -80,23 +80,23 @@
                                     aria-labelledby="home-tab">
                                     <div class="row">
                                         <div class="col-lg-6 mb-3">
-                                            <label for="">Fecha Registro del Expediente (*)</label>
+                                            <label for="" class="fw-bolder">Fecha Registro del Expediente (*) :</label>
                                             <input type="text" class="form-control" id="txt_fechareg" disabled>
                                         </div>
                                         <div class="col-lg-6 mb-3">
-                                            <label for="">Tipo de Incidencia (*)</label>
+                                            <label for="" class="fw-bolder">Tipo de Incidencia (*) :</label>
                                             <input type="text" class="form-control" id="txt_tipoincidencia" disabled>
                                         </div>
                                         <div class="col-lg-6 mb-3">
-                                            <label for="">Fecha del Incidente(*)</label>
+                                            <label for="" class="fw-bolder">Fecha del Incidente(*) :</label>
                                             <input type="text" class="form-control" id="txt_fechaincidencia" disabled>
                                         </div>
                                         <div class="col-lg-6 mb-3">
-                                            <label for="">Hora del Incidente (*)</label>
+                                            <label for="" class="fw-bolder">Hora del Incidente (*) :</label>
                                             <input type="text" class="form-control" id="txt_horaincidencia" disabled>
                                         </div>
                                         <div class="col-lg-12 mb-3">
-                                            <label for="">N° Asunto del tramite (*)</label>
+                                            <label for="" class="fw-bolder">N° Asunto del tramite (*) :</label>
                                             <textarea id="txt_asunto_incidencia" rows="5" class="form-control" style="resize:none;"
                                                 disabled></textarea>
                                         </div>
@@ -108,31 +108,31 @@
                                     aria-labelledby="profile-tab">
                                     <div class="row">
                                         <div class="col-6 mb-3">
-                                            <label for="">N° DNI (*)</label>
+                                            <label for="" class="fw-bolder">N° DNI (*) :</label>
                                             <input type="text" class="form-control" id="txt_dni" disabled>
                                         </div>
                                         <div class="col-6 mb-3">
-                                            <label for="">Nombre (*)</label>
+                                            <label for="" class="fw-bolder">Nombre (*) :</label>
                                             <input type="text" class="form-control" id="txt_nom" disabled>
                                         </div>
                                         <div class="col-6 mb-3">
-                                            <label for="">Apellido Paterno (*)</label>
+                                            <label for="" class="fw-bolder">Apellido Paterno (*) :</label>
                                             <input type="text" class="form-control" id="txt_apepat" disabled>
                                         </div>
                                         <div class="col-6 mb-3">
-                                            <label for="">Apellido Materno (*)</label>
+                                            <label for="" class="fw-bolder">Apellido Materno (*) :</label>
                                             <input type="text" class="form-control" id="txt_apemat" disabled>
                                         </div>
                                         <div class="col-6 mb-3">
-                                            <label for="">Celular (*)</label>
+                                            <label for="" class="fw-bolder">Celular (*) :</label>
                                             <input type="text" class="form-control" id="txt_celular" disabled>
                                         </div>
                                         <div class="col-6 mb-3">
-                                            <label for="">Email (*)</label>
+                                            <label for="" class="fw-bolder">Email (*) :</label>
                                             <input type="text" class="form-control" id="txt_email" disabled>
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <label for="">Direccion (*)</label>
+                                            <label for="" class="fw-bolder">Direccion (*) :</label>
                                             <input type="text" class="form-control" id="txt_dire" disabled>
                                         </div>
                                     </div>

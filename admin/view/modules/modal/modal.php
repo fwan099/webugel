@@ -3,7 +3,7 @@
     <div class="content__wrap">
         <nav aria-label="breadcrumb" class="pb-2">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">Portal Web UGEL Yunguyo</li>
+                <li class="breadcrumb-item">Portal Web</li>
                 <li class="breadcrumb-item">Modal Externo Comunicado</li>
             </ol>
         </nav>
@@ -63,11 +63,11 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-12 mb-3">
-                        <label for="">Comunicado (*)</label>
+                        <label for="" class="fw-bolder">Comunicado (*) :</label>
                         <textarea id="asunto_incidencia" rows="4" class="form-control" style="resize:none;"></textarea>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Imagen (*)</label>
+                        <label for="" class="fw-bolder">Imagen (*) :</label>
                         <img class="mb-3" src="../controller/empleado/foto/noimage.jpg" alt="" id="imagen__prev_modal">
                         <input type="file" class="form-control" id="txt_img_modal">
                     </div>
@@ -75,8 +75,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-outline-secondary" onclick="Registrar_Modal()">Registrar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary" onclick="Registrar_Modal()">Registrar</button>
             </div>
         </div>
     </div>
@@ -93,12 +93,12 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-12 mb-3">
-                        <label for="">Comunicado (*)</label>
+                        <label for="" class="fw-bolder">Comunicado (*) :</label>
                         <input type="text" id="txt_id_modal" hidden>
                         <textarea id="asunto_incidencia_edit" rows="4" class="form-control" style="resize:none;"></textarea>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Imagen (*)</label>
+                        <label for="" class="fw-bolder">Imagen (*) :</label>
                         <img class="mb-3" src="../controller/empleado/foto/noimage.jpg" alt="" id="imagen__prev_modal_edit">
                         <input type="file" class="form-control" id="txt_img_modal_edit">
                     </div>

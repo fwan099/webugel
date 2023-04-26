@@ -3,7 +3,7 @@
     <div class="content__wrap">
         <nav aria-label="breadcrumb" class="pb-2">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">Portal Web UGEL Yunguyo</li>
+                <li class="breadcrumb-item">Portal Web</li>
                 <li class="breadcrumb-item">Directorio</li>
             </ol>
         </nav>
@@ -67,32 +67,32 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-6 mb-3">
-                        <label for="">Cargo (*)</label>
+                        <label for="" class="fw-bolder">Cargo (*) :</label>
                         <input type="text" class="form-control" id="txt_cargo">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Area (*)</label>
+                        <label for="" class="fw-bolder">Area (*) :</label>
                         <select class="js-example-basic-single" id="select_area" style="width:100%">
                         </select>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Empleado (*)</label>
+                        <label for="" class="fw-bolder">Empleado (*) :</label>
                         <select class="js-example-basic-single" id="select_empleado" style="width:100%">
                         </select>
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Profesion (*)</label>
+                        <label for="" class="fw-bolder">Profesion (*) :</label>
                         <input type="text" class="form-control" id="txt_profesion">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Orden (*)</label>
+                        <label for="" class="fw-bolder">Orden (*) :</label>
                         <input type="text" class="form-control" id="txt_orden">
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-outline-secondary" onclick="registrar_directorio()">Registrar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary" onclick="registrar_directorio()">Registrar</button>
             </div>
         </div>
     </div>
@@ -109,26 +109,26 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-6 mb-3">
-                        <label for="">Cargo (*)</label>
+                        <label for="" class="fw-bolder">Cargo (*) :</label>
                         <input type="text" class="form-control" id="txt_cargo_edit">
                         <input type="text" class="" id="txt_id" hidden>
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Area (*)</label>
+                        <label for="" class="fw-bolder">Area (*) :</label>
                         <select class="js-example-basic-single" id="select_area_edit" style="width:100%">
                         </select>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Empleado (*)</label>
+                        <label for="" class="fw-bolder">Empleado (*) :</label>
                         <select class="js-example-basic-single" id="select_empleado_edit" style="width:100%">
                         </select>
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Profesion (*)</label>
+                        <label for="" class="fw-bolder">Profesion (*) :</label>
                         <input type="text" class="form-control" id="txt_profesion_edit">
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Orden (*)</label>
+                        <label for="" class="fw-bolder">Orden (*) :</label>
                         <input type="text" class="form-control" id="txt_orden_edit">
                     </div>
                 </div>

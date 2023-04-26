@@ -7,7 +7,6 @@ if (!isset($_SESSION['S_ID'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta name="generator" content="Hugo 0.87.0" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -165,7 +164,7 @@ if (!isset($_SESSION['S_ID'])) {
                                         <!-- User menu link -->
                                         <div class="list-group list-group-borderless h-100 py-3">
 
-                                            <a href="#" onclick="cargar_modal_perfil()" class="list-group-item list-group-item-action">
+                                            <a href="#" onclick="cargar_contenido('content','modules/perfil/perfil.php')" class="list-group-item list-group-item-action">
                                                 <i class="demo-pli-male fs-5 me-2"></i> Mi Perfil
                                             </a>
 
@@ -315,46 +314,7 @@ if (!isset($_SESSION['S_ID'])) {
                                 </li>
                                 <!-- END : Regular menu link -->
                             <?php } ?>
-                            <?php if ($_SESSION['S_ROL'] == 'Secretario(a)') { ?>
-                                <li class="nav-item ">
-                                    <a onclick="cargar_contenido('content','modules/inicio.php')" class="nav-link active mininav-toggle"><i class="bi bi-house-door fs-5 me-2"></i>
-
-                                        <span class="nav-label mininav-content ms-1">Inicio</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="javascript:cargar_contenido('content','modules/tramite_area/tramite_registro_otros.php')" class="nav-link  mininav-toggle"><i class="bi bi-clipboard2-check fs-5 me-2"></i>
-
-                                        <span class="nav-label mininav-content ms-1">Registrar Tramite</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="javascript:cargar_contenido('content','modules/tramite_area/tramites_recibidos.php')" class="nav-link  mininav-toggle"><i class="bi bi-pc-display-horizontal fs-5 me-2"></i>
-
-                                        <span class="nav-label mininav-content ms-1">Tramites Recibidos</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="javascript:cargar_contenido('content','modules/tramite_area/tramites_enviados.php')" class="nav-link e mininav-toggle"><i class="bi bi-file-earmark-medical fs-5 me-2"></i>
-
-                                        <span class="nav-label mininav-content ms-1">Tramites Enviados</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="javascript:cargar_contenido('content','modules/tramite_area/seguimiento_interno.php')" class="nav-link e mininav-toggle"><i class="bi bi-search fs-5 me-2"></i>
-
-                                        <span class="nav-label mininav-content ms-1">Buscar</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a onclick="cargar_contenido('content','modules/comunicados/comunicados.php')" class="nav-link mininav-toggle"><i class="bi bi-megaphone fs-5 me-2"></i>
-
-                                        <span class="nav-label mininav-content ms-1">Comunicados</span>
-                                    </a>
-                                </li>
-
-                                <!-- END : Regular menu link -->
-                            <?php } ?>
+                            
                         </ul>
                     </div>
                     <!-- END : Navigation Category -->

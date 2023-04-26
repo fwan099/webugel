@@ -4,7 +4,7 @@
     <div class="content__wrap">
         <nav aria-label="breadcrumb" class="pb-2">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">Portal Web UGEL Yunguyo</li>
+                <li class="breadcrumb-item">Portal Web</li>
                 <li class="breadcrumb-item">Convocatorias Auxiliares</li>
             </ol>
         </nav>
@@ -69,27 +69,27 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-12 mb-3">
-                        <label for="">Titulo (*)</label>
+                        <label for="" class="fw-bolder">Titulo (*) :</label>
                         <input type="text" class="form-control" id="txt_titulo">
                     </div>
                     <div class="col-12 mb-3">
-                        <label for="">Bases (*)</label>
+                        <label for="" class="fw-bolder"> 1. Bases (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_bases">
                     </div>
                     <div class="col-12 mb-3">
-                        <label for="">Evaluacion Preliminar Curricular PDF (*)</label>
+                        <label for="" class="fw-bolder"> 2. Evaluación Preliminar Curricular PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_preliminar_cv">
                     </div>
                     <div class="col-12 mb-3">
-                        <label for="">Absolucion de Reclamos PDF (*)</label>
+                        <label for="" class="fw-bolder">3. Absolución de Reclamos PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_reclamos">
                     </div>
-                    <div class="col-12 mb-3">
-                        <label for="">Evaluacion Final Curricular PDF (*)</label>
+                    <div class="col-12 mb-3 ">
+                        <label for="" class="fw-bolder">4. Evaluación Final Curricular PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_final_cv">
                     </div>
                     <div class="col-12 mb-3">
-                        <label for="">Resultado Final PDF (*)</label>
+                        <label for="" class="fw-bolder">5. Resultado Final PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_final">
                     </div>
                 </div>
@@ -104,7 +104,7 @@
 <!-- Modal -->
 <!-- Modal -->
 <div class="modal fade" id="modal_editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">EDITAR DATOS DE CONVOCATORIA</h5>
@@ -113,36 +113,36 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-8 mb-3">
-                        <label for="">Titulo (*)</label>
+                        <label for="" class="fw-bolder">Titulo (*)</label>
                         <input type="text" class="form-control" id="txt_titulo_edit">
-                        <input type="text" class="form-control" id="txt_id_conv" hidden >
+                        <input type="text" class="form-control" id="txt_id_conv" hidden>
                     </div>
                     <div class="col-lg-4 mb-3">
-                        <label for="">Area Procedencia (*)</label>
+                        <label for="" class="fw-bolder">Area Procedencia (*) :</label>
                         <input type="text" class="form-control" id="txt_area_edit" readonly>
                     </div>
-                    <div class="col-lg-6 mb-3">
-                        <label for="">1 Bases (*)</label>
+                    <div class="col-lg-12 mb-3">
+                        <label for="" class="fw-bolder">1. Bases (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_bases_edit">
                     </div>
-                    <div class="col-lg-6 mb-3">
-                        <label for="">2 Evaluacion Preliminar Curricular PDF (*)</label>
+                    <div class="col-lg-12 mb-3">
+                        <label for="" class="fw-bolder">2. Evaluacion Preliminar Curricular PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_preliminar_cv_edit">
                     </div>
-                    <div class="col-lg-6 mb-3">
-                        <label for="">3 Absolucion de Reclamos PDF (*)</label>
+                    <div class="col-lg-12 mb-3">
+                        <label for="" class="fw-bolder">3. Absolucion de Reclamos PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_reclamos_edit">
                     </div>
-                    <div class="col-lg-6 mb-3">
-                        <label for="">4 Evaluacion Final Curricular PDF (*)</label>
+                    <div class="col-lg-12 mb-3">
+                        <label for="" class="fw-bolder">4. Evaluacion Final Curricular PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_final_cv_edit">
                     </div>
-                    <div class="col-lg-6 mb-3">
-                        <label for="">5 Resultado Final PDF (*)</label>
+                    <div class="col-lg-12 mb-3">
+                        <label for="" class="fw-bolder">5. Resultado Final PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_doc_final_edit">
                     </div>
-                    <div class="col-lg-6 mb-3">
-                        <label for="">Estado (*)</label>
+                    <div class="col-lg-12 mb-3">
+                        <label for="" class="fw-bolder">Estado (*) :</label>
                         <select name="" id="select_estatus" class="form-select js-example-basic-single">
                             <option value="ABIERTO">EN PROCESO</option>
                             <option value="FINALIZADO">FINALIZADO</option>
@@ -184,7 +184,7 @@
             placeholder: $(this).data('placeholder'),
         });
     });
-    $('#txt_img_prev').on('change', function() { 
+    $('#txt_img_prev').on('change', function() {
         var ext = $(this).val().split('.').pop();
         if ($(this).val() != '') {
             if (ext == "png" || ext == "jpg") {
@@ -204,7 +204,7 @@
             }
         }
     });
-    $('#txt_documento').on('change', function() { 
+    $('#txt_documento').on('change', function() {
         var ext = $(this).val().split('.').pop();
         if ($(this).val() != '') {
             if (ext == "pdf" || ext == "PDF") {
@@ -224,5 +224,4 @@
             }
         }
     });
-
 </script>

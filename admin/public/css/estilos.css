@@ -81,6 +81,10 @@
   .border_input{
       border-color:  transparent !important;
   }
+  #imagen__prev_c,  #imagen__prev_e{
+    height: 150px;
+  width: 150px;
+  }
 #imagen__prev,#imagen__prev_edit{
   height: 150px;
   width: 150px;

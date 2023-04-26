@@ -4,8 +4,8 @@
     <div class="content__wrap">
         <nav aria-label="breadcrumb" class="pb-2">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">Portal Web UGEL Yunguyo</li>
-                <li class="breadcrumb-item">Area</li>
+                <li class="breadcrumb-item">Portal Web</li>
+                <li class="breadcrumb-item">Comunicados</li>
             </ol>
         </nav>
         <!-- Table with toolbar -->
@@ -65,26 +65,30 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-12 mb-3">
-                        <label for="">Titulo (*)</label>
+                        <label for="" class="fw-bolder">Titulo (*) :</label>
                         <input type="text" class="form-control" id="txt_titulo">
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Descripción (*)</label>
+                        <label for="" class="fw-bolder">Descripción (*) :</label>
                         <textarea id="txt_desc" rows="3" class="form-control" style="resize:none;"></textarea>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Subir Vista Previa PNG/JPG (*)</label>
+                        <div class="d-flex flex-column">
+                            <label for="" class="fw-bolder">Subir Vista Previa PNG/JPG (*) :</label>
+                            <img class="mb-3" src="../controller/comunicado/img/default_large.png" alt="" id="imagen__prev_c">
+                        </div>
+
                         <input type='file' class='form-control' id='txt_img_prev'>
                     </div>
                     <div class="col-12 mb-3">
-                        <label for="">Cargar Documento PDF (*)</label>
+                        <label for="" class="fw-bolder">Cargar Documento PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_documento">
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-outline-secondary" onclick="Registrar_Comunicados()">Registrar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="Registrar_Comunicados()">Registrar</button>
             </div>
         </div>
     </div>
@@ -100,24 +104,28 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-12 mb-3">
-                        <label for="">Titulo (*)</label>
+                        <label for="" class="fw-bolder">Titulo (*) :</label>
                         <input type="text" class="form-control" id="txt_titulo_edit">
                         <input type="text" hidden id="txt_id_edit">
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Descripción (*)</label>
+                        <label for="" class="fw-bolder">Descripción (*) :</label>
                         <textarea id="txt_desc_edit" rows="3" class="form-control" style="resize:none;"></textarea>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Subir Vista Previa PNG/JPG (*)</label>
+                        <div class="d-flex flex-column">
+                            <label for="" class="fw-bolder">Subir Vista Previa PNG/JPG (*) :</label>
+                            <img class="mb-3" src="" alt="" id="imagen__prev_e">
+                        </div>
+
                         <input type='file' class='form-control' id='txt_img_prev_edit'>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Cargar Documento PDF (*)</label>
+                        <label for="" class="fw-bolder">Cargar Documento PDF (*) :</label>
                         <input type="file" class="form-control" id="txt_documento_edit">
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Estado (*)</label>
+                        <label for="" class="fw-bolder">Estado (*) :</label>
                         <select name="" id="select_estatus" class="form-select js-example-basic-single">
                             <option value="ACTIVO">ACTIVO</option>
                             <option value="INACTIVO">INACTIVO</option>
@@ -126,8 +134,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-outline-secondary" onclick="Modificar_Comunicado()">Actualizar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="Modificar_Comunicado()">Actualizar</button>
             </div>
         </div>
     </div>
@@ -159,36 +167,36 @@
                                 <div id="_dm-coTabsBaseHome" class="tab-pane fade active show" role="tabpanel" aria-labelledby="home-tab">
                                     <div class="row">
                                         <div class="col-lg-6 mb-3">
-                                            <label for="">Area Procedencia (*)</label>
+                                            <label for="" class="fw-bolder">Area Procedencia (*) :</label>
                                             <input type="text" class="form-control" id="txt_area_mas" readonly>
                                             <input type="text" class="form-control" id="txt_idcom_mas" hidden readonly>
                                         </div>
                                         <div class="col-lg-3 mb-3">
-                                            <label for="">Fecha Creación (*)</label>
+                                            <label for="" class="fw-bolder">Fecha Creación (*) :</label>
                                             <input type="text" class="form-control" id="txt_fecha_mas" readonly>
                                         </div>
                                         <div class="col-lg-3 mb-3">
-                                            <label for="">Estado (*)</label>
+                                            <label for="" class="fw-bolder">Estado (*) :</label>
                                             <input type="text" class="form-control" id="txt_estado_mas" readonly>
                                         </div>
                                         <div class="col-lg-12 mb-3">
-                                            <label for="">Titulo (*)</label>
+                                            <label for="" class="fw-bolder">Titulo (*) :</label>
                                             <input type="text" class="form-control" id="txt_titulo_mas" readonly>
                                         </div>
                                         <div class="col-lg-12 mb-3">
-                                            <label for="">Descripción (*)</label>
+                                            <label for="" class="fw-bolder">Descripción (*) :</label>
                                             <textarea id="txt_desc_mas" rows="3" class="form-control" style="resize:none;" readonly></textarea>
                                         </div>
                                         <div class="col-lg-12 mb-3 d-flex flex-column">
-                                            <label for="">Vista Previa (*)</label>
+                                            <label for="" class="fw-bolder">Vista Previa (*) :</label>
                                             <img src="" alt="" id="img_prev_mas" style="width: 160px; height: 160px;" class="align-self-center rounded rounded-2 border border-2 border-dark">
                                         </div>
                                     </div>
                                 </div>
                                 <div id="_dm-coTabsBaseProfile2" class="tab-pane fade" role="tabpanel" aria-labelledby="profile-tab">
-                                    <div class="row" >
+                                    <div class="row">
                                         <iframe src="" width="100%" height="460px" frameborder="0" id="pdf_doc_mas"></iframe>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -208,6 +216,17 @@
     $(document).ready(function() {
         listar_comunicado();
 
+        let img = document.querySelector("#imagen__prev_c");
+        let input = document.querySelector("#txt_img_prev");
+        input.addEventListener("change", () => {
+            img.src = URL.createObjectURL(input.files[0]);
+        });
+
+        let img2 = document.querySelector("#imagen__prev_e");
+        let input2 = document.querySelector("#txt_img_prev_edit");
+        input2.addEventListener("change", () => {
+            img2.src = URL.createObjectURL(input2.files[0]);
+        });
 
     });
 
@@ -227,7 +246,7 @@
             placeholder: $(this).data('placeholder'),
         });
     });
-    $('#txt_img_prev').on('change', function() { 
+    $('#txt_img_prev').on('change', function() {
         var ext = $(this).val().split('.').pop();
         if ($(this).val() != '') {
             if (ext == "png" || ext == "jpg") {
@@ -247,7 +266,7 @@
             }
         }
     });
-    $('#txt_documento').on('change', function() { 
+    $('#txt_documento').on('change', function() {
         var ext = $(this).val().split('.').pop();
         if ($(this).val() != '') {
             if (ext == "pdf" || ext == "PDF") {
@@ -267,5 +286,4 @@
             }
         }
     });
-
 </script>

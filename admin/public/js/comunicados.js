@@ -68,6 +68,7 @@ $('#tabla_comunicado').on('click', '.editar', function () {
     document.getElementById('txt_titulo_edit').value = data.com_titulo;
     document.getElementById('txt_desc_edit').value = data.com_descripcion;
     document.getElementById('select_estatus').value = data.com_estado;
+    document.getElementById('imagen__prev_e').src = "../" + data.com_imgprev;
 });
 
 $('#tabla_comunicado').on('click', '.eliminar', function () {

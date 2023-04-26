@@ -3,8 +3,8 @@
     <div class="content__wrap">
         <nav aria-label="breadcrumb" class="pb-2">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">Sistema de Tramite Documentario</li>
-                <li class="breadcrumb-item">Usuario</li>
+                <li class="breadcrumb-item">Portal Web</li>
+                <li class="breadcrumb-item">Usuarios</li>
             </ol>
         </nav>
 
@@ -65,12 +65,12 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-6 mb-3">
-                        <label for="">Usuario</label>
+                        <label for="" class="fw-bolder">Usuario (*) :</label>
                         <input type="text" class="form-control" id="txt_usu">
 
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Contraseña</label>
+                        <label for="" class="fw-bolder">Contraseña (*) :</label>
                         <div class="input-group">
                             <input type="password" class="form-control" id="txt_con">
                             <button type="button" class="btn btn-light" onclick="mostrarPassword('txt_con')">
@@ -80,17 +80,17 @@
 
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Empleado</label>
+                        <label for="" class="fw-bolder">Empleado (*) :</label>
                         <select class="js-example-basic-single" id="select_empleado" style="width:100%">
                         </select>
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Area</label>
+                        <label for="" class="fw-bolder">Area (*) :</label>
                         <select class="js-example-basic-single" id="select_area" style="width:100%">
                         </select>
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Rol</label>
+                        <label for="" class="fw-bolder">Rol (*) :</label>
                         <select class="js-example-basic-single" id="select_rol" style="width:100%">
                             <option value="Publicador">Publicador</option>
                             <option value="Administrador">Administrador</option>
@@ -118,22 +118,22 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-12 mb-3">
-                        <label for="">Usuario</label>
+                        <label for="" class="fw-bolder">Usuario (*) :</label>
                         <input type="text" class="form-control" id="txt_usu_editar" disabled>
                         <input type="text" id="txt_idusuario" hidden>
                     </div>
                     <div class="col-lg-12 mb-3">
-                        <label for="">Empleado</label>
+                        <label for="" class="fw-bolder">Empleado (*) :</label>
                         <select class="js-example-basic-single" id="select_empleado_editar" style="width:100%">
                         </select>
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Area</label>
+                        <label for="" class="fw-bolder">Area (*) :</label>
                         <select class="js-example-basic-single" id="select_area_editar" style="width:100%">
                         </select>
                     </div>
                     <div class="col-lg-6 mb-3">
-                        <label for="">Rol</label>
+                        <label for="" class="fw-bolder">Rol (*) :</label>
                         <select class="js-example-basic-single" id="select_rol_editar" style="width:100%">
                             <option value="Publicador">Publicador</option>
                             <option value="Administrador">Administrador</option>
