@@ -3,15 +3,15 @@
 
  Source Server         : localhost_3306
  Source Server Type    : MySQL
- Source Server Version : 100427 (10.4.27-MariaDB)
+ Source Server Version : 100428 (10.4.28-MariaDB)
  Source Host           : localhost:3306
  Source Schema         : web_ugel
 
  Target Server Type    : MySQL
- Target Server Version : 100427 (10.4.27-MariaDB)
+ Target Server Version : 100428 (10.4.28-MariaDB)
  File Encoding         : 65001
 
- Date: 10/04/2023 09:05:21
+ Date: 27/04/2023 13:54:24
 */
 
 SET NAMES utf8mb4;
@@ -32,7 +32,7 @@ CREATE TABLE `area`  (
 -- ----------------------------
 -- Records of area
 -- ----------------------------
-INSERT INTO `area` VALUES (1, 'AREA DE ADMINISTRACION', '2023-03-17 09:10:23', 'ACTIVO');
+INSERT INTO `area` VALUES (1, 'AREA DE ADMINISTRACION', '2023-03-17 09:10:23', 'INACTIVO');
 INSERT INTO `area` VALUES (2, 'AREA DE GESTION PEDAGOGICA', '2023-03-20 14:49:13', 'ACTIVO');
 INSERT INTO `area` VALUES (3, 'AREA DE GESTION INSTITUCIONAL', '2023-03-20 14:49:44', 'ACTIVO');
 INSERT INTO `area` VALUES (4, 'DIRECCION', '2023-04-03 11:15:33', 'ACTIVO');
@@ -90,7 +90,7 @@ CREATE TABLE `convocatorias`  (
   PRIMARY KEY (`convocatoria_id`) USING BTREE,
   INDEX `conv_area_id`(`conv_area_id` ASC) USING BTREE,
   CONSTRAINT `convocatorias_ibfk_1` FOREIGN KEY (`conv_area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of convocatorias
@@ -108,6 +108,7 @@ INSERT INTO `convocatorias` VALUES (11, 'FREDDY CONVOCATORIA CAS N° 005 CONTRAT
 INSERT INTO `convocatorias` VALUES (12, 'FREDDY CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-04-02 12:01:26', 'controller/convocatorias/docs/CONV12420231298.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
 INSERT INTO `convocatorias` VALUES (13, 'FREDDY CONVOCATORIA CAS N° 005 CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS – PROFESIONAL III PARA EQUIPO ITINERANTE DE CONVIVENCIA ESCOLAR', '2023-04-02 12:01:48', 'controller/convocatorias/docs/CONV124202312478.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
 INSERT INTO `convocatorias` VALUES (14, '.PAGE-ITEM', '2023-04-02 12:02:56', 'controller/convocatorias/docs/CONV124202312232.PDF', '', '', '', '', 'ABIERTO', 1, 'CAS');
+INSERT INTO `convocatorias` VALUES (15, 'CONVOCATORIA ABRIL', '2023-04-26 16:33:49', 'controller/convocatorias/docs/CONV1264202316380.PDF', 'controller/convocatorias/docs/CONV2264202316756.PDF', '', '', 'controller/convocatorias/docs/CONV5264202316524.PDF', 'ABIERTO', 1, 'CAS');
 
 -- ----------------------------
 -- Table structure for directorio
@@ -157,7 +158,7 @@ CREATE TABLE `empleado`  (
 -- ----------------------------
 -- Records of empleado
 -- ----------------------------
-INSERT INTO `empleado` VALUES (1, 'FREDDY', 'HUAYNAPATA', 'UCHARICO', '2023-03-17', '1999-07-15', '73744393', '967444616', 'FREDDY.LEDIS099@GMAIL.COM', 'ACTIVO', 'JR. 31 DE MARZO S/NM', 'controller/empleado/foto/EMPLE34202311634.PNG');
+INSERT INTO `empleado` VALUES (1, 'FREDDY  WALTER', 'HUAYNAPATA', 'UCHARICO', '2023-03-17', '1999-07-15', '12345678', '999999999', 'FREDDY.HU099@GMAIL.COM', 'ACTIVO', 'JR. 31 DE MARZO S/N', 'controller/empleado/foto/EMPLE274202311714.JPG');
 INSERT INTO `empleado` VALUES (11, 'Efrain', 'Condori', 'Rivera', '2023-04-03', '2023-04-05', '78965412', '987456321', 'efraincondori34543@gmail.com', 'ACTIVO', 'JR. YUNGUYO', 'controller/empleado/foto/default.png');
 INSERT INTO `empleado` VALUES (12, 'Jesus Henry', 'Rivera', 'Cauhuya', '2023-04-03', '2023-04-13', '745745', '987456231', 'ecoriverra@hotmail.com', 'ACTIVO', 'YUNGUYO', 'controller/empleado/foto/default.png');
 INSERT INTO `empleado` VALUES (13, 'Obed Desiderio', 'Quispe', 'Torres', '2023-04-03', '2023-04-06', '6465', '987456321', 'obedfsdesiedro@gmail.com', 'ACTIVO', '123', 'controller/empleado/foto/default.png');
@@ -195,7 +196,7 @@ CREATE TABLE `modal`  (
   PRIMARY KEY (`modal_id`) USING BTREE,
   INDEX `modal_area_id`(`modal_area_id` ASC) USING BTREE,
   CONSTRAINT `modal_ibfk_1` FOREIGN KEY (`modal_area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of modal
@@ -256,7 +257,7 @@ CREATE TABLE `reclamos`  (
   PRIMARY KEY (`reclamo_id`) USING BTREE,
   INDEX `rec_area_destino`(`rec_area_destino` ASC) USING BTREE,
   CONSTRAINT `reclamos_ibfk_1` FOREIGN KEY (`rec_area_destino`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of reclamos
@@ -311,12 +312,13 @@ CREATE TABLE `usuario`  (
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`empresa_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`empleado_id`) REFERENCES `empleado` (`empleado_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `usuario_ibfk_3` FOREIGN KEY (`area_id`) REFERENCES `area` (`area_cod`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of usuario
 -- ----------------------------
-INSERT INTO `usuario` VALUES (1, 'admin', '$2y$12$am6UQg3sjkZxgBsBagU/YO46PKwGgWmcfXB7usiVWic3y5cOY.Y7K', '2023-03-17', NULL, 'ACTIVO', 'Administrador', 1, 1, 1);
+INSERT INTO `usuario` VALUES (1, 'admin', '$2y$12$HQnuIMHKpB91HtdU6JIjAOTAXoKQGFvHBMw8zPvK997z8mCwgXWfu', '2023-03-17', NULL, 'ACTIVO', 'Administrador', 1, 1, 1);
+INSERT INTO `usuario` VALUES (6, 'perro', '$2y$12$nDL4PtYnztH8UAzgM124yuS0Pz7Wp9/aWApe5dyM0L9ZYJdaHmPYO', '2023-04-26', NULL, 'ACTIVO', 'Publicador', 1, 12, 2);
 
 -- ----------------------------
 -- Procedure structure for SP_BUSCAR_COMUNICADO
@@ -929,6 +931,19 @@ END
 delimiter ;
 
 -- ----------------------------
+-- Procedure structure for SP_MODIFICAR_CREDENCIALES
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_MODIFICAR_CREDENCIALES`;
+delimiter ;;
+CREATE PROCEDURE `SP_MODIFICAR_CREDENCIALES`(IN IDUSU INT,IN USERNAME VARCHAR(30),IN PASS VARCHAR(255))
+BEGIN
+UPDATE usuario SET usuario.usu_usuario = USERNAME, usuario.usu_contra = PASS WHERE usuario.usu_id = IDUSU;
+SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
 -- Procedure structure for SP_MODIFICAR_DIRECTORIO
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `SP_MODIFICAR_DIRECTORIO`;
@@ -1050,6 +1065,41 @@ END IF;
 
 	UPDATE oficios SET ofi_titulo = TITULO, ofi_descripcion = DESCRIPCION, ofi_img_prev = @RUTANUEVAIMG, ofi_documento = @RUTANUEVADOC, ofi_estado = ESTADO WHERE oficio_id = ID;
 	SELECT 1;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_MODIFICAR_PERFIL
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_MODIFICAR_PERFIL`;
+delimiter ;;
+CREATE PROCEDURE `SP_MODIFICAR_PERFIL`(IN ID INT,IN DNI VARCHAR(12),IN NOMBRE VARCHAR(60),IN PATERNO VARCHAR(60),IN MATERNO VARCHAR(60),IN TELEFONO VARCHAR(30),IN FECHA DATE, IN EMAIL VARCHAR(30),IN DIRECCION VARCHAR(60),IN IMGRUT VARCHAR(255))
+BEGIN
+DECLARE RUTAACTUALIMG VARCHAR(255);
+DECLARE RUTANUEVAIMG VARCHAR(255);
+SET @RUTANUEVAIMG = IMGRUT;
+
+SET @RUTAACTUALIMG:= (SELECT empleado.emple_fotoperfil FROM empleado WHERE empleado_id=ID);
+
+IF IMGRUT = '' THEN
+	SET @RUTANUEVAIMG= @RUTAACTUALIMG;
+END IF;
+
+
+	UPDATE empleado SET 
+	emple_nrodocumento=DNI,
+	emple_nombre=NOMBRE,
+	emple_apepat=PATERNO,
+	emple_apemat=MATERNO,
+	emple_fechanacimiento= FECHA,
+	emple_movil=TELEFONO,
+	emple_direccion=DIRECCION,
+	emple_email=EMAIL,
+	emple_fotoperfil = @RUTANUEVAIMG
+	WHERE empleado_id=ID;
+	SELECT 1;
+
 END
 ;;
 delimiter ;
@@ -1289,6 +1339,52 @@ SELECT
 FROM
 	oficios
 	WHERE oficio_id= ID
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_TRAER_PASSWORD
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_TRAER_PASSWORD`;
+delimiter ;;
+CREATE PROCEDURE `SP_TRAER_PASSWORD`(IN IDUSU INT)
+SELECT
+	usuario.usu_contra
+FROM
+	usuario
+	WHERE usuario.usu_id = IDUSU
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for SP_TRAER_PERFIL
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `SP_TRAER_PERFIL`;
+delimiter ;;
+CREATE PROCEDURE `SP_TRAER_PERFIL`(IN IDUSU INT)
+SELECT
+	usuario.usu_id, 
+	usuario.usu_usuario, 
+	empleado.emple_nombre, 
+	empleado.emple_apepat, 
+	empleado.emple_apemat, 
+	empleado.emple_nrodocumento, 
+	empleado.emple_movil, 
+	empleado.emple_email, 
+	empleado.emple_direccion, 
+	empleado.emple_fotoperfil, 
+	empleado.emple_fechanacimiento,
+	empleado.empleado_id,
+	CONCAT_WS(' ',empleado.emple_nombre,empleado.emple_apepat,empleado.emple_apemat) as namefull,
+	usuario.usu_contra 
+	
+FROM
+	usuario
+	INNER JOIN
+	empleado
+	ON 
+		usuario.empleado_id = empleado.empleado_id
+		WHERE usuario.usu_id = IDUSU
 ;;
 delimiter ;
 

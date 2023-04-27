@@ -7,6 +7,7 @@ if (!isset($_SESSION['S_ID'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta name="generator" content="Hugo 0.87.0" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -164,8 +165,11 @@ if (!isset($_SESSION['S_ID'])) {
                                         <!-- User menu link -->
                                         <div class="list-group list-group-borderless h-100 py-3">
 
-                                            <a href="#" onclick="cargar_contenido('content','modules/perfil/perfil.php')" class="list-group-item list-group-item-action">
+                                            <a onclick="cargar_contenido('content','modules/perfil/perfil.php')" class="list-group-item list-group-item-action">
                                                 <i class="demo-pli-male fs-5 me-2"></i> Mi Perfil
+                                            </a>
+                                            <a onclick="cargar_modal_credenciales()" class="list-group-item list-group-item-action">
+                                                <i class="bi bi-shield fs-5 me-2"></i> Credenciales
                                             </a>
 
                                             <a href="../controller/usuario/controller_cerrar_sesion.php" class="list-group-item list-group-item-action">
@@ -210,7 +214,7 @@ if (!isset($_SESSION['S_ID'])) {
                                 <!-- User name and position -->
                                 <div class="d-block text-center shadow-none p-2">
                                     <span class=" d-flex justify-content-center align-items-center">
-                                        <h6 class="mb-0 me-3"><?php echo $_SESSION['S_NOMBRES']; ?></h6>
+                                        <h6 class="mb-0 me-3" id="name-nav"><?php echo $_SESSION['S_NOMBRES']; ?></h6>
                                     </span>
                                     <small class="text-muted"><?php echo $_SESSION['S_ROL']; ?></small>
                                 </div>
@@ -314,7 +318,7 @@ if (!isset($_SESSION['S_ID'])) {
                                 </li>
                                 <!-- END : Regular menu link -->
                             <?php } ?>
-                            
+
                         </ul>
                     </div>
                     <!-- END : Navigation Category -->
@@ -394,7 +398,46 @@ if (!isset($_SESSION['S_ID'])) {
         </div>
     </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="modal_credenciales" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CONFIGURACION DE CREDENCIALES</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <label for="" class="fw-bolder">Usuario (*) :</label>
+                        <input type="text" class="form-control" id="txt_user">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="" class="fw-bolder">Contraseña Actual (*) :</label>
+                        <input type="password" class="form-control" id="txt_pass_a">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="" class="fw-bolder">Nueva (*) :</label>
+                        <input type="password" class="form-control" id="txt_pass_n">
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary" onclick="Actualizar_Credenciales()">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script>
+        $(document).ready(function() {
+
+
+
+        });
         $('.mininav-toggle.nav-link').click(function() {
             $('.mininav-toggle.nav-link').removeClass('active');
             $(this).addClass('active');
@@ -502,7 +545,7 @@ if (!isset($_SESSION['S_ID'])) {
     </script>
 
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <!-- JAVASCRIPTS -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <script src="https://kit.fontawesome.com/bd7b24f1e0.js" crossorigin="anonymous"></script>
@@ -514,10 +557,10 @@ if (!isset($_SESSION['S_ID'])) {
     <!-- Nifty JS [ OPTIONAL ] -->
     <script src="./assets/js/nifty.js" defer></script>
 
-    
+
     <!-- Nifty Settings [ DEMO ] -->
     <script src="./assets/js/demo-purpose-only.js" defer></script>
-  
+
 
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 
@@ -526,7 +569,10 @@ if (!isset($_SESSION['S_ID'])) {
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="../public/DataTables/datatables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    
+
+    <script src="../public/js/perfil.js?rev=<?php echo time(); ?>"></script>
+
+
 </body>
 
 </html>
