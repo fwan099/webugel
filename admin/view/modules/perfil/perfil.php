@@ -73,7 +73,7 @@
 </div>
 <script>
     $(document).ready(function() {
-        Traer_Pefil();
+       // Traer_Pefil();
 
 
         let img2 = document.querySelector("#txt_img_edit");

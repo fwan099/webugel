@@ -191,6 +191,10 @@
 </div>
 <!-- Testimonial End -->
 
+<!-- Agrega el siguiente código donde quieras que aparezca el modal -->
+<?php include('modal_slider.php'); ?>
+
+
 
 
 <div id="fb-root"></div>

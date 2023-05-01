@@ -3,13 +3,13 @@
     $MU = new Modelo_Empleado();//Instaciamos
     $id =strtoupper(htmlspecialchars($_POST['id'],ENT_QUOTES,'UTF-8'));
     $nro =strtoupper(htmlspecialchars($_POST['nro'],ENT_QUOTES,'UTF-8'));
-    $nom =strtoupper(htmlspecialchars($_POST['nom'],ENT_QUOTES,'UTF-8'));
-    $apepa =strtoupper(htmlspecialchars($_POST['apepa'],ENT_QUOTES,'UTF-8'));
-    $apema =strtoupper(htmlspecialchars($_POST['apema'],ENT_QUOTES,'UTF-8'));
+    $nom =$_POST['nom'];
+    $apepa =$_POST['apepa'];
+    $apema =$_POST['apema'];
     $fnac =strtoupper(htmlspecialchars($_POST['fnac'],ENT_QUOTES,'UTF-8'));
     $movil =strtoupper(htmlspecialchars($_POST['movil'],ENT_QUOTES,'UTF-8'));
-    $dire =strtoupper(htmlspecialchars($_POST['dire'],ENT_QUOTES,'UTF-8'));
-    $email =strtoupper(htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8'));
+    $dire =$_POST['dire'];
+    $email =$_POST['email'];
     $esta =strtoupper(htmlspecialchars($_POST['esta'],ENT_QUOTES,'UTF-8'));
     $nombrearchivoImg =strtoupper(htmlspecialchars($_POST['nombrearchivoImg'],ENT_QUOTES,'UTF-8'));
 

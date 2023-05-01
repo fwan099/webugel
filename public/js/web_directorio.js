@@ -15,6 +15,7 @@ function mostrar_directorio(){
                     '<ul class=" list-unstyled card__date ">'+
                         '<li><i class="fa fa-user-tie card-text me-2 "></i><span class="card-text">'+data[i]["dir_cargo"]+'</span></li>'+
                         '<li><i class="fa-solid fa-envelope me-2"></i><span>'+data[i]["emple_email"]+'</span></li>'+
+                        '<li><i class="fa-solid fa-phone me-2"></i><span>'+data[i]["emple_movil"]+'</span></li>'+
                     '</ul>'+
                 '</div>'+
             '</div>';
