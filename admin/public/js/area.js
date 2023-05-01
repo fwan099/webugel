@@ -87,37 +87,80 @@ $('#tabla_area').on('click', '.editar', function () {
     document.getElementById('txt_idarea').value = data.area_cod;
     document.getElementById('select_estatus').value = data.area_estado;
 });
+$('#tabla_area').on('click', '.eliminar', function () {
+    let data = tbl_area.row($(this).parents('tr')).data();
+    if (tbl_area.row(this).child.isShown()) {
+        data = tbl_area.row(this).data();
+    }
+    Swal.fire({
+        title: '¿Desea Eliminar el Area?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            eliminar_area(data.area_cod);
+        }
+    });
+});
+function eliminar_area(id) {
+    $.ajax({
+        "url": "../controller/area/controller_eliminar_area.php",
+        type: 'POST',
+        data: {
+            id: id,
+
+        }
+    }).done(function (resp) {
+        if (resp == 1) {
+            Swal.fire("Mensaje de Confirmacion", "Tipo Documento Eliminado con Exito", "success").then((value) => {
+                tbl_area.ajax.reload();
+            });
+
+
+        } else if (resp == 2) {
+            Swal.fire("Mensaje de Advertencia", "No se puede Eliminar, el Tipo Documento se Encuentra Activo", "warning");
+        } else {
+            Swal.fire("Mensaje de Error", "No se completo la operacion, El registro esta siendo utilizado por otra instancia, comuniquese con Soporte", "error");
+        }
+
+    });
+
+}
 
 function Modificar_Area() {
     let id = document.getElementById('txt_idarea').value;
     let area = document.getElementById('txt_area_editar').value;
     let esta = document.getElementById('select_estatus').value;
-    if (area.length == 0 || id.length==0) {
+    if (area.length == 0 || id.length == 0) {
         return Swal.fire("Mensaje de Advetencia", "Tiene campos vacios", "warning");
     }
     $.ajax({
         "url": "../controller/area/controller_modificar_area.php",
         type: 'POST',
-        data:{
-            id:id,
-            are:area,
-            esta:esta
+        data: {
+            id: id,
+            are: area,
+            esta: esta
         }
     }).done(function (resp) {
-        if(resp>0){
-            if(resp==1){
-                Swal.fire("Mensaje de Confirmacion","Datos Actualizados","success").then((value)=>{
+        if (resp > 0) {
+            if (resp == 1) {
+                Swal.fire("Mensaje de Confirmacion", "Datos Actualizados", "success").then((value) => {
                     tbl_area.ajax.reload();
                     $("#modal_editar").modal('hide');
 
                 })
 
-            }else{
-                Swal.fire("Mensaje de Advertencia","El area ingresada ya se encuentra en la base de datos","warning");
+            } else {
+                Swal.fire("Mensaje de Advertencia", "El area ingresada ya se encuentra en la base de datos", "warning");
             }
 
-        }else{
-            return Swal.fire("Mensaje de Error","No se completo la modificacion","error");
+        } else {
+            return Swal.fire("Mensaje de Error", "No se completo la modificacion", "error");
         }
     })
 }

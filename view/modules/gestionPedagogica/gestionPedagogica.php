@@ -6,7 +6,7 @@
         <div class="row gy-5 gx-4">
             <div class="col-lg-8">
                 <div class="d-flex align-items-center mb-5">
-                    <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/com-logo-2.jpg" alt=""
+                    <img class="flex-shrink-0 img-fluid border rounded" src="./template/img/agp.jpg" alt=""
                         style="width: 80px; height: 80px;">
                     <div class="text-start ps-4">
                         <h3 class="mb-3">Area de Gestión Pedagógica</h3>
